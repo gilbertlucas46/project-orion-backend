@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_user_info_proof_of_identities",
+  "info": {
+    "displayName": "proofOfIdentity",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "id_picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "id_type": {
+      "type": "enumeration",
+      "enum": [
+        "drivers_license",
+        "nbi-clearance",
+        "police-clearance",
+        "postal",
+        "voters",
+        "Philhealth (PHIC)",
+        "Barangay certification",
+        "gsis",
+        "sss",
+        "unified-multi-purpose",
+        "senior-citizen"
+      ]
+    }
+  }
+}

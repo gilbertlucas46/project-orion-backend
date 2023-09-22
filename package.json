@@ -9,11 +9,21 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
+  "workspaces": ["./src/plugins/strapi-plugin-ckeditor"],
   "devDependencies": {},
   "dependencies": {
-    "@strapi/strapi": "4.14.0-alpha.0",
-    "@strapi/plugin-users-permissions": "4.14.0-alpha.0",
-    "@strapi/plugin-i18n": "4.14.0-alpha.0",
+    "@ckeditor/strapi-plugin-ckeditor": "^0.0.7",
+    "@strapi/plugin-graphql": "^4.12.5",
+    "@strapi/plugin-i18n": "4.12.5",
+    "@strapi/plugin-users-permissions": "4.12.5",
+    "@strapi/provider-upload-cloudinary": "^4.12.5",
+    "@strapi/strapi": "4.12.5",
+    "better-sqlite3": "8.5.0",
+    "dotenv": "^16.3.1",
+    "mysql": "^2.18.1",
+    "strapi-gtm-module": "^0.0.5",
+    "strapi-location-field-plugin": "^1.2.2",
+    "strapi-plugin-multi-select": "^1.2.2",
     "pg": "8.8.0"
   },
   "author": {

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_car_properties_car_types",
+  "info": {
+    "displayName": "car_type"
+  },
+  "options": {},
+  "attributes": {
+    "car_types": {
+      "type": "enumeration",
+      "enum": [
+        "Sedan",
+        "Hatchback",
+        "Pickup",
+        "SUV",
+        "Van",
+        "Closed Van",
+        "Caravan",
+        "Motorcycle"
+      ]
+    }
+  }
+}
