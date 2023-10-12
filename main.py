@@ -1,6 +1,22 @@
 from graphene import Schema, ObjectType, String , Int, Field, List, Mutation
 from fastapi import FastAPI
 from starlette_graphene3 import GraphQLApp, make_playground_handler
+from sqlalchemy import create_engine, Column, Integer, String as SQLstring
+from sqlalchemy.ext.declarative import declarative_base
+
+DB_URL = ""
+engine = create_engine(DB_URL)
+
+Base = declarative_base()
+
+class Employer(Base):
+    __tablename__ = "employers"
+    
+    id = Column(Integer, primary_key=True)
+    name = Column(SQLstring)
+    contact_email = Column(SQLstring)
+    industry = Column(SQLstring)
+
 
 employers_data = [
     {"id": 1, "name": "MetaTechA", "contact_email": "contact@company-a.com", "industry": "Tech"},
