@@ -3,12 +3,14 @@ from fastapi import FastAPI
 from starlette_graphene3 import GraphQLApp, make_playground_handler
 from sqlalchemy import create_engine, Column, Integer, String as SQLstring, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, sessionmaker
 
-DB_URL = "postgresql://postgres:yTVwE9Nq4XoDyShnEPgZ@containers-us-west-174.railway.app:7345/railway"
+
+DB_URL = "postgresql://postgres:7TMQNjORocYmkzvphszT@containers-us-west-105.railway.app:6869/railway"
 engine = create_engine(DB_URL)
 
 Base = declarative_base()
+
 
 class Employer(Base):
     __tablename__ = "employers"
@@ -19,7 +21,7 @@ class Employer(Base):
     industry = Column(SQLstring)
     jobs = relationship("Job", back_populates="employer")
     
-class Jobs(Base):
+class Job(Base):
     __tablename__ = "jobs"
     
     id = Column(Integer, primary_key=True)
@@ -29,6 +31,14 @@ class Jobs(Base):
     employer = relationship("Employer", back_populates="jobs")
 
 Base.metadata.create_all(engine)
+
+Session = sessionmaker(bind=engine)
+session = Session()
+
+
+# we cannot commit the session to the database. this will insert all this data into the database
+# it will persist that, so all we need to do is session.commit()
+
 
 employers_data = [
     {"id": 1, "name": "MetaTechA", "contact_email": "contact@company-a.com", "industry": "Tech"},
@@ -41,6 +51,21 @@ jobs_data = [
     {"id": 3, "title": "Accountant", "description": "Manage financial records", "employer_id": 2},
     {"id": 4, "title": "Manager", "description": "Manage people who manage records", "employer_id": 2},
 ]
+
+
+for employer in employers_data:
+    #create a new instance of employer
+    emp = Employer(**employer) # "**" destructure the object
+    #add it to the session
+    session.add(emp)
+
+for job in jobs_data:
+    #create a new instance of employer
+    session.add(Job(**job))
+    #add it to the session
+    
+    
+session.commit()
 
 # 💁 lambda the actual evaluation of the type is postponed until it is needed, allowing both 
 # classes to be defined without running in to issues related to circular dependencies
