@@ -11,16 +11,15 @@ engine = create_engine(DB_URL)
 
 Base = declarative_base()
 
-
 class Employer(Base):
     __tablename__ = "employers"
-    
+
     id = Column(Integer, primary_key=True)
     name = Column(SQLstring)
     contact_email = Column(SQLstring)
     industry = Column(SQLstring)
     jobs = relationship("Job", back_populates="employer")
-    
+
 class Job(Base):
     __tablename__ = "jobs"
     
@@ -30,15 +29,8 @@ class Job(Base):
     employer_id = Column(Integer, ForeignKey("employers.id"))
     employer = relationship("Employer", back_populates="jobs")
 
-Base.metadata.create_all(engine)
 
 Session = sessionmaker(bind=engine)
-session = Session()
-
-
-# we cannot commit the session to the database. this will insert all this data into the database
-# it will persist that, so all we need to do is session.commit()
-
 
 employers_data = [
     {"id": 1, "name": "MetaTechA", "contact_email": "contact@company-a.com", "industry": "Tech"},
@@ -48,27 +40,37 @@ employers_data = [
 jobs_data = [
     {"id": 1, "title": "Software Engineer", "description": "Develop web applications", "employer_id": 1},
     {"id": 2, "title": "Data Analyst", "description": "Analyze data and create reports", "employer_id": 1},
-    {"id": 3, "title": "Accountant", "description": "Manage financial records", "employer_id": 2},
+    {"id": 3, "title": "Accountant II", "description": "Manage financial records", "employer_id": 2},
     {"id": 4, "title": "Manager", "description": "Manage people who manage records", "employer_id": 2},
 ]
 
 
-for employer in employers_data:
-    #create a new instance of employer
-    emp = Employer(**employer) # "**" destructure the object
-    #add it to the session
-    session.add(emp)
 
-for job in jobs_data:
-    #create a new instance of employer
-    session.add(Job(**job))
-    #add it to the session
+# database helper
+# drops all the table if any exists
+def prepare_database():
+    Base.metadata.drop_all(engine)
+    Base.metadata.create_all(engine)
     
+    session = Session()
     
-session.commit()
+    for employer in employers_data:
+        #create a new instance of employer
+        emp = Employer(**employer) # "**" destructure the object
+        #add it to the session
+        session.add(emp)
+
+    for job in jobs_data:
+        #create a new instance of employer
+        session.add(Job(**job))
+        #add it to the session
+
+    session.commit()
+    session.close()
 
 # 💁 lambda the actual evaluation of the type is postponed until it is needed, allowing both 
 # classes to be defined without running in to issues related to circular dependencies
+
 
 class EmployerObject(ObjectType):
     id = Int()
@@ -108,6 +110,13 @@ class Query(ObjectType):
 schema = Schema(query=Query)
 
 app = FastAPI()
+
+#Fast api provides some special decorators to let us hook into the
+#varios application events, and one such event is startup, which is triggered
+#when the application, well literally starts up.
+@app.on_event("startup")
+def startup_event():
+    prepare_database()
 
 # mount on graphql API
 app.mount("/graphql", GraphQLApp(
