@@ -1,10 +1,11 @@
 from graphene import Schema, ObjectType, String , Int, Field, List, Mutation
 from fastapi import FastAPI
 from starlette_graphene3 import GraphQLApp, make_playground_handler
-from sqlalchemy import create_engine, Column, Integer, String as SQLstring
+from sqlalchemy import create_engine, Column, Integer, String as SQLstring, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship
 
-DB_URL = ""
+DB_URL = "postgresql://postgres:yTVwE9Nq4XoDyShnEPgZ@containers-us-west-174.railway.app:7345/railway"
 engine = create_engine(DB_URL)
 
 Base = declarative_base()
@@ -16,7 +17,18 @@ class Employer(Base):
     name = Column(SQLstring)
     contact_email = Column(SQLstring)
     industry = Column(SQLstring)
+    jobs = relationship("Job", back_populates="employer")
+    
+class Jobs(Base):
+    __tablename__ = "jobs"
+    
+    id = Column(Integer, primary_key=True)
+    title = Column(SQLstring)
+    description = Column(SQLstring)
+    employer_id = Column(Integer, ForeignKey("employers.id"))
+    employer = relationship("Employer", back_populates="jobs")
 
+Base.metadata.create_all(engine)
 
 employers_data = [
     {"id": 1, "name": "MetaTechA", "contact_email": "contact@company-a.com", "industry": "Tech"},
