@@ -30,6 +30,3 @@ def prepare_database():
 
     session.commit()
     session.close()
-
-# 💁 lambda the actual evaluation of the type is postponed until it is needed, allowing both 
-# classes to be defined without running in to issues related to circular dependencies
