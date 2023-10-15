@@ -10,7 +10,8 @@ class EmployerObject(ObjectType):
     
     @staticmethod
     def resolve_jobs(root, info):
-        return [job for job in jobs_data if job["employer_id"] == root["id"]]
+        return root.jobs
+    
 class JobObject(ObjectType):
     id = Int()
     title = String()
@@ -22,4 +23,4 @@ class JobObject(ObjectType):
     # return the first employer that matches the condition.
     @staticmethod
     def resolve_employer(root, info):
-        return next((employer for employer in employers_data if employer["id"] == root["employer_id"]), None)
+        return root.employer

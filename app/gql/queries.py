@@ -1,6 +1,7 @@
 from graphene import ObjectType, List
 from app.gql.types import JobObject, EmployerObject
-from app.db.data import jobs_data, employers_data
+from app.db.database import Session
+from app.db.models import Job, Employer
 
 class Query(ObjectType):
     jobs = List(JobObject)
@@ -8,8 +9,8 @@ class Query(ObjectType):
     
     @staticmethod
     def resolve_jobs(root, info):
-        return jobs_data
+        return Session().query(Job).all()
     
     @staticmethod
     def resolve_employers(root, info):
-        return employers_data
+        return Session().query(Employer).all()
