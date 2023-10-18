@@ -6,7 +6,9 @@ from app.db.models import Base, Employer, Job
 from app.settings.config import DB_URL
 from app.db.data import employers_data, jobs_data
  
-engine = create_engine(DB_URL)
+# engine = create_engine(DB_URL)
+ 
+engine = create_engine(DB_URL, echo=True)
 Session = sessionmaker(bind=engine)
 
 # database helper

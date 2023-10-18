@@ -7,16 +7,16 @@ Base = declarative_base()
 class Employer(Base):
     __tablename__ = "employers"
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True) # autoincrement=True so everytime a db insert happens the id auto increment without us needing to specify
     name = Column(String)
     contact_email = Column(String)
-    industry = Column(String)
+    industry = Column(String) 
     jobs = relationship("Job", back_populates="employer")
 
 class Job(Base):
     __tablename__ = "jobs"
     
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
     title = Column(String)
     description = Column(String)
     employer_id = Column(Integer, ForeignKey("employers.id"))
