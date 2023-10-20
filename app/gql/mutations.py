@@ -33,14 +33,7 @@ class UpdateJob(Mutation):
 	@staticmethod
 	def mutate(root, info, job_id, title=None, description=None, employer_id=None):
 		session = Session()
-		# job = session.query(Job).filter(Job.id == job_id).first()
-		job = session.query(Job)\
-			.options(joinedload(Job.employer))\
-			.filter(Job.id == job_id).first() 
-   # joinedload() it specifies SQLAlchemy that we want to load the job record alongside with its
-   # relational attribute "employer"
-   # meaning do not lazily evaluate this attribute "employer" do not wait
-   # for somebody to sa .employer, do it right away!
+		job = session.query(Job).filter(Job.id == job_id).first()
 
 		if not job:
 			raise Exception("Job not found")
