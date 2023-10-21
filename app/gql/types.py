@@ -20,6 +20,12 @@ class JobObject(ObjectType):
     # The next() function is used to retrieve the next item from
     # the iterable created by the generator expression. In this case, it will
     # return the first employer that matches the condition.
+    applications = List(lambda: JobApplicationObject)
+    
+    @staticmethod
+    def resolve_applications(root, info):
+        return root.applications
+    
     @staticmethod
     def resolve_employer(root, info):
         return root.employer
@@ -29,6 +35,13 @@ class UserObject(ObjectType):
     username = String()
     email = String()
     role = String()
+    
+    applications = List(lambda: JobApplicationObject)
+    
+    @staticmethod
+    def resolve_applications(root, info):
+        return root.applications
+    
     
 class JobApplicationObject(ObjectType):
     id = Int()
