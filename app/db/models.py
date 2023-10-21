@@ -27,6 +27,8 @@ class Job(Base):
     employer_id = Column(Integer, ForeignKey("employers.id"))
     employer = relationship("Employer", back_populates="jobs", lazy="joined")
     
+    applications = relationship("JobApplication", back_populates="job", lazy="joined")
+    
 class User(Base):
     __tablename__ = 'users'
     
@@ -35,3 +37,15 @@ class User(Base):
     email = Column(String)
     password = Column(String)
     role = Column(String)
+    
+    applications = relationship("JobApplication", back_populates="user", lazy="joined")
+    
+class JobApplication(Base):
+    __tablename__ = 'job_applications'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    user_id = Column(Integer, ForeignKey("users.id"))
+    job_id = Column(Integer, ForeignKey("jobs.id"))
+    
+    user = relationship("User", back_populates="applications", lazy="joined")
+    job = relationship("Job", back_populates="applications", lazy="joined")

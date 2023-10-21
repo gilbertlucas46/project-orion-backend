@@ -1,7 +1,7 @@
 from graphene import ObjectType, List, Field, Int
-from app.gql.types import JobObject, EmployerObject, UserObject
+from app.gql.types import JobObject, EmployerObject, UserObject, JobApplicationObject
 from app.db.database import Session
-from app.db.models import Job, Employer, User
+from app.db.models import Job, Employer, User, JobApplication
 
 class Query(ObjectType):
     jobs = List(JobObject)
@@ -9,8 +9,11 @@ class Query(ObjectType):
     employers = List(EmployerObject)
     employer = Field(EmployerObject, id=Int(required=True))
     users = List(UserObject)
+    job_applications = List(JobApplicationObject)
     
-    @staticmethod
+    def resolve_job_applications(root, info):
+        return Session().query(JobApplication).all()
+
     def resolve_users(root, info):
         return Session().query(User).all()
 

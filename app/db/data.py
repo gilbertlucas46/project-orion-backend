@@ -16,3 +16,10 @@ users_data = [
     {"username": "gilbert", "email": "gilbert@email.com", "password": "password", "role": "admin" },
     {"username": "willow", "email": "willow@email.com", "password": "password", "role": "admin" }
 ]
+
+applications_data = [
+    {"user_id": 1, "job_id": 1},
+    {"user_id": 2, "job_id": 2},
+    {"user_id": 2, "job_id": 3},
+    {"user_id": 1, "job_id": 4}
+]

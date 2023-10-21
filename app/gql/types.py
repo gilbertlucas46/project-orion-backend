@@ -25,7 +25,22 @@ class JobObject(ObjectType):
         return root.employer
     
 class UserObject(ObjectType):
-    id = String()
+    id = Int()
     username = String()
     email = String()
     role = String()
+    
+class JobApplicationObject(ObjectType):
+    id = Int()
+    user_id = Int()
+    job_id = Int()
+    user = Field(lambda: UserObject)
+    job = Field(lambda: JobObject)
+    
+    @staticmethod
+    def resolve_user(root, info):
+        return root.user
+    
+    @staticmethod
+    def resolve_job(root, info):
+        return root.job
