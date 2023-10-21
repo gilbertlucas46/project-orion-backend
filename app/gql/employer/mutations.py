@@ -1,4 +1,4 @@
-from graphene import Mutation, String,  Field
+from graphene import Mutation, String,  Field, Int
 from app.gql.types import  EmployerObject
 from app.db.database import Session
 from app.db.models import  Employer
@@ -20,3 +20,32 @@ class AddEmployer(Mutation):
         session.refresh(employer)
         return AddEmployer(employer=employer)
     
+class UpdateEmployer(Mutation):
+    class Arguments:
+        employer_id = Int(required=True)
+        name = String()
+        contact_email = String()
+        industry = String()
+        
+    employer = Field(lambda: EmployerObject)
+
+    @staticmethod
+    def mutate(root, info, employer_id, name=None, contact_email=None, industry=None):
+        session = Session()
+        employer = session.query(Employer).filter(Employer.id == employer_id).first()
+
+        if not employer:
+            raise Exception("employer not found")
+
+        if name is not None:
+            employer.name = name
+        if contact_email is not None:
+            employer.contact_email = contact_email
+        if industry is not None:
+            employer.industry = industry
+
+        session.add(employer)
+        session.commit()
+        # we're refreshing the job instance with the current state that it has in the db
+        session.refresh(employer)
+        return UpdateEmployer(employer=employer)
