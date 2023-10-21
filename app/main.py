@@ -11,7 +11,7 @@ schema = Schema(query=Query, mutation=Mutation)
 app = FastAPI()
 
 #Fast api provides some special decorators to let us hook into the
-#varios application events, and one such event is startup, which is triggered
+#various application events, and one such event is startup, which is triggered
 #when the application, well literally starts up.
 
 @app.on_event("startup")

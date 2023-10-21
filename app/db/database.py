@@ -2,9 +2,9 @@
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from app.db.models import Base, Employer, Job
+from app.db.models import Base, Employer, Job, User
 from app.settings.config import DB_URL
-from app.db.data import employers_data, jobs_data
+from app.db.data import employers_data, jobs_data, users_data
  
 # engine = create_engine(DB_URL)
  
@@ -21,7 +21,7 @@ def prepare_database():
     
     for employer in employers_data:
         #create a new instance of employer
-        emp = Employer(**employer) # "**" destructure the object
+        emp = Employer(**employer) # "**" destructure/spread the object
         #add it to the session
         session.add(emp)
 
@@ -29,6 +29,9 @@ def prepare_database():
         #create a new instance of employer
         session.add(Job(**job))
         #add it to the session
+        
+    for user in users_data:
+        session.add(User(**user))
 
     session.commit()
     session.close()

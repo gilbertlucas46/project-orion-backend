@@ -10,3 +10,9 @@ jobs_data = [
     { "title": "Accountant II", "description": "Manage financial records", "employer_id": 2},
     { "title": "Manager", "description": "Manage people who manage records", "employer_id": 2},
 ]
+
+users_data = [
+    {"username": "mia", "email": "mia@email.com", "password": "password", "role": "admin" },
+    {"username": "gilbert", "email": "gilbert@email.com", "password": "password", "role": "admin" },
+    {"username": "willow", "email": "willow@email.com", "password": "password", "role": "admin" }
+]
