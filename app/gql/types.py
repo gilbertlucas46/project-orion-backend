@@ -1,5 +1,4 @@
 from graphene import ObjectType, String, Int, List, Field
-from app.db.data import employers_data, jobs_data
 
 class EmployerObject(ObjectType):
     id = Int()
