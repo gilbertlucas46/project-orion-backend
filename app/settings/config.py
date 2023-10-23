@@ -1,1 +1,1 @@
-DB_URL = "postgresql://postgres:7TMQNjORocYmkzvphszT@containers-us-west-105.railway.app:6869/railway"
+DB_URL = "postgresql://postgres:pFUZXz9nWl8gDwYSiRfL@containers-us-west-194.railway.app:5979/railway"
