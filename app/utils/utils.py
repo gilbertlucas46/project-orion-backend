@@ -23,7 +23,6 @@ def hash_password(pwd):
     ph = PasswordHasher()
     return ph.hash(pwd)
 
-
 def verify_password(pwd_hash, pwd):
     ph = PasswordHasher()
 

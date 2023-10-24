@@ -5,12 +5,12 @@ from sqlalchemy.orm import sessionmaker
 from app.db.models import Base, Employer, Job, User, JobApplication
 from app.settings.config import DB_URL
 from app.db.data import employers_data, jobs_data, users_data, applications_data
-from  argon2 import PasswordHasher
+from app.utils.utils import hash_password
+
 # engine = create_engine(DB_URL)
- 
+
 engine = create_engine(DB_URL, echo=True)
 Session = sessionmaker(bind=engine)
-ph = PasswordHasher()
 
 # database helper
 # drops all the table if any exists
@@ -32,7 +32,7 @@ def prepare_database():
         #add it to the session
         
     for user in users_data:
-        user["password_hash"] = ph.hash(user["password"])
+        user["password_hash"] = hash_password(user["password"])
         del user["password"]
         session.add(User(**user))
     
