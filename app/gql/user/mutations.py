@@ -3,7 +3,8 @@ from graphql import GraphQLError
 from app.db.database import Session
 from app.db.models import User
 from argon2.exceptions import VerifyMismatchError
-from app.utils.utils import generate_token
+from app.utils.utils import generate_token, verify_password
+
 
 class LoginUser(Mutation):
     class Arguments:
@@ -20,13 +21,7 @@ class LoginUser(Mutation):
         if not user:
             raise GraphQLError("a user with that email does no exist")
         
-        try:
-            ph.verify(user.password_hash, password)
-            # from the user instance that we got from the database
-            # lets get the password_hash and verify that it is consistent with the "password"
-            # that the user provided
-        except VerifyMismatchError:
-            raise GraphQLError("Invalid password")
+        verify_password(user.password_hash, password)
         
         token = generate_token(email)
         
