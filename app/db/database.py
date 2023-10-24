@@ -5,8 +5,6 @@ from sqlalchemy.orm import sessionmaker
 from app.db.models import Base, Employer, Job, User, JobApplication
 from app.settings.config import DB_URL
 from app.db.data import employers_data, jobs_data, users_data, applications_data
-from app.utils.utils import hash_password
-
 # engine = create_engine(DB_URL)
 
 engine = create_engine(DB_URL, echo=True)
@@ -15,6 +13,7 @@ Session = sessionmaker(bind=engine)
 # database helper
 # drops all the table if any exists
 def prepare_database():
+    from app.utils.utils import hash_password
     Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
     
