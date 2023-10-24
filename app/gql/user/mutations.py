@@ -10,6 +10,26 @@ from argon2.exceptions import VerifyMismatchError
 
 ph = PasswordHasher()
 
+import jwt
+from datetime import timedelta, datetime
+
+SECRET_KEY = "job_board_app_secret!"
+ALGORITHM = "HS256"
+TOKEN_EXPIRATION_TIME_MINUTES = 15
+
+def generate_token(email):
+    # now + token lifespan
+    expiration_time = datetime.utcnow() + timedelta(minutes=TOKEN_EXPIRATION_TIME_MINUTES)
+    payload = {
+        "sub": email,
+        "exp": expiration_time,
+        
+    }
+    
+    token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)
+    
+    return token
+
 class LoginUser(Mutation):
     class Arguments:
         email = String()
@@ -33,6 +53,6 @@ class LoginUser(Mutation):
         except VerifyMismatchError:
             raise GraphQLError("Invalid password")
         
-        token = "".join(choices(string.ascii_lowercase, k=10))
+        token = generate_token(email)
         
         return LoginUser(token=token)
