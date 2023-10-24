@@ -7,15 +7,14 @@ from app.db.database import Session
 from app.db.models import User
 from argon2 import PasswordHasher
 from argon2.exceptions import VerifyMismatchError
+from app.settings.config import SECRET_KEY, ALGORITHM, TOKEN_EXPIRATION_TIME_MINUTES
 
 ph = PasswordHasher()
 
 import jwt
 from datetime import timedelta, datetime
 
-SECRET_KEY = "job_board_app_secret!"
-ALGORITHM = "HS256"
-TOKEN_EXPIRATION_TIME_MINUTES = 15
+
 
 def generate_token(email):
     # now + token lifespan
