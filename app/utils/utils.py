@@ -1,11 +1,15 @@
+from functools import wraps
+from datetime import timedelta, datetime, timezone
+import jwt
 from argon2 import PasswordHasher
 from argon2.exceptions import VerifyMismatchError
-from app.settings.config import SECRET_KEY, ALGORITHM, TOKEN_EXPIRATION_TIME_MINUTES
-from app.db.models import User
-from app.db.database import Session
 from graphql import GraphQLError
-import jwt
-from datetime import timedelta, datetime, timezone
+from app.settings.config import SECRET_KEY, ALGORITHM, TOKEN_EXPIRATION_TIME_MINUTES
+from app.db.database import Session
+from app.db.models import User
+
+
+
 
 def generate_token(email):
     # now + token lifespan
@@ -70,3 +74,31 @@ def verify_password(pwd_hash, pwd):
     except VerifyMismatchError:
         raise GraphQLError("Invalid password")
 
+
+def admin_user(func):
+    # Note: 💁 when we wrapped the function with our decorator
+    # it looses its original name & docstring which makes problematic
+    # including debugging and investigating error messages
+    # Its a good practice to copy the to copy the name, docstring as well as the
+    # other meta data from the original function to the wrapped function
+    # one elegant way to do it is to use functools module
+    @wraps
+    def wrapper(*args, **kwargs):
+        # /single asterisk(positional) double asterisk keyword arguments respectively
+        
+        # we need to get access to the context
+        # which is always second in our mutate function
+        info = args[1]
+        # get a handle on the authenticated user
+        user = get_authenticated_user(info.context)
+        
+        # check whether the user has a role of admin
+        if user.role != "admin":
+            raise GraphQLError("You are not authorized to perform this action")
+        
+        # 1.If they are and admin proceed to the rest of the logic
+        # 2. Return the invocation of the wrapped function with *args, **kwargs
+        # because we dont know in advance what they will be called with
+        return func(*args, **kwargs)
+        
+    return wrapper()
