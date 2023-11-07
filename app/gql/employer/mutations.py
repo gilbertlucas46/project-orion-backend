@@ -2,7 +2,7 @@ from graphene import Mutation, String,  Field, Int, Boolean
 from app.gql.types import  EmployerObject
 from app.db.database import Session
 from app.db.models import  Employer
-from app.utils.utils import get_authenticated_user, admin_user
+from app.utils.utils import admin_user
 
 class AddEmployer(Mutation):
     class Arguments:
