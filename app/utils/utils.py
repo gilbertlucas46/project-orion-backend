@@ -81,8 +81,8 @@ def admin_user(func):
     # including debugging and investigating error messages
     # Its a good practice to copy the to copy the name, docstring as well as the
     # other meta data from the original function to the wrapped function
-    # one elegant way to do it is to use functools module
-    @wraps
+    # one elegant way to do it is to use functools module "@wraps"
+    @wraps(func)
     def wrapper(*args, **kwargs):
         # /single asterisk(positional) double asterisk keyword arguments respectively
         
@@ -97,8 +97,11 @@ def admin_user(func):
             raise GraphQLError("You are not authorized to perform this action")
         
         # 1.If they are and admin proceed to the rest of the logic
-        # 2. Return the invocation of the wrapped function with *args, **kwargs
+        # 2.Return the invocation of the wrapped function with *args, **kwargs
         # because we dont know in advance what they will be called with
         return func(*args, **kwargs)
         
-    return wrapper()
+        # when we return the ❌wrapper() ✅wrapper we do not want to invoke it
+        # we simple want to return the wrapped function with the checks
+        # that its doing & delegating the invocation of that function
+    return wrapper
