@@ -5,7 +5,7 @@ from app.db.models import User
 from argon2.exceptions import VerifyMismatchError
 from app.utils.utils import generate_token, verify_password
 from app.gql.types import UserObject
-from app.utils.utils import hash_password
+from app.utils.utils import hash_password, get_authenticated_user
 
 class LoginUser(Mutation):
     class Arguments:
@@ -39,10 +39,15 @@ class AddUser(Mutation):
     
     @staticmethod
     def mutate(root, info, username, email, password, role):
+        if role == "admin":
+            current_user = get_authenticated_user(info.context)
+            if current_user.role != "admin":
+                raise GraphQLError('only admin can add new users')
+        
         session = Session()
         user = session.query(User).filter(User.email == email).first()
         
-        if(user):
+        if user:
             raise GraphQLError("A user with this email already exists.")
         
         password_hash = hash_password(password)

@@ -69,3 +69,4 @@ def verify_password(pwd_hash, pwd):
         # that the user provided
     except VerifyMismatchError:
         raise GraphQLError("Invalid password")
+
