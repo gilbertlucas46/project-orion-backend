@@ -61,7 +61,7 @@ class DeleteJob(Mutation):
 
     success =  Boolean()
     
-    @admin_user
+    @admin_user 
     def mutate(root, info, id):
         session = Session()
         job = session.query(Job).filter(Job.id == id).first()

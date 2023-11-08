@@ -1,0 +1,1351 @@
+[
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Employer",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Job",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "JobApplication",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Employer",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Job",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "JobApplication",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Job",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Employer",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "JobApplication",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Employer",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Job",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "DB_URL",
+        "importPath": "app.settings.config",
+        "description": "app.settings.config",
+        "isExtraImport": true,
+        "detail": "app.settings.config",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "importPath": "app.settings.config",
+        "description": "app.settings.config",
+        "isExtraImport": true,
+        "detail": "app.settings.config",
+        "documentation": {}
+    },
+    {
+        "label": "ALGORITHM",
+        "importPath": "app.settings.config",
+        "description": "app.settings.config",
+        "isExtraImport": true,
+        "detail": "app.settings.config",
+        "documentation": {}
+    },
+    {
+        "label": "TOKEN_EXPIRATION_TIME_MINUTES",
+        "importPath": "app.settings.config",
+        "description": "app.settings.config",
+        "isExtraImport": true,
+        "detail": "app.settings.config",
+        "documentation": {}
+    },
+    {
+        "label": "employers_data",
+        "importPath": "app.db.data",
+        "description": "app.db.data",
+        "isExtraImport": true,
+        "detail": "app.db.data",
+        "documentation": {}
+    },
+    {
+        "label": "jobs_data",
+        "importPath": "app.db.data",
+        "description": "app.db.data",
+        "isExtraImport": true,
+        "detail": "app.db.data",
+        "documentation": {}
+    },
+    {
+        "label": "users_data",
+        "importPath": "app.db.data",
+        "description": "app.db.data",
+        "isExtraImport": true,
+        "detail": "app.db.data",
+        "documentation": {}
+    },
+    {
+        "label": "applications_data",
+        "importPath": "app.db.data",
+        "description": "app.db.data",
+        "isExtraImport": true,
+        "detail": "app.db.data",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.ext.declarative",
+        "description": "sqlalchemy.ext.declarative",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "Mutation",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Int",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Boolean",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Mutation",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Int",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Boolean",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Mutation",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Int",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Boolean",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectType",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectType",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Int",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectType",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Int",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Schema",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Schema",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectType",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Int",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Mutation",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "EmployerObject",
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "isExtraImport": true,
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "JobObject",
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "isExtraImport": true,
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "JobApplicationObject",
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "isExtraImport": true,
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "UserObject",
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "isExtraImport": true,
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "JobObject",
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "isExtraImport": true,
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "EmployerObject",
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "isExtraImport": true,
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "UserObject",
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "isExtraImport": true,
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "JobApplicationObject",
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "isExtraImport": true,
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "app.db.database",
+        "description": "app.db.database",
+        "isExtraImport": true,
+        "detail": "app.db.database",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "app.db.database",
+        "description": "app.db.database",
+        "isExtraImport": true,
+        "detail": "app.db.database",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "app.db.database",
+        "description": "app.db.database",
+        "isExtraImport": true,
+        "detail": "app.db.database",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "app.db.database",
+        "description": "app.db.database",
+        "isExtraImport": true,
+        "detail": "app.db.database",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "app.db.database",
+        "description": "app.db.database",
+        "isExtraImport": true,
+        "detail": "app.db.database",
+        "documentation": {}
+    },
+    {
+        "label": "prepare_database",
+        "importPath": "app.db.database",
+        "description": "app.db.database",
+        "isExtraImport": true,
+        "detail": "app.db.database",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "app.db.database",
+        "description": "app.db.database",
+        "isExtraImport": true,
+        "detail": "app.db.database",
+        "documentation": {}
+    },
+    {
+        "label": "admin_user",
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "isExtraImport": true,
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "admin_user",
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "isExtraImport": true,
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "generate_token",
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "isExtraImport": true,
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "isExtraImport": true,
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "hash_password",
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "isExtraImport": true,
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_authenticated_user",
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "isExtraImport": true,
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "GraphQLError",
+        "importPath": "graphql",
+        "description": "graphql",
+        "isExtraImport": true,
+        "detail": "graphql",
+        "documentation": {}
+    },
+    {
+        "label": "GraphQLError",
+        "importPath": "graphql",
+        "description": "graphql",
+        "isExtraImport": true,
+        "detail": "graphql",
+        "documentation": {}
+    },
+    {
+        "label": "VerifyMismatchError",
+        "importPath": "argon2.exceptions",
+        "description": "argon2.exceptions",
+        "isExtraImport": true,
+        "detail": "argon2.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "VerifyMismatchError",
+        "importPath": "argon2.exceptions",
+        "description": "argon2.exceptions",
+        "isExtraImport": true,
+        "detail": "argon2.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "AddJob",
+        "importPath": "app.gql.job.mutations",
+        "description": "app.gql.job.mutations",
+        "isExtraImport": true,
+        "detail": "app.gql.job.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateJob",
+        "importPath": "app.gql.job.mutations",
+        "description": "app.gql.job.mutations",
+        "isExtraImport": true,
+        "detail": "app.gql.job.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteJob",
+        "importPath": "app.gql.job.mutations",
+        "description": "app.gql.job.mutations",
+        "isExtraImport": true,
+        "detail": "app.gql.job.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "AddEmployer",
+        "importPath": "app.gql.employer.mutations",
+        "description": "app.gql.employer.mutations",
+        "isExtraImport": true,
+        "detail": "app.gql.employer.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateEmployer",
+        "importPath": "app.gql.employer.mutations",
+        "description": "app.gql.employer.mutations",
+        "isExtraImport": true,
+        "detail": "app.gql.employer.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteEmployer",
+        "importPath": "app.gql.employer.mutations",
+        "description": "app.gql.employer.mutations",
+        "isExtraImport": true,
+        "detail": "app.gql.employer.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "LoginUser",
+        "importPath": "app.gql.user.mutations",
+        "description": "app.gql.user.mutations",
+        "isExtraImport": true,
+        "detail": "app.gql.user.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "AddUser",
+        "importPath": "app.gql.user.mutations",
+        "description": "app.gql.user.mutations",
+        "isExtraImport": true,
+        "detail": "app.gql.user.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "ApplyToJob",
+        "importPath": "app.gql.user.mutations",
+        "description": "app.gql.user.mutations",
+        "isExtraImport": true,
+        "detail": "app.gql.user.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "wraps",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jwt",
+        "description": "jwt",
+        "detail": "jwt",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordHasher",
+        "importPath": "argon2",
+        "description": "argon2",
+        "isExtraImport": true,
+        "detail": "argon2",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "GraphQLApp",
+        "importPath": "starlette_graphene3",
+        "description": "starlette_graphene3",
+        "isExtraImport": true,
+        "detail": "starlette_graphene3",
+        "documentation": {}
+    },
+    {
+        "label": "make_playground_handler",
+        "importPath": "starlette_graphene3",
+        "description": "starlette_graphene3",
+        "isExtraImport": true,
+        "detail": "starlette_graphene3",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "importPath": "app.gql.queries",
+        "description": "app.gql.queries",
+        "isExtraImport": true,
+        "detail": "app.gql.queries",
+        "documentation": {}
+    },
+    {
+        "label": "Mutation",
+        "importPath": "app.gql.mutations",
+        "description": "app.gql.mutations",
+        "isExtraImport": true,
+        "detail": "app.gql.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "employers_data",
+        "kind": 5,
+        "importPath": "app.db.data",
+        "description": "app.db.data",
+        "peekOfCode": "employers_data = [\n    { \"name\": \"MetaTechA\", \"contact_email\": \"contact@company-a.com\", \"industry\": \"Tech\"},\n    { \"name\": \"MoneySoftB\", \"contact_email\": \"contact@company-b.com\", \"industry\": \"Finance\"},\n]\njobs_data = [\n    { \"title\": \"Software Engineer\", \"description\": \"Develop web applications\", \"employer_id\": 1},\n    { \"title\": \"Data Analyst\", \"description\": \"Analyze data and create reports\", \"employer_id\": 1},\n    { \"title\": \"Accountant II\", \"description\": \"Manage financial records\", \"employer_id\": 2},\n    { \"title\": \"Manager\", \"description\": \"Manage people who manage records\", \"employer_id\": 2},\n]",
+        "detail": "app.db.data",
+        "documentation": {}
+    },
+    {
+        "label": "jobs_data",
+        "kind": 5,
+        "importPath": "app.db.data",
+        "description": "app.db.data",
+        "peekOfCode": "jobs_data = [\n    { \"title\": \"Software Engineer\", \"description\": \"Develop web applications\", \"employer_id\": 1},\n    { \"title\": \"Data Analyst\", \"description\": \"Analyze data and create reports\", \"employer_id\": 1},\n    { \"title\": \"Accountant II\", \"description\": \"Manage financial records\", \"employer_id\": 2},\n    { \"title\": \"Manager\", \"description\": \"Manage people who manage records\", \"employer_id\": 2},\n]\nusers_data = [\n    {\"username\": \"mia\", \"email\": \"mia@email.com\", \"password\": \"password\", \"role\": \"admin\" },\n    {\"username\": \"gilbert\", \"email\": \"gilbert@email.com\", \"password\": \"password\", \"role\": \"admin\" },\n    {\"username\": \"willow\", \"email\": \"willow@email.com\", \"password\": \"password\", \"role\": \"admin\" }",
+        "detail": "app.db.data",
+        "documentation": {}
+    },
+    {
+        "label": "users_data",
+        "kind": 5,
+        "importPath": "app.db.data",
+        "description": "app.db.data",
+        "peekOfCode": "users_data = [\n    {\"username\": \"mia\", \"email\": \"mia@email.com\", \"password\": \"password\", \"role\": \"admin\" },\n    {\"username\": \"gilbert\", \"email\": \"gilbert@email.com\", \"password\": \"password\", \"role\": \"admin\" },\n    {\"username\": \"willow\", \"email\": \"willow@email.com\", \"password\": \"password\", \"role\": \"admin\" }\n]\napplications_data = [\n    {\"user_id\": 1, \"job_id\": 1},\n    {\"user_id\": 2, \"job_id\": 2},\n    {\"user_id\": 2, \"job_id\": 3},\n    {\"user_id\": 1, \"job_id\": 4}",
+        "detail": "app.db.data",
+        "documentation": {}
+    },
+    {
+        "label": "applications_data",
+        "kind": 5,
+        "importPath": "app.db.data",
+        "description": "app.db.data",
+        "peekOfCode": "applications_data = [\n    {\"user_id\": 1, \"job_id\": 1},\n    {\"user_id\": 2, \"job_id\": 2},\n    {\"user_id\": 2, \"job_id\": 3},\n    {\"user_id\": 1, \"job_id\": 4}\n]",
+        "detail": "app.db.data",
+        "documentation": {}
+    },
+    {
+        "label": "prepare_database",
+        "kind": 2,
+        "importPath": "app.db.database",
+        "description": "app.db.database",
+        "peekOfCode": "def prepare_database():\n    from app.utils.utils import hash_password\n    Base.metadata.drop_all(engine)\n    Base.metadata.create_all(engine)\n    session = Session()\n    for employer in employers_data:\n        #create a new instance of employer\n        emp = Employer(**employer) # \"**\" destructure/spread the object\n        #add it to the session\n        session.add(emp)",
+        "detail": "app.db.database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "app.db.database",
+        "description": "app.db.database",
+        "peekOfCode": "engine = create_engine(DB_URL, echo=True)\nSession = sessionmaker(bind=engine)\n# database helper\n# drops all the table if any exists\ndef prepare_database():\n    from app.utils.utils import hash_password\n    Base.metadata.drop_all(engine)\n    Base.metadata.create_all(engine)\n    session = Session()\n    for employer in employers_data:",
+        "detail": "app.db.database",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "kind": 5,
+        "importPath": "app.db.database",
+        "description": "app.db.database",
+        "peekOfCode": "Session = sessionmaker(bind=engine)\n# database helper\n# drops all the table if any exists\ndef prepare_database():\n    from app.utils.utils import hash_password\n    Base.metadata.drop_all(engine)\n    Base.metadata.create_all(engine)\n    session = Session()\n    for employer in employers_data:\n        #create a new instance of employer",
+        "detail": "app.db.database",
+        "documentation": {}
+    },
+    {
+        "label": "Employer",
+        "kind": 6,
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "peekOfCode": "class Employer(Base):\n    __tablename__ = \"employers\"\n    id = Column(Integer, primary_key=True, autoincrement=True) \n    # autoincrement=True so everytime a db insert happens the id auto increment without us needing to specify\n    name = Column(String)\n    contact_email = Column(String)\n    industry = Column(String) \n    jobs = relationship(\"Job\", back_populates=\"employer\", lazy=\"joined\")\nclass Job(Base):\n    __tablename__ = \"jobs\"",
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Job",
+        "kind": 6,
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "peekOfCode": "class Job(Base):\n    __tablename__ = \"jobs\"\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    title = Column(String)\n    description = Column(String)\n    employer_id = Column(Integer, ForeignKey(\"employers.id\"))\n    employer = relationship(\"Employer\", back_populates=\"jobs\", lazy=\"joined\")\n    applications = relationship(\"JobApplication\", back_populates=\"job\", lazy=\"joined\")\nclass User(Base):\n    __tablename__ = 'users'",
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "peekOfCode": "class User(Base):\n    __tablename__ = 'users'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    username = Column(String)\n    email = Column(String)\n    password_hash = Column(String)\n    role = Column(String)\n    applications = relationship(\"JobApplication\", back_populates=\"user\", lazy=\"joined\")\nclass JobApplication(Base):\n    __tablename__ = 'job_applications'",
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "JobApplication",
+        "kind": 6,
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "peekOfCode": "class JobApplication(Base):\n    __tablename__ = 'job_applications'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    job_id = Column(Integer, ForeignKey(\"jobs.id\"))\n    user = relationship(\"User\", back_populates=\"applications\", lazy=\"joined\")\n    job = relationship(\"Job\", back_populates=\"applications\", lazy=\"joined\")",
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "peekOfCode": "Base = declarative_base()\n# lazy=\"joined\" it specifies SQLAlchemy that we want to load the relational attributes\n# meaning do not lazily evaluate the do not wait.\nclass Employer(Base):\n    __tablename__ = \"employers\"\n    id = Column(Integer, primary_key=True, autoincrement=True) \n    # autoincrement=True so everytime a db insert happens the id auto increment without us needing to specify\n    name = Column(String)\n    contact_email = Column(String)\n    industry = Column(String) ",
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "AddEmployer",
+        "kind": 6,
+        "importPath": "app.gql.employer.mutations",
+        "description": "app.gql.employer.mutations",
+        "peekOfCode": "class AddEmployer(Mutation):\n    class Arguments:\n        name = String(required=True)\n        contact_email = String(required=True)\n        industry = String(required=True)\n    employer = Field(lambda: EmployerObject)\n    authenticated_as = Field(String)\n    @admin_user\n    def mutate(root, info, name, contact_email, industry):\n        session = Session()",
+        "detail": "app.gql.employer.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateEmployer",
+        "kind": 6,
+        "importPath": "app.gql.employer.mutations",
+        "description": "app.gql.employer.mutations",
+        "peekOfCode": "class UpdateEmployer(Mutation):\n    class Arguments:\n        employer_id = Int(required=True)\n        name = String()\n        contact_email = String()\n        industry = String()\n    employer = Field(lambda: EmployerObject)\n    @admin_user\n    def mutate(root, info, employer_id, name=None, contact_email=None, industry=None):\n        session = Session()",
+        "detail": "app.gql.employer.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteEmployer",
+        "kind": 6,
+        "importPath": "app.gql.employer.mutations",
+        "description": "app.gql.employer.mutations",
+        "peekOfCode": "class DeleteEmployer(Mutation):\n    class Arguments:\n        id = Int(required=True)\n    success =  Boolean()\n    @admin_user\n    def mutate(root, info, id):\n        session = Session()\n        employer = session.query(Employer).filter(Employer.id == id).first()\n        if not employer:\n            raise Exception(\"Job not found\")",
+        "detail": "app.gql.employer.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "AddJob",
+        "kind": 6,
+        "importPath": "app.gql.job.mutations",
+        "description": "app.gql.job.mutations",
+        "peekOfCode": "class AddJob(Mutation):\n    class Arguments:\n        title = String(required=True)\n        description = String(required=True)\n        employer_id = Int(required=True)\n    job = Field(lambda: JobObject)\n    @admin_user\n    def mutate(root, info, title, description, employer_id):\n        job = Job(title=title, description=description,\n                  employer_id=employer_id)  # add this job to the session",
+        "detail": "app.gql.job.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateJob",
+        "kind": 6,
+        "importPath": "app.gql.job.mutations",
+        "description": "app.gql.job.mutations",
+        "peekOfCode": "class UpdateJob(Mutation):\n    class Arguments:\n        job_id = Int(required=True)\n        title = String()\n        description = String()\n        employer_id = Int()\n    job = Field(lambda: JobObject)\n    @admin_user\n    def mutate(root, info, job_id, title=None, description=None, employer_id=None):\n        session = Session()",
+        "detail": "app.gql.job.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteJob",
+        "kind": 6,
+        "importPath": "app.gql.job.mutations",
+        "description": "app.gql.job.mutations",
+        "peekOfCode": "class DeleteJob(Mutation):\n    class Arguments:\n        id = Int(required=True)\n    success =  Boolean()\n    @admin_user \n    def mutate(root, info, id):\n        session = Session()\n        job = session.query(Job).filter(Job.id == id).first()\n        if not job:\n            raise Exception(\"Job not found\")",
+        "detail": "app.gql.job.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "LoginUser",
+        "kind": 6,
+        "importPath": "app.gql.user.mutations",
+        "description": "app.gql.user.mutations",
+        "peekOfCode": "class LoginUser(Mutation):\n    class Arguments:\n        email = String()\n        password = String()\n    token = String()\n    @staticmethod\n    def mutate(root, info, email, password):\n        session = Session()\n        user = session.query(User).filter(User.email == email).first()\n        if not user:",
+        "detail": "app.gql.user.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "AddUser",
+        "kind": 6,
+        "importPath": "app.gql.user.mutations",
+        "description": "app.gql.user.mutations",
+        "peekOfCode": "class AddUser(Mutation):\n    class Arguments:\n        username = String(required=True)\n        email = String(required=True)\n        password = String(required=True)\n        role = String(required=True)\n    user = Field(lambda: UserObject)\n    @staticmethod\n    def mutate(root, info, username, email, password, role):\n        if role == \"admin\":",
+        "detail": "app.gql.user.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "ApplyToJob",
+        "kind": 6,
+        "importPath": "app.gql.user.mutations",
+        "description": "app.gql.user.mutations",
+        "peekOfCode": "class ApplyToJob(Mutation):\n    class Arguments:\n        user_id = Int(required=True)\n        job_id = Int(required=True)\n    # It returns a job application field\n    job_application = Field(lambda: JobApplicationObject)\n    @staticmethod\n    def mutate(root, info, user_id, job_id):\n        session = Session()\n        # check first if the job already exist",
+        "detail": "app.gql.user.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "Mutation",
+        "kind": 6,
+        "importPath": "app.gql.mutations",
+        "description": "app.gql.mutations",
+        "peekOfCode": "class Mutation(ObjectType):\n    add_job = AddJob.Field()\n    update_job = UpdateJob.Field()\n    delete_job = DeleteJob.Field()\n    add_employer = AddEmployer.Field()\n    update_employer = UpdateEmployer.Field()\n    delete_employer = DeleteEmployer.Field()\n    login_user = LoginUser.Field()\n    add_user = AddUser.Field()\n    apply_to_jobs = ApplyToJob.Field()",
+        "detail": "app.gql.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "kind": 6,
+        "importPath": "app.gql.queries",
+        "description": "app.gql.queries",
+        "peekOfCode": "class Query(ObjectType):\n    jobs = List(JobObject)\n    job = Field(JobObject, id=Int(required=True))\n    employers = List(EmployerObject)\n    employer = Field(EmployerObject, id=Int(required=True))\n    users = List(UserObject)\n    job_applications = List(JobApplicationObject)\n    def resolve_job_applications(root, info):\n        return Session().query(JobApplication).all()\n    def resolve_users(root, info):",
+        "detail": "app.gql.queries",
+        "documentation": {}
+    },
+    {
+        "label": "EmployerObject",
+        "kind": 6,
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "peekOfCode": "class EmployerObject(ObjectType):\n    id = Int()\n    name = String()\n    contact_email = String()\n    industry = String()\n    jobs = List(lambda: JobObject) # \"lambda\" defer undefined class names\n    @staticmethod\n    def resolve_jobs(root, info):\n        return root.jobs\nclass JobObject(ObjectType):",
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "JobObject",
+        "kind": 6,
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "peekOfCode": "class JobObject(ObjectType):\n    id = Int()\n    title = String()\n    description = String()\n    employer_id = Int()\n    employer = Field(lambda:EmployerObject) # a job is associated with a single employer\n    # The next() function is used to retrieve the next item from\n    # the iterable created by the generator expression. In this case, it will\n    # return the first employer that matches the condition.\n    applications = List(lambda: JobApplicationObject)",
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "UserObject",
+        "kind": 6,
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "peekOfCode": "class UserObject(ObjectType):\n    id = Int()\n    username = String()\n    email = String()\n    role = String()\n    applications = List(lambda: JobApplicationObject)\n    @staticmethod\n    def resolve_applications(root, info):\n        return root.applications\nclass JobApplicationObject(ObjectType):",
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "JobApplicationObject",
+        "kind": 6,
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "peekOfCode": "class JobApplicationObject(ObjectType):\n    id = Int()\n    user_id = Int()\n    job_id = Int()\n    user = Field(lambda: UserObject)\n    job = Field(lambda: JobObject)\n    @staticmethod\n    def resolve_user(root, info):\n        return root.user\n    @staticmethod",
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "DB_URL",
+        "kind": 5,
+        "importPath": "app.settings.config",
+        "description": "app.settings.config",
+        "peekOfCode": "DB_URL = \"postgresql://postgres:pFUZXz9nWl8gDwYSiRfL@containers-us-west-194.railway.app:5979/railway\"\nSECRET_KEY = \"job_board_app_secret!\"\nALGORITHM = \"HS256\"\nTOKEN_EXPIRATION_TIME_MINUTES = 15",
+        "detail": "app.settings.config",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "app.settings.config",
+        "description": "app.settings.config",
+        "peekOfCode": "SECRET_KEY = \"job_board_app_secret!\"\nALGORITHM = \"HS256\"\nTOKEN_EXPIRATION_TIME_MINUTES = 15",
+        "detail": "app.settings.config",
+        "documentation": {}
+    },
+    {
+        "label": "ALGORITHM",
+        "kind": 5,
+        "importPath": "app.settings.config",
+        "description": "app.settings.config",
+        "peekOfCode": "ALGORITHM = \"HS256\"\nTOKEN_EXPIRATION_TIME_MINUTES = 15",
+        "detail": "app.settings.config",
+        "documentation": {}
+    },
+    {
+        "label": "TOKEN_EXPIRATION_TIME_MINUTES",
+        "kind": 5,
+        "importPath": "app.settings.config",
+        "description": "app.settings.config",
+        "peekOfCode": "TOKEN_EXPIRATION_TIME_MINUTES = 15",
+        "detail": "app.settings.config",
+        "documentation": {}
+    },
+    {
+        "label": "generate_token",
+        "kind": 2,
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "peekOfCode": "def generate_token(email):\n    # now + token lifespan\n    expiration_time = datetime.utcnow() + timedelta(minutes=TOKEN_EXPIRATION_TIME_MINUTES)\n    payload = {\n        \"sub\": email,\n        \"exp\": expiration_time,\n    }\n    token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)\n    return token\ndef get_authenticated_user(context):",
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_authenticated_user",
+        "kind": 2,
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "peekOfCode": "def get_authenticated_user(context):\n    # On every request that our graphql server receives\n    # as some context information about that contains\n    # the execution context in which that request was made.\n    # from there we'll be able to access the request object,\n    # the full HTTP request object, and from that request object we'll\n    # extract the authorization header.\n    request_object = context.get('request')\n    auth_header = request_object.headers.get('Authorization')\n    token = [None]",
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "hash_password",
+        "kind": 2,
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "peekOfCode": "def hash_password(pwd):\n    ph = PasswordHasher()\n    return ph.hash(pwd)\ndef verify_password(pwd_hash, pwd):\n    ph = PasswordHasher()\n    try:\n        ph.verify(pwd_hash, pwd)\n        # from the user instance that we got from the database\n        # lets get the password_hash and verify that it is consistent with the \"password\"\n        # that the user provided",
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "kind": 2,
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "peekOfCode": "def verify_password(pwd_hash, pwd):\n    ph = PasswordHasher()\n    try:\n        ph.verify(pwd_hash, pwd)\n        # from the user instance that we got from the database\n        # lets get the password_hash and verify that it is consistent with the \"password\"\n        # that the user provided\n    except VerifyMismatchError:\n        raise GraphQLError(\"Invalid password\")\ndef admin_user(func):",
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "admin_user",
+        "kind": 2,
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "peekOfCode": "def admin_user(func):\n    # Note: 💁 when we wrapped the function with our decorator\n    # it looses its original name & docstring which makes problematic\n    # including debugging and investigating error messages\n    # Its a good practice to copy the to copy the name, docstring as well as the\n    # other meta data from the original function to the wrapped function\n    # one elegant way to do it is to use functools module \"@wraps\"\n    @wraps(func)\n    def wrapper(*args, **kwargs):\n        # /single asterisk(positional) double asterisk keyword arguments respectively",
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "startup_event",
+        "kind": 2,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "def startup_event():\n    prepare_database()\n@app.get(\"/employers\")\ndef get_employers():\n    with Session() as session:\n        return session.query(Employer).all()\n@app.get(\"/jobs\")\ndef get_employers():\n    with Session() as session:\n        return session.query(Job).all()",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_employers",
+        "kind": 2,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "def get_employers():\n    with Session() as session:\n        return session.query(Employer).all()\n@app.get(\"/jobs\")\ndef get_employers():\n    with Session() as session:\n        return session.query(Job).all()\n# mount on graphql API\napp.mount(\"/graphql\", GraphQLApp(\n    schema=schema,",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_employers",
+        "kind": 2,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "def get_employers():\n    with Session() as session:\n        return session.query(Job).all()\n# mount on graphql API\napp.mount(\"/graphql\", GraphQLApp(\n    schema=schema,\n    on_get=make_playground_handler()\n))\n# at this point we are exposing our graphql API at \"/graphql\" endpoint of out web application",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "schema",
+        "kind": 5,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "schema = Schema(query=Query, mutation=Mutation)\napp = FastAPI()\n#Fast api provides some special decorators to let us hook into the\n#various application events, and one such event is startup, which is triggered\n#when the application, well literally starts up.\n@app.on_event(\"startup\")\ndef startup_event():\n    prepare_database()\n@app.get(\"/employers\")\ndef get_employers():",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "app = FastAPI()\n#Fast api provides some special decorators to let us hook into the\n#various application events, and one such event is startup, which is triggered\n#when the application, well literally starts up.\n@app.on_event(\"startup\")\ndef startup_event():\n    prepare_database()\n@app.get(\"/employers\")\ndef get_employers():\n    with Session() as session:",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "UserType",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class UserType(ObjectType):\n    id = Int()\n    name = String()\n    age = Int()\nclass UpdateUser(Mutation):\n    class Arguments:\n        user_id = Int(required=True)\n        name = String()\n        age = Int()\n    user = Field(UserType)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateUser",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class UpdateUser(Mutation):\n    class Arguments:\n        user_id = Int(required=True)\n        name = String()\n        age = Int()\n    user = Field(UserType)\n    @staticmethod\n    def mutate(root, info, user_id, name=None, age=None):\n        user = None\n        for u in Query.users:",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteUser",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class DeleteUser(Mutation):\n    class Arguments:\n        user_id = Int(required=True)\n    user = Field(UserType)\n    @staticmethod\n    def mutate(root, info, user_id):\n        user = None\n        for idx, u in Query.users:\n            if u['id'] == user_id:\n                user = u",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "CreateUser",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class CreateUser(Mutation):\n    class Arguments:\n        name = String()\n        age = Int()\n    user = Field(UserType)\n    @staticmethod\n    def mutate(self,info, name, age):\n        user = { \"id\": len(Query.users) + 1, \"name\": name, \"age\": age}\n        Query.users.append(user)\n        return CreateUser(user=user)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class Query(ObjectType):\n    user = Field(UserType, user_id=Int())\n    users_by_min_age = List(UserType, min_age=Int())\n    users = [\n        {\"id\": 1, \"name\": \"Gilbert\", \"age\": 32},\n        {\"id\": 2, \"name\": \"Mia\", \"age\": 34}\n    ]\n    @staticmethod\n    def resolve_user(root, info, user_id):\n        matched_users = [user for user in Query.users if user[\"id\"] == user_id]",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "Mutation",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class Mutation(ObjectType):\n    create_user = CreateUser.Field()\n    update_user = UpdateUser.Field()\n    delete_user = DeleteUser.Field()\n# OOP aside:\n# - instance methods(self)\n# - class methofs(cls)\n# - staticmethod\nschema = Schema(query=Query, mutation=Mutation)\ngql_2 = '''",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "schema",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "schema = Schema(query=Query, mutation=Mutation)\ngql_2 = '''\n{\n    user(userId: 2) {\n        id\n        name\n        age\n    }\n}\n# '''",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "gql_2",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "gql_2 = '''\n{\n    user(userId: 2) {\n        id\n        name\n        age\n    }\n}\n# '''\n# gql = '''",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "gql",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "gql = '''\nmutation {\n    createUser(name: \"ungas\", age: 100) {\n        user {\n            id\n            name\n            age\n        }\n    }\n}",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "gql_update",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "gql_update = '''\nmutation {\n    updateUser(name: \"ungas\", age: 111, userId: 2) {\n        user {\n            id\n            name\n            age\n        }\n    }\n}",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "gql_delete",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "gql_delete = '''\nmutation {\n    deleteUser(userId: 2) {\n        user {\n            id\n            name\n            age\n        }\n    }\n}",
+        "detail": "test",
+        "documentation": {}
+    }
+]

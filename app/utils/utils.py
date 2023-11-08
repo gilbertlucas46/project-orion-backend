@@ -91,6 +91,7 @@ def admin_user(func):
         info = args[1]
         # get a handle on the authenticated user
         user = get_authenticated_user(info.context)
+        print(info.context)
         
         # check whether the user has a role of admin
         if user.role != "admin":

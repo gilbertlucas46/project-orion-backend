@@ -1,10 +1,10 @@
 from graphene import Mutation, String, Int, Field, Boolean
 from graphql import GraphQLError
 from app.db.database import Session
-from app.db.models import User
+from app.db.models import JobApplication, User
 from argon2.exceptions import VerifyMismatchError
 from app.utils.utils import generate_token, verify_password
-from app.gql.types import UserObject
+from app.gql.types import JobApplicationObject, UserObject
 from app.utils.utils import hash_password, get_authenticated_user
 
 class LoginUser(Mutation):
@@ -37,6 +37,7 @@ class AddUser(Mutation):
         
     user = Field(lambda: UserObject)
     
+    
     @staticmethod
     def mutate(root, info, username, email, password, role):
         if role == "admin":
@@ -56,3 +57,33 @@ class AddUser(Mutation):
         session.commit()
         session.refresh(user)
         return AddUser(user=user)
+    
+class ApplyToJob(Mutation):
+    class Arguments:
+        user_id = Int(required=True)
+        job_id = Int(required=True)
+        
+    # It returns a job application field
+    job_application = Field(lambda: JobApplicationObject)
+    
+    @staticmethod
+    def mutate(root, info, user_id, job_id):
+        session = Session()
+        
+        # check first if the job already exist
+        existing_application = session.query(JobApplication).filter(
+            JobApplication.user_id == user_id,
+            JobApplication.job_id == job_id
+        ).first()
+        
+        if existing_application:
+            raise GraphQLError("This user has already applied to this job")
+        
+        # JobApplication -> database model, create new instance
+        job_application = JobApplication(user_id=user_id, job_id=job_id)
+        session.add(job_application)
+        session.commit()
+        # Refresh it in order to get the ID that Porsgres assigned
+        session.refresh(job_application)
+        
+        return ApplyToJob(job_application=job_application)
