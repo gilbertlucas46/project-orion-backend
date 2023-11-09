@@ -3,7 +3,7 @@ from graphql import GraphQLError
 from app.db.database import Session
 from app.db.models import JobApplication, User
 from argon2.exceptions import VerifyMismatchError
-from app.utils.utils import authd_user, generate_token, verify_password
+from app.utils.utils import authd_user, authd_user_same_as, generate_token, verify_password
 from app.gql.types import JobApplicationObject, UserObject
 from app.utils.utils import hash_password, get_authenticated_user
 
@@ -66,7 +66,7 @@ class ApplyToJob(Mutation):
     # It returns a job application field
     job_application = Field(lambda: JobApplicationObject)
     
-    @authd_user
+    @authd_user_same_as
     def mutate(root, info, user_id, job_id):
         session = Session()
         
