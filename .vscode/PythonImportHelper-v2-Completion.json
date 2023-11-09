@@ -656,6 +656,14 @@
         "documentation": {}
     },
     {
+        "label": "authd_user",
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "isExtraImport": true,
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
         "label": "generate_token",
         "importPath": "app.utils.utils",
         "description": "app.utils.utils",
@@ -1065,7 +1073,7 @@
         "kind": 6,
         "importPath": "app.gql.user.mutations",
         "description": "app.gql.user.mutations",
-        "peekOfCode": "class ApplyToJob(Mutation):\n    class Arguments:\n        user_id = Int(required=True)\n        job_id = Int(required=True)\n    # It returns a job application field\n    job_application = Field(lambda: JobApplicationObject)\n    @staticmethod\n    def mutate(root, info, user_id, job_id):\n        session = Session()\n        # check first if the job already exist",
+        "peekOfCode": "class ApplyToJob(Mutation):\n    class Arguments:\n        user_id = Int(required=True)\n        job_id = Int(required=True)\n    # It returns a job application field\n    job_application = Field(lambda: JobApplicationObject)\n    @authd_user\n    def mutate(root, info, user_id, job_id):\n        session = Session()\n        # check first if the job already exist",
         "detail": "app.gql.user.mutations",
         "documentation": {}
     },
@@ -1201,6 +1209,15 @@
         "importPath": "app.utils.utils",
         "description": "app.utils.utils",
         "peekOfCode": "def admin_user(func):\n    # Note: 💁 when we wrapped the function with our decorator\n    # it looses its original name & docstring which makes problematic\n    # including debugging and investigating error messages\n    # Its a good practice to copy the to copy the name, docstring as well as the\n    # other meta data from the original function to the wrapped function\n    # one elegant way to do it is to use functools module \"@wraps\"\n    @wraps(func)\n    def wrapper(*args, **kwargs):\n        # /single asterisk(positional) double asterisk keyword arguments respectively",
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "authd_user",
+        "kind": 2,
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "peekOfCode": "def authd_user(func):\n    @wraps(func)\n    def wrapper(*args, **kwargs):\n        info = args[1]\n        get_authenticated_user(info.context)\n        return func(*args, **kwargs)\n    return wrapper",
         "detail": "app.utils.utils",
         "documentation": {}
     },

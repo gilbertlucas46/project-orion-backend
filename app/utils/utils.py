@@ -106,3 +106,12 @@ def admin_user(func):
         # we simple want to return the wrapped function with the checks
         # that its doing & delegating the invocation of that function
     return wrapper
+
+def authd_user(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        info = args[1]
+        get_authenticated_user(info.context)
+        return func(*args, **kwargs)
+        
+    return wrapper
