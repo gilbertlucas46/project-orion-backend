@@ -1189,7 +1189,7 @@
         "kind": 2,
         "importPath": "app.utils.utils",
         "description": "app.utils.utils",
-        "peekOfCode": "def get_authenticated_user(context):\n    # On every request that our graphql server receives\n    # as some context information about that contains\n    # the execution context in which that request was made.\n    # from there we'll be able to access the request object,\n    # the full HTTP request object, and from that request object we'll\n    # extract the authorization header.\n    request_object = context.get('request')\n    auth_header = request_object.headers.get('Authorization')\n    token = [None]",
+        "peekOfCode": "def get_authenticated_user(context):\n    # On every request that our graphql server receives\n    # as some context information about that contains\n    # the execution context in which that request was made.\n    # from there we'll be able to access the request object,\n    # the full HTTP request object, and from that request object we'll\n    # extract the authorization header.\n    request_object = context.get('request')\n    auth_header = request_object.headers.get('Authorization')\n    token = auth_header.split(\" \")",
         "detail": "app.utils.utils",
         "documentation": {}
     },

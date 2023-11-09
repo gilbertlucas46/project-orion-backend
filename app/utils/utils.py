@@ -34,9 +34,7 @@ def get_authenticated_user(context):
     request_object = context.get('request')
     auth_header = request_object.headers.get('Authorization')
 
-    token = [None]
-    if auth_header:
-        token = auth_header.split(" ")
+    token = auth_header.split(" ")
 
     if auth_header and token[0] == "Bearer" and len(token) == 2:
         try:
