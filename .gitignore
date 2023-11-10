@@ -1,3 +1,5 @@
+Haters
+
 ############################
 # OS X
 ############################
@@ -95,20 +97,14 @@ results
 node_modules
 .node_history
 
-############################
-# Tests
-############################
-
-coverage
-
-############################
-# Strapi
-############################
-
 .env
-license.txt
 exports
 *.cache
 dist
-build
-.strapi-updater.json
+
+env
+app/.env
+.DS_Store
+**/__pycache__/
+**__pycache__
+venv
