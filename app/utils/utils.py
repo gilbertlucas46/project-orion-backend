@@ -4,12 +4,19 @@ import jwt
 from argon2 import PasswordHasher
 from argon2.exceptions import VerifyMismatchError
 from graphql import GraphQLError
-from app.settings.config import SECRET_KEY, ALGORITHM, TOKEN_EXPIRATION_TIME_MINUTES
 from app.db.database import Session
 from app.db.models import User
+from dotenv import load_dotenv
+import os
 
-
-
+load_dotenv()
+# This invocation will load all of the key value pairs from our .env
+# into a massive dictionary "load_dotenv()" that can be access from
+#  out OS module
+# os.getenv("") this is how we get an environment variable at runtime
+SECRET_KEY = os.getenv("SECRET_KEY")
+ALGORITHM = os.getenv("ALGORITHM")
+TOKEN_EXPIRATION_TIME_MINUTES = int(os.getenv("TOKEN_EXPIRATION_TIME_MINUTES"))
 
 def generate_token(email):
     # now + token lifespan

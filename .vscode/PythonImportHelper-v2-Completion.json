@@ -184,38 +184,6 @@
         "documentation": {}
     },
     {
-        "label": "DB_URL",
-        "importPath": "app.settings.config",
-        "description": "app.settings.config",
-        "isExtraImport": true,
-        "detail": "app.settings.config",
-        "documentation": {}
-    },
-    {
-        "label": "SECRET_KEY",
-        "importPath": "app.settings.config",
-        "description": "app.settings.config",
-        "isExtraImport": true,
-        "detail": "app.settings.config",
-        "documentation": {}
-    },
-    {
-        "label": "ALGORITHM",
-        "importPath": "app.settings.config",
-        "description": "app.settings.config",
-        "isExtraImport": true,
-        "detail": "app.settings.config",
-        "documentation": {}
-    },
-    {
-        "label": "TOKEN_EXPIRATION_TIME_MINUTES",
-        "importPath": "app.settings.config",
-        "description": "app.settings.config",
-        "isExtraImport": true,
-        "detail": "app.settings.config",
-        "documentation": {}
-    },
-    {
         "label": "employers_data",
         "importPath": "app.db.data",
         "description": "app.db.data",
@@ -245,6 +213,31 @@
         "description": "app.db.data",
         "isExtraImport": true,
         "detail": "app.db.data",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
         "documentation": {}
     },
     {
@@ -942,11 +935,20 @@
         "documentation": {}
     },
     {
+        "label": "DB_URL",
+        "kind": 5,
+        "importPath": "app.db.database",
+        "description": "app.db.database",
+        "peekOfCode": "DB_URL = os.getenv(\"DB_URL\")\nengine = create_engine(DB_URL, echo=False)\nSession = sessionmaker(bind=engine)\n# database helper\n# drops all the table if any exists\ndef prepare_database():\n    from app.utils.utils import hash_password\n    Base.metadata.drop_all(engine)\n    Base.metadata.create_all(engine)\n    session = Session()",
+        "detail": "app.db.database",
+        "documentation": {}
+    },
+    {
         "label": "engine",
         "kind": 5,
         "importPath": "app.db.database",
         "description": "app.db.database",
-        "peekOfCode": "engine = create_engine(DB_URL, echo=True)\nSession = sessionmaker(bind=engine)\n# database helper\n# drops all the table if any exists\ndef prepare_database():\n    from app.utils.utils import hash_password\n    Base.metadata.drop_all(engine)\n    Base.metadata.create_all(engine)\n    session = Session()\n    for employer in employers_data:",
+        "peekOfCode": "engine = create_engine(DB_URL, echo=False)\nSession = sessionmaker(bind=engine)\n# database helper\n# drops all the table if any exists\ndef prepare_database():\n    from app.utils.utils import hash_password\n    Base.metadata.drop_all(engine)\n    Base.metadata.create_all(engine)\n    session = Session()\n    for employer in employers_data:",
         "detail": "app.db.database",
         "documentation": {}
     },
@@ -1140,42 +1142,6 @@
         "documentation": {}
     },
     {
-        "label": "DB_URL",
-        "kind": 5,
-        "importPath": "app.settings.config",
-        "description": "app.settings.config",
-        "peekOfCode": "DB_URL = \"postgresql://postgres:pFUZXz9nWl8gDwYSiRfL@containers-us-west-194.railway.app:5979/railway\"\nSECRET_KEY = \"job_board_app_secret!\"\nALGORITHM = \"HS256\"\nTOKEN_EXPIRATION_TIME_MINUTES = 15",
-        "detail": "app.settings.config",
-        "documentation": {}
-    },
-    {
-        "label": "SECRET_KEY",
-        "kind": 5,
-        "importPath": "app.settings.config",
-        "description": "app.settings.config",
-        "peekOfCode": "SECRET_KEY = \"job_board_app_secret!\"\nALGORITHM = \"HS256\"\nTOKEN_EXPIRATION_TIME_MINUTES = 15",
-        "detail": "app.settings.config",
-        "documentation": {}
-    },
-    {
-        "label": "ALGORITHM",
-        "kind": 5,
-        "importPath": "app.settings.config",
-        "description": "app.settings.config",
-        "peekOfCode": "ALGORITHM = \"HS256\"\nTOKEN_EXPIRATION_TIME_MINUTES = 15",
-        "detail": "app.settings.config",
-        "documentation": {}
-    },
-    {
-        "label": "TOKEN_EXPIRATION_TIME_MINUTES",
-        "kind": 5,
-        "importPath": "app.settings.config",
-        "description": "app.settings.config",
-        "peekOfCode": "TOKEN_EXPIRATION_TIME_MINUTES = 15",
-        "detail": "app.settings.config",
-        "documentation": {}
-    },
-    {
         "label": "generate_token",
         "kind": 2,
         "importPath": "app.utils.utils",
@@ -1239,48 +1205,75 @@
         "documentation": {}
     },
     {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "peekOfCode": "SECRET_KEY = os.getenv(\"SECRET_KEY\")\nALGORITHM = os.getenv(\"ALGORITHM\")\nTOKEN_EXPIRATION_TIME_MINUTES = int(os.getenv(\"TOKEN_EXPIRATION_TIME_MINUTES\"))\ndef generate_token(email):\n    # now + token lifespan\n    expiration_time = datetime.utcnow() + timedelta(minutes=TOKEN_EXPIRATION_TIME_MINUTES)\n    payload = {\n        \"sub\": email,\n        \"exp\": expiration_time,\n    }",
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "ALGORITHM",
+        "kind": 5,
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "peekOfCode": "ALGORITHM = os.getenv(\"ALGORITHM\")\nTOKEN_EXPIRATION_TIME_MINUTES = int(os.getenv(\"TOKEN_EXPIRATION_TIME_MINUTES\"))\ndef generate_token(email):\n    # now + token lifespan\n    expiration_time = datetime.utcnow() + timedelta(minutes=TOKEN_EXPIRATION_TIME_MINUTES)\n    payload = {\n        \"sub\": email,\n        \"exp\": expiration_time,\n    }\n    token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)",
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "TOKEN_EXPIRATION_TIME_MINUTES",
+        "kind": 5,
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "peekOfCode": "TOKEN_EXPIRATION_TIME_MINUTES = int(os.getenv(\"TOKEN_EXPIRATION_TIME_MINUTES\"))\ndef generate_token(email):\n    # now + token lifespan\n    expiration_time = datetime.utcnow() + timedelta(minutes=TOKEN_EXPIRATION_TIME_MINUTES)\n    payload = {\n        \"sub\": email,\n        \"exp\": expiration_time,\n    }\n    token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)\n    return token",
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
         "label": "startup_event",
         "kind": 2,
-        "importPath": "app.main",
-        "description": "app.main",
+        "importPath": "main",
+        "description": "main",
         "peekOfCode": "def startup_event():\n    prepare_database()\n@app.get(\"/employers\")\ndef get_employers():\n    with Session() as session:\n        return session.query(Employer).all()\n@app.get(\"/jobs\")\ndef get_employers():\n    with Session() as session:\n        return session.query(Job).all()",
-        "detail": "app.main",
+        "detail": "main",
         "documentation": {}
     },
     {
         "label": "get_employers",
         "kind": 2,
-        "importPath": "app.main",
-        "description": "app.main",
+        "importPath": "main",
+        "description": "main",
         "peekOfCode": "def get_employers():\n    with Session() as session:\n        return session.query(Employer).all()\n@app.get(\"/jobs\")\ndef get_employers():\n    with Session() as session:\n        return session.query(Job).all()\n# mount on graphql API\napp.mount(\"/graphql\", GraphQLApp(\n    schema=schema,",
-        "detail": "app.main",
+        "detail": "main",
         "documentation": {}
     },
     {
         "label": "get_employers",
         "kind": 2,
-        "importPath": "app.main",
-        "description": "app.main",
+        "importPath": "main",
+        "description": "main",
         "peekOfCode": "def get_employers():\n    with Session() as session:\n        return session.query(Job).all()\n# mount on graphql API\napp.mount(\"/graphql\", GraphQLApp(\n    schema=schema,\n    on_get=make_playground_handler()\n))\n# at this point we are exposing our graphql API at \"/graphql\" endpoint of out web application",
-        "detail": "app.main",
+        "detail": "main",
         "documentation": {}
     },
     {
         "label": "schema",
         "kind": 5,
-        "importPath": "app.main",
-        "description": "app.main",
+        "importPath": "main",
+        "description": "main",
         "peekOfCode": "schema = Schema(query=Query, mutation=Mutation)\napp = FastAPI()\n#Fast api provides some special decorators to let us hook into the\n#various application events, and one such event is startup, which is triggered\n#when the application, well literally starts up.\n@app.on_event(\"startup\")\ndef startup_event():\n    prepare_database()\n@app.get(\"/employers\")\ndef get_employers():",
-        "detail": "app.main",
+        "detail": "main",
         "documentation": {}
     },
     {
         "label": "app",
         "kind": 5,
-        "importPath": "app.main",
-        "description": "app.main",
+        "importPath": "main",
+        "description": "main",
         "peekOfCode": "app = FastAPI()\n#Fast api provides some special decorators to let us hook into the\n#various application events, and one such event is startup, which is triggered\n#when the application, well literally starts up.\n@app.on_event(\"startup\")\ndef startup_event():\n    prepare_database()\n@app.get(\"/employers\")\ndef get_employers():\n    with Session() as session:",
-        "detail": "app.main",
+        "detail": "main",
         "documentation": {}
     },
     {
