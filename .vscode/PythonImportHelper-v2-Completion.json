@@ -40,6 +40,14 @@
         "documentation": {}
     },
     {
+        "label": "Float",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "sessionmaker",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
@@ -105,6 +113,14 @@
     },
     {
         "label": "Job",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Post",
         "importPath": "app.db.models",
         "description": "app.db.models",
         "isExtraImport": true,
@@ -369,6 +385,54 @@
         "documentation": {}
     },
     {
+        "label": "Float",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Mutation",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Int",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Boolean",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
         "label": "ObjectType",
         "importPath": "graphene",
         "description": "graphene",
@@ -449,6 +513,14 @@
         "documentation": {}
     },
     {
+        "label": "Float",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
         "label": "Schema",
         "importPath": "graphene",
         "description": "graphene",
@@ -473,6 +545,14 @@
         "documentation": {}
     },
     {
+        "label": "PostObject",
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "isExtraImport": true,
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
         "label": "JobApplicationObject",
         "importPath": "app.gql.types",
         "description": "app.gql.types",
@@ -518,6 +598,22 @@
         "description": "app.gql.types",
         "isExtraImport": true,
         "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "PostObject",
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "isExtraImport": true,
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "app.db.database",
+        "description": "app.db.database",
+        "isExtraImport": true,
+        "detail": "app.db.database",
         "documentation": {}
     },
     {
@@ -574,6 +670,14 @@
         "description": "app.db.database",
         "isExtraImport": true,
         "detail": "app.db.database",
+        "documentation": {}
+    },
+    {
+        "label": "admin_user",
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "isExtraImport": true,
+        "detail": "app.utils.utils",
         "documentation": {}
     },
     {
@@ -694,6 +798,14 @@
         "description": "app.gql.job.mutations",
         "isExtraImport": true,
         "detail": "app.gql.job.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "AddPost",
+        "importPath": "app.gql.post.mutations",
+        "description": "app.gql.post.mutations",
+        "isExtraImport": true,
+        "detail": "app.gql.post.mutations",
         "documentation": {}
     },
     {
@@ -955,7 +1067,7 @@
         "kind": 6,
         "importPath": "app.db.models",
         "description": "app.db.models",
-        "peekOfCode": "class Employer(Base):\n    __tablename__ = \"employers\"\n    id = Column(Integer, primary_key=True, autoincrement=True) \n    # autoincrement=True so everytime a db insert happens the id auto increment without us needing to specify\n    name = Column(String)\n    contact_email = Column(String)\n    industry = Column(String) \n    jobs = relationship(\"Job\", back_populates=\"employer\", lazy=\"joined\")\nclass Job(Base):\n    __tablename__ = \"jobs\"",
+        "peekOfCode": "class Employer(Base):\n    __tablename__ = \"employers\"\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    # autoincrement=True so everytime a db insert happens the id auto increment without us needing to specify\n    name = Column(String)\n    contact_email = Column(String)\n    industry = Column(String)\n    jobs = relationship(\"Job\", back_populates=\"employer\", lazy=\"joined\")\nclass Job(Base):\n    __tablename__ = \"jobs\"",
         "detail": "app.db.models",
         "documentation": {}
     },
@@ -964,7 +1076,7 @@
         "kind": 6,
         "importPath": "app.db.models",
         "description": "app.db.models",
-        "peekOfCode": "class Job(Base):\n    __tablename__ = \"jobs\"\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    title = Column(String)\n    description = Column(String)\n    employer_id = Column(Integer, ForeignKey(\"employers.id\"))\n    employer = relationship(\"Employer\", back_populates=\"jobs\", lazy=\"joined\")\n    applications = relationship(\"JobApplication\", back_populates=\"job\", lazy=\"joined\")\nclass User(Base):\n    __tablename__ = 'users'",
+        "peekOfCode": "class Job(Base):\n    __tablename__ = \"jobs\"\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    title = Column(String)\n    description = Column(String)\n    employer_id = Column(Integer, ForeignKey(\"employers.id\"))\n    employer = relationship(\"Employer\", back_populates=\"jobs\", lazy=\"joined\")\n    applications = relationship(\n        \"JobApplication\", back_populates=\"job\", lazy=\"joined\")\nclass User(Base):",
         "detail": "app.db.models",
         "documentation": {}
     },
@@ -973,7 +1085,7 @@
         "kind": 6,
         "importPath": "app.db.models",
         "description": "app.db.models",
-        "peekOfCode": "class User(Base):\n    __tablename__ = 'users'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    username = Column(String)\n    email = Column(String)\n    password_hash = Column(String)\n    role = Column(String)\n    applications = relationship(\"JobApplication\", back_populates=\"user\", lazy=\"joined\")\nclass JobApplication(Base):\n    __tablename__ = 'job_applications'",
+        "peekOfCode": "class User(Base):\n    __tablename__ = 'users'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    username = Column(String)\n    email = Column(String)\n    password_hash = Column(String)\n    role = Column(String)\n    applications = relationship(\n        \"JobApplication\", back_populates=\"user\", lazy=\"joined\")\nclass JobApplication(Base):",
         "detail": "app.db.models",
         "documentation": {}
     },
@@ -982,7 +1094,43 @@
         "kind": 6,
         "importPath": "app.db.models",
         "description": "app.db.models",
-        "peekOfCode": "class JobApplication(Base):\n    __tablename__ = 'job_applications'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    job_id = Column(Integer, ForeignKey(\"jobs.id\"))\n    user = relationship(\"User\", back_populates=\"applications\", lazy=\"joined\")\n    job = relationship(\"Job\", back_populates=\"applications\", lazy=\"joined\")",
+        "peekOfCode": "class JobApplication(Base):\n    __tablename__ = 'job_applications'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    job_id = Column(Integer, ForeignKey(\"jobs.id\"))\n    user = relationship(\"User\", back_populates=\"applications\", lazy=\"joined\")\n    job = relationship(\"Job\", back_populates=\"applications\", lazy=\"joined\")\nclass Post(Base):\n    __tablename__ = 'posts'\n    id = Column(Integer, primary_key=True, autoincrement=True)",
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Post",
+        "kind": 6,
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "peekOfCode": "class Post(Base):\n    __tablename__ = 'posts'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    title = Column(String)\n    description = Column(String)\n    rating = Column(Float)\n    booking_count = Column(Integer)\n    # Connect the post to an employer using the company_id\n    company_id = Column(Integer, ForeignKey('employers.id'))\n    user_profile_id = Column(Integer)",
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Price",
+        "kind": 6,
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "peekOfCode": "class Price(Base):\n    __tablename__ = 'prices'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    post_id = Column(Integer, ForeignKey('posts.id'))\n    vehicle_type = Column(String)\n    price = Column(Float)\n    post = relationship(\"Post\", back_populates=\"prices\")\nclass Image(Base):\n    __tablename__ = 'images'\n    id = Column(Integer, primary_key=True, autoincrement=True)",
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "kind": 6,
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "peekOfCode": "class Image(Base):\n    __tablename__ = 'images'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    post_id = Column(Integer, ForeignKey('posts.id'))\n    image_url = Column(String)\n    post = relationship(\"Post\", back_populates=\"images\")\nclass Addon(Base):\n    __tablename__ = 'addons'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    post_id = Column(Integer, ForeignKey('posts.id'))",
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Addon",
+        "kind": 6,
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "peekOfCode": "class Addon(Base):\n    __tablename__ = 'addons'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    post_id = Column(Integer, ForeignKey('posts.id'))\n    name = Column(String)\n    description = Column(String)\n    price = Column(Float)\n    post = relationship(\"Post\", back_populates=\"addons\")",
         "detail": "app.db.models",
         "documentation": {}
     },
@@ -991,7 +1139,7 @@
         "kind": 5,
         "importPath": "app.db.models",
         "description": "app.db.models",
-        "peekOfCode": "Base = declarative_base()\n# lazy=\"joined\" it specifies SQLAlchemy that we want to load the relational attributes\n# meaning do not lazily evaluate the do not wait.\nclass Employer(Base):\n    __tablename__ = \"employers\"\n    id = Column(Integer, primary_key=True, autoincrement=True) \n    # autoincrement=True so everytime a db insert happens the id auto increment without us needing to specify\n    name = Column(String)\n    contact_email = Column(String)\n    industry = Column(String) ",
+        "peekOfCode": "Base = declarative_base()\n# lazy=\"joined\" it specifies SQLAlchemy that we want to load the relational attributes\n# meaning do not lazily evaluate the do not wait.\nclass Employer(Base):\n    __tablename__ = \"employers\"\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    # autoincrement=True so everytime a db insert happens the id auto increment without us needing to specify\n    name = Column(String)\n    contact_email = Column(String)\n    industry = Column(String)",
         "detail": "app.db.models",
         "documentation": {}
     },
@@ -1050,6 +1198,15 @@
         "documentation": {}
     },
     {
+        "label": "AddPost",
+        "kind": 6,
+        "importPath": "app.gql.post.mutations",
+        "description": "app.gql.post.mutations",
+        "peekOfCode": "class AddPost(Mutation):\n    class Arguments:\n        title = String(required=True)\n        description = String(required=True)\n        rating = Float(required=True)\n        booking_count = Int(required=True)\n    post = Field(lambda: PostObject)\n    @admin_user\n    def mutate(root, info, title, description, rating, booking_count):\n        post = Post(title=title, description=description,",
+        "detail": "app.gql.post.mutations",
+        "documentation": {}
+    },
+    {
         "label": "LoginUser",
         "kind": 6,
         "importPath": "app.gql.user.mutations",
@@ -1090,7 +1247,7 @@
         "kind": 6,
         "importPath": "app.gql.queries",
         "description": "app.gql.queries",
-        "peekOfCode": "class Query(ObjectType):\n    jobs = List(JobObject)\n    job = Field(JobObject, id=Int(required=True))\n    employers = List(EmployerObject)\n    employer = Field(EmployerObject, id=Int(required=True))\n    users = List(UserObject)\n    job_applications = List(JobApplicationObject)\n    def resolve_job_applications(root, info):\n        return Session().query(JobApplication).all()\n    def resolve_users(root, info):",
+        "peekOfCode": "class Query(ObjectType):\n    jobs = List(JobObject)\n    job = Field(JobObject, id=Int(required=True))\n    employers = List(EmployerObject)\n    employer = Field(EmployerObject, id=Int(required=True))\n    users = List(UserObject)\n    job_applications = List(JobApplicationObject)\n    post = Field(PostObject, id=Int(required=True))\n    def resolve_job_applications(root, info):\n        return Session().query(JobApplication).all()",
         "detail": "app.gql.queries",
         "documentation": {}
     },
@@ -1099,7 +1256,7 @@
         "kind": 6,
         "importPath": "app.gql.types",
         "description": "app.gql.types",
-        "peekOfCode": "class EmployerObject(ObjectType):\n    id = Int()\n    name = String()\n    contact_email = String()\n    industry = String()\n    jobs = List(lambda: JobObject) # \"lambda\" defer undefined class names\n    @staticmethod\n    def resolve_jobs(root, info):\n        return root.jobs\nclass JobObject(ObjectType):",
+        "peekOfCode": "class EmployerObject(ObjectType):\n    id = Int()\n    name = String()\n    contact_email = String()\n    industry = String()\n    jobs = List(lambda: JobObject)  # \"lambda\" defer undefined class names\n    @staticmethod\n    def resolve_jobs(root, info):\n        return root.jobs\nclass JobObject(ObjectType):",
         "detail": "app.gql.types",
         "documentation": {}
     },
@@ -1108,7 +1265,7 @@
         "kind": 6,
         "importPath": "app.gql.types",
         "description": "app.gql.types",
-        "peekOfCode": "class JobObject(ObjectType):\n    id = Int()\n    title = String()\n    description = String()\n    employer_id = Int()\n    employer = Field(lambda:EmployerObject) # a job is associated with a single employer\n    # The next() function is used to retrieve the next item from\n    # the iterable created by the generator expression. In this case, it will\n    # return the first employer that matches the condition.\n    applications = List(lambda: JobApplicationObject)",
+        "peekOfCode": "class JobObject(ObjectType):\n    id = Int()\n    title = String()\n    description = String()\n    employer_id = Int()\n    # a job is associated with a single employer\n    employer = Field(lambda: EmployerObject)\n    # The next() function is used to retrieve the next item from\n    # the iterable created by the generator expression. In this case, it will\n    # return the first employer that matches the condition.",
         "detail": "app.gql.types",
         "documentation": {}
     },
@@ -1127,6 +1284,42 @@
         "importPath": "app.gql.types",
         "description": "app.gql.types",
         "peekOfCode": "class JobApplicationObject(ObjectType):\n    id = Int()\n    user_id = Int()\n    job_id = Int()\n    user = Field(lambda: UserObject)\n    job = Field(lambda: JobObject)\n    @staticmethod\n    def resolve_user(root, info):\n        return root.user\n    @staticmethod",
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "PriceObject",
+        "kind": 6,
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "peekOfCode": "class PriceObject(ObjectType):\n    vehicle_type = String()\n    price = Float()\nclass ImageObject(ObjectType):\n    image_url = String()\nclass AddonObject(ObjectType):\n    name = String()\n    description = String()\n    price = Float()\nclass PostObject(ObjectType):",
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "ImageObject",
+        "kind": 6,
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "peekOfCode": "class ImageObject(ObjectType):\n    image_url = String()\nclass AddonObject(ObjectType):\n    name = String()\n    description = String()\n    price = Float()\nclass PostObject(ObjectType):\n    id = Int()\n    title = String()\n    description = String()",
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "AddonObject",
+        "kind": 6,
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "peekOfCode": "class AddonObject(ObjectType):\n    name = String()\n    description = String()\n    price = Float()\nclass PostObject(ObjectType):\n    id = Int()\n    title = String()\n    description = String()\n    rating = Float()\n    booking_count = Int()",
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "PostObject",
+        "kind": 6,
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "peekOfCode": "class PostObject(ObjectType):\n    id = Int()\n    title = String()\n    description = String()\n    rating = Float()\n    booking_count = Int()\n    company_id = Int()\n    user_profile_id = Int()\n    prices = List(lambda: PriceObject)\n    images = List(lambda: ImageObject)",
         "detail": "app.gql.types",
         "documentation": {}
     },
