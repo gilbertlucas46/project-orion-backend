@@ -14,9 +14,9 @@ app = FastAPI()
 #various application events, and one such event is startup, which is triggered
 #when the application, well literally starts up.
 
-# @app.on_event("startup")
-# def startup_event():
-#     prepare_database()
+@app.on_event("startup")
+def startup_event():
+    prepare_database()
     
 @app.get("/employers")
 def get_employers():
