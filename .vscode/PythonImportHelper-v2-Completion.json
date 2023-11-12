@@ -865,52 +865,7 @@
         "kind": 5,
         "importPath": "app.db.data",
         "description": "app.db.data",
-        "peekOfCode": "applications_data = [\n    {\"user_id\": 1, \"job_id\": 1},\n    {\"user_id\": 2, \"job_id\": 2},\n    {\"user_id\": 2, \"job_id\": 3},\n    {\"user_id\": 1, \"job_id\": 4}\n]\ncompanies = [\n    {\n        \"id\": 1,\n        \"name\": \"88 car wash\",",
-        "detail": "app.db.data",
-        "documentation": {}
-    },
-    {
-        "label": "companies",
-        "kind": 5,
-        "importPath": "app.db.data",
-        "description": "app.db.data",
-        "peekOfCode": "companies = [\n    {\n        \"id\": 1,\n        \"name\": \"88 car wash\",\n        \"about\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid veritatis animi numquam! Mollitia facere, excepturi dolor\",\n        \"logo\": \"https://cdn.worldvectorlogo.com/logos/lorem-lorem.svg\",\n        \"address\": \"Mandaluyong, Metro Manila, Philippines\"\n    }\n]\nvehicle_types = [",
-        "detail": "app.db.data",
-        "documentation": {}
-    },
-    {
-        "label": "vehicle_types",
-        "kind": 5,
-        "importPath": "app.db.data",
-        "description": "app.db.data",
-        "peekOfCode": "vehicle_types = [\n    {\"name\": \"sedan\"},\n    {\"name\": \"hatchback\"},\n    {\"name\": \"pickup\"},\n    {\"name\": \"suv\"},\n    {\"name\": \"van\"},\n    {\"name\": \"close van\"},\n    {\"name\": \"caravan\"},\n    {\"name\": \"motorcycle\"}\n]",
-        "detail": "app.db.data",
-        "documentation": {}
-    },
-    {
-        "label": "posts",
-        "kind": 5,
-        "importPath": "app.db.data",
-        "description": "app.db.data",
-        "peekOfCode": "posts = [\n    {\n        \"id\": 1,\n        \"title\": \"88 car wash\",\n        \"description\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid veritatis animi numquam! Mollitia facere, excepturi dolore, dicta ullam harum nemo autem ipsam reiciendis, a eligendi qui at maxime nihil ipsum!\",\n        \"rating\": 4.5,\n        \"booking_count\": 11,\n        \"company_id\": 1,  # Connect the post to a company using the company_id\n        \"user_profile_id\": 1, \n        \"prices\": [",
-        "detail": "app.db.data",
-        "documentation": {}
-    },
-    {
-        "label": "reviews",
-        "kind": 5,
-        "importPath": "app.db.data",
-        "description": "app.db.data",
-        "peekOfCode": "reviews = [\n    {\n        \"username\": \"Ronnel Anthony\",\n        \"message\": \"We had a very awesome stay in this place. The unit is complete with everything you need even first aid kit. The location is perfect, the room is equipped and clean. The host is very…\",\n        \"post_id\": 1,  # Connect the review to a post using the post_id\n    }\n]\nbookings = [\n    {\n        \"booking_id\": 1,",
-        "detail": "app.db.data",
-        "documentation": {}
-    },
-    {
-        "label": "bookings",
-        "kind": 5,
-        "importPath": "app.db.data",
-        "description": "app.db.data",
-        "peekOfCode": "bookings = [\n    {\n        \"booking_id\": 1,\n        \"post_id\": 1,\n        \"user_profile_id\": 1,  # Connect the booking to a user profile using the user_profile_id\n        \"user_name\": \"John Doe\",\n        \"booking_date\": \"2023-11-15\",\n        \"vehicle_type\": \"sedan\",\n        \"price\": 300.00,\n        \"status\": \"confirmed\",",
+        "peekOfCode": "applications_data = [\n    {\"user_id\": 1, \"job_id\": 1},\n    {\"user_id\": 2, \"job_id\": 2},\n    {\"user_id\": 2, \"job_id\": 3},\n    {\"user_id\": 1, \"job_id\": 4}\n]",
         "detail": "app.db.data",
         "documentation": {}
     },
@@ -928,7 +883,7 @@
         "kind": 5,
         "importPath": "app.db.database",
         "description": "app.db.database",
-        "peekOfCode": "DB_URL = os.getenv(\"DB_URL\")\nengine = create_engine(DB_URL, echo=False)\nSession = sessionmaker(bind=engine)\n# database helper\n# drops all the table if any exists\ndef prepare_database():\n    from app.utils.utils import hash_password\n    Base.metadata.drop_all(engine)\n    Base.metadata.create_all(engine)\n    session = Session()",
+        "peekOfCode": "DB_URL = os.getenv(\"DB_URL\")\nengine = create_engine(DB_URL, echo=True)\nSession = sessionmaker(bind=engine)\n# database helper\n# drops all the table if any exists\ndef prepare_database():\n    from app.utils.utils import hash_password\n    Base.metadata.drop_all(engine)\n    Base.metadata.create_all(engine)\n    session = Session()",
         "detail": "app.db.database",
         "documentation": {}
     },
@@ -937,7 +892,7 @@
         "kind": 5,
         "importPath": "app.db.database",
         "description": "app.db.database",
-        "peekOfCode": "engine = create_engine(DB_URL, echo=False)\nSession = sessionmaker(bind=engine)\n# database helper\n# drops all the table if any exists\ndef prepare_database():\n    from app.utils.utils import hash_password\n    Base.metadata.drop_all(engine)\n    Base.metadata.create_all(engine)\n    session = Session()\n    for employer in employers_data:",
+        "peekOfCode": "engine = create_engine(DB_URL, echo=True)\nSession = sessionmaker(bind=engine)\n# database helper\n# drops all the table if any exists\ndef prepare_database():\n    from app.utils.utils import hash_password\n    Base.metadata.drop_all(engine)\n    Base.metadata.create_all(engine)\n    session = Session()\n    for employer in employers_data:",
         "detail": "app.db.database",
         "documentation": {}
     },
@@ -1221,15 +1176,6 @@
         "documentation": {}
     },
     {
-        "label": "startup_event",
-        "kind": 2,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "def startup_event():\n    prepare_database()\n@app.get(\"/employers\")\ndef get_employers():\n    with Session() as session:\n        return session.query(Employer).all()\n@app.get(\"/jobs\")\ndef get_employers():\n    with Session() as session:\n        return session.query(Job).all()",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
         "label": "get_employers",
         "kind": 2,
         "importPath": "main",
@@ -1252,7 +1198,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "schema = Schema(query=Query, mutation=Mutation)\napp = FastAPI()\n#Fast api provides some special decorators to let us hook into the\n#various application events, and one such event is startup, which is triggered\n#when the application, well literally starts up.\n@app.on_event(\"startup\")\ndef startup_event():\n    prepare_database()\n@app.get(\"/employers\")\ndef get_employers():",
+        "peekOfCode": "schema = Schema(query=Query, mutation=Mutation)\napp = FastAPI()\n#Fast api provides some special decorators to let us hook into the\n#various application events, and one such event is startup, which is triggered\n#when the application, well literally starts up.\n# @app.on_event(\"startup\")\n# def startup_event():\n#     prepare_database()\n@app.get(\"/employers\")\ndef get_employers():",
         "detail": "main",
         "documentation": {}
     },
@@ -1261,7 +1207,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI()\n#Fast api provides some special decorators to let us hook into the\n#various application events, and one such event is startup, which is triggered\n#when the application, well literally starts up.\n@app.on_event(\"startup\")\ndef startup_event():\n    prepare_database()\n@app.get(\"/employers\")\ndef get_employers():\n    with Session() as session:",
+        "peekOfCode": "app = FastAPI()\n#Fast api provides some special decorators to let us hook into the\n#various application events, and one such event is startup, which is triggered\n#when the application, well literally starts up.\n# @app.on_event(\"startup\")\n# def startup_event():\n#     prepare_database()\n@app.get(\"/employers\")\ndef get_employers():\n    with Session() as session:",
         "detail": "main",
         "documentation": {}
     }

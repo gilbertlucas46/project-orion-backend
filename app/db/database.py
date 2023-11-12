@@ -10,7 +10,7 @@ import os
 load_dotenv()
 DB_URL = os.getenv("DB_URL")
 
-engine = create_engine(DB_URL, echo=False)
+engine = create_engine(DB_URL, echo=True)
 Session = sessionmaker(bind=engine)
 
 # database helper
