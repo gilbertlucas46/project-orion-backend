@@ -1,4 +1,5 @@
-from graphene import ObjectType, String, Int, List, Field, Float
+from graphene import ObjectType, String, Int, List, Field, Float, Enum
+from app.gql.enums import StatusGQLEnum
 
 
 class EmployerObject(ObjectType):
@@ -39,8 +40,13 @@ class UserObject(ObjectType):
     username = String()
     email = String()
     role = String()
-
+    status = StatusGQLEnum()
     applications = List(lambda: JobApplicationObject)
+
+    @staticmethod
+    def resolve_status(root, info):
+        # Check if 'status' exists; if not, return a default value
+        return root.status.value if root.status is not None else "PENDING"
 
     @staticmethod
     def resolve_applications(root, info):

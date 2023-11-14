@@ -1,6 +1,8 @@
+import graphene
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String, ForeignKey, Float
+from sqlalchemy import Column, Integer, String, ForeignKey, Float, Enum
 from sqlalchemy.orm import relationship
+from app.gql.enums import StatusEnum
 
 Base = declarative_base()
 
@@ -40,6 +42,7 @@ class User(Base):
     email = Column(String)
     password_hash = Column(String)
     role = Column(String)
+    status = Column(Enum(StatusEnum, name="status", nullable=True))
 
     applications = relationship(
         "JobApplication", back_populates="user", lazy="joined")

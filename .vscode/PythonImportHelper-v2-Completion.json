@@ -48,6 +48,14 @@
         "documentation": {}
     },
     {
+        "label": "Enum",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "sessionmaker",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
@@ -257,11 +265,12 @@
         "documentation": {}
     },
     {
-        "label": "declarative_base",
-        "importPath": "sqlalchemy.ext.declarative",
-        "description": "sqlalchemy.ext.declarative",
+        "label": "graphene",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "sqlalchemy.ext.declarative",
+        "importPath": "graphene",
+        "description": "graphene",
+        "detail": "graphene",
         "documentation": {}
     },
     {
@@ -514,6 +523,14 @@
     },
     {
         "label": "Float",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
         "importPath": "graphene",
         "description": "graphene",
         "isExtraImport": true,
@@ -526,6 +543,46 @@
         "description": "graphene",
         "isExtraImport": true,
         "detail": "graphene",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.ext.declarative",
+        "description": "sqlalchemy.ext.declarative",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "StatusEnum",
+        "importPath": "app.gql.enums",
+        "description": "app.gql.enums",
+        "isExtraImport": true,
+        "detail": "app.gql.enums",
+        "documentation": {}
+    },
+    {
+        "label": "StatusGQLEnum",
+        "importPath": "app.gql.enums",
+        "description": "app.gql.enums",
+        "isExtraImport": true,
+        "detail": "app.gql.enums",
+        "documentation": {}
+    },
+    {
+        "label": "StatusEnum",
+        "importPath": "app.gql.enums",
+        "description": "app.gql.enums",
+        "isExtraImport": true,
+        "detail": "app.gql.enums",
+        "documentation": {}
+    },
+    {
+        "label": "StatusGQLEnum",
+        "importPath": "app.gql.enums",
+        "description": "app.gql.enums",
+        "isExtraImport": true,
+        "detail": "app.gql.enums",
         "documentation": {}
     },
     {
@@ -777,6 +834,14 @@
         "documentation": {}
     },
     {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
         "label": "AddJob",
         "importPath": "app.gql.job.mutations",
         "description": "app.gql.job.mutations",
@@ -950,7 +1015,7 @@
         "kind": 5,
         "importPath": "app.db.data",
         "description": "app.db.data",
-        "peekOfCode": "employers_data = [\n    { \"name\": \"MetaTechA\", \"contact_email\": \"contact@company-a.com\", \"industry\": \"Tech\"},\n    { \"name\": \"MoneySoftB\", \"contact_email\": \"contact@company-b.com\", \"industry\": \"Finance\"},\n]\njobs_data = [\n    { \"title\": \"Software Engineer\", \"description\": \"Develop web applications\", \"employer_id\": 1},\n    { \"title\": \"Data Analyst\", \"description\": \"Analyze data and create reports\", \"employer_id\": 1},\n    { \"title\": \"Accountant II\", \"description\": \"Manage financial records\", \"employer_id\": 2},\n    { \"title\": \"Manager\", \"description\": \"Manage people who manage records\", \"employer_id\": 2},\n]",
+        "peekOfCode": "employers_data = [\n    {\"name\": \"MetaTechA\", \"contact_email\": \"contact@company-a.com\", \"industry\": \"Tech\"},\n    {\"name\": \"MoneySoftB\", \"contact_email\": \"contact@company-b.com\", \"industry\": \"Finance\"},\n]\njobs_data = [\n    {\"title\": \"Software Engineer\",\n        \"description\": \"Develop web applications\", \"employer_id\": 1},\n    {\"title\": \"Data Analyst\",\n        \"description\": \"Analyze data and create reports\", \"employer_id\": 1},\n    {\"title\": \"Accountant II\", \"description\": \"Manage financial records\", \"employer_id\": 2},",
         "detail": "app.db.data",
         "documentation": {}
     },
@@ -959,7 +1024,7 @@
         "kind": 5,
         "importPath": "app.db.data",
         "description": "app.db.data",
-        "peekOfCode": "jobs_data = [\n    { \"title\": \"Software Engineer\", \"description\": \"Develop web applications\", \"employer_id\": 1},\n    { \"title\": \"Data Analyst\", \"description\": \"Analyze data and create reports\", \"employer_id\": 1},\n    { \"title\": \"Accountant II\", \"description\": \"Manage financial records\", \"employer_id\": 2},\n    { \"title\": \"Manager\", \"description\": \"Manage people who manage records\", \"employer_id\": 2},\n]\nusers_data = [\n    {\"username\": \"mia\", \"email\": \"mia@email.com\", \"password\": \"password\", \"role\": \"admin\" },\n    {\"username\": \"gilbert\", \"email\": \"gilbert@email.com\", \"password\": \"password\", \"role\": \"admin\" },\n    {\"username\": \"willow\", \"email\": \"willow@email.com\", \"password\": \"password\", \"role\": \"admin\" }",
+        "peekOfCode": "jobs_data = [\n    {\"title\": \"Software Engineer\",\n        \"description\": \"Develop web applications\", \"employer_id\": 1},\n    {\"title\": \"Data Analyst\",\n        \"description\": \"Analyze data and create reports\", \"employer_id\": 1},\n    {\"title\": \"Accountant II\", \"description\": \"Manage financial records\", \"employer_id\": 2},\n    {\"title\": \"Manager\", \"description\": \"Manage people who manage records\", \"employer_id\": 2},\n]\nusers_data = [\n    {\"username\": \"mia\", \"email\": \"mia@email.com\",",
         "detail": "app.db.data",
         "documentation": {}
     },
@@ -968,7 +1033,7 @@
         "kind": 5,
         "importPath": "app.db.data",
         "description": "app.db.data",
-        "peekOfCode": "users_data = [\n    {\"username\": \"mia\", \"email\": \"mia@email.com\", \"password\": \"password\", \"role\": \"admin\" },\n    {\"username\": \"gilbert\", \"email\": \"gilbert@email.com\", \"password\": \"password\", \"role\": \"admin\" },\n    {\"username\": \"willow\", \"email\": \"willow@email.com\", \"password\": \"password\", \"role\": \"admin\" }\n]\napplications_data = [\n    {\"user_id\": 1, \"job_id\": 1},\n    {\"user_id\": 2, \"job_id\": 2},\n    {\"user_id\": 2, \"job_id\": 3},\n    {\"user_id\": 1, \"job_id\": 4}",
+        "peekOfCode": "users_data = [\n    {\"username\": \"mia\", \"email\": \"mia@email.com\",\n        \"password\": \"password\", \"role\": \"admin\"},\n    {\"username\": \"gilbert\", \"email\": \"gilbert@email.com\",\n        \"password\": \"password\", \"role\": \"admin\"},\n    {\"username\": \"willow\", \"email\": \"willow@email.com\",\n        \"password\": \"password\", \"role\": \"admin\"}\n]\napplications_data = [\n    {\"user_id\": 1, \"job_id\": 1},",
         "detail": "app.db.data",
         "documentation": {}
     },
@@ -1004,7 +1069,7 @@
         "kind": 5,
         "importPath": "app.db.data",
         "description": "app.db.data",
-        "peekOfCode": "posts = [\n    {\n        \"id\": 1,\n        \"title\": \"88 car wash\",\n        \"description\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid veritatis animi numquam! Mollitia facere, excepturi dolore, dicta ullam harum nemo autem ipsam reiciendis, a eligendi qui at maxime nihil ipsum!\",\n        \"rating\": 4.5,\n        \"booking_count\": 11,\n        \"company_id\": 1,  # Connect the post to a company using the company_id\n        \"user_profile_id\": 1, \n        \"prices\": [",
+        "peekOfCode": "posts = [\n    {\n        \"id\": 1,\n        \"title\": \"88 car wash\",\n        \"description\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid veritatis animi numquam! Mollitia facere, excepturi dolore, dicta ullam harum nemo autem ipsam reiciendis, a eligendi qui at maxime nihil ipsum!\",\n        \"rating\": 4.5,\n        \"booking_count\": 11,\n        \"company_id\": 1,  # Connect the post to a company using the company_id\n        \"user_profile_id\": 1,\n        \"prices\": [",
         "detail": "app.db.data",
         "documentation": {}
     },
@@ -1085,7 +1150,7 @@
         "kind": 6,
         "importPath": "app.db.models",
         "description": "app.db.models",
-        "peekOfCode": "class User(Base):\n    __tablename__ = 'users'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    username = Column(String)\n    email = Column(String)\n    password_hash = Column(String)\n    role = Column(String)\n    applications = relationship(\n        \"JobApplication\", back_populates=\"user\", lazy=\"joined\")\nclass JobApplication(Base):",
+        "peekOfCode": "class User(Base):\n    __tablename__ = 'users'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    username = Column(String)\n    email = Column(String)\n    password_hash = Column(String)\n    role = Column(String)\n    status = Column(Enum(StatusEnum, name=\"status\", nullable=True))\n    applications = relationship(\n        \"JobApplication\", back_populates=\"user\", lazy=\"joined\")",
         "detail": "app.db.models",
         "documentation": {}
     },
@@ -1220,7 +1285,7 @@
         "kind": 6,
         "importPath": "app.gql.user.mutations",
         "description": "app.gql.user.mutations",
-        "peekOfCode": "class AddUser(Mutation):\n    class Arguments:\n        username = String(required=True)\n        email = String(required=True)\n        password = String(required=True)\n        role = String(required=True)\n    user = Field(lambda: UserObject)\n    @staticmethod\n    def mutate(root, info, username, email, password, role):\n        if role == \"admin\":",
+        "peekOfCode": "class AddUser(Mutation):\n    class Arguments:\n        username = String(required=True)\n        email = String(required=True)\n        password = String(required=True)\n        role = String(required=True)\n        status = StatusGQLEnum()\n    user = Field(lambda: UserObject)\n    @staticmethod\n    def mutate(root, info, username, email, password, role, status):",
         "detail": "app.gql.user.mutations",
         "documentation": {}
     },
@@ -1231,6 +1296,24 @@
         "description": "app.gql.user.mutations",
         "peekOfCode": "class ApplyToJob(Mutation):\n    class Arguments:\n        user_id = Int(required=True)\n        job_id = Int(required=True)\n    # It returns a job application field\n    job_application = Field(lambda: JobApplicationObject)\n    @authd_user_same_as\n    def mutate(root, info, user_id, job_id):\n        session = Session()\n        # check first if the job already exist",
         "detail": "app.gql.user.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "StatusEnum",
+        "kind": 6,
+        "importPath": "app.gql.enums",
+        "description": "app.gql.enums",
+        "peekOfCode": "class StatusEnum(Enum):\n    PENDING = \"PENDING\"\n    VERIFIED = \"VERIFIED\"\n    DISABLED = \"DISABLED\"\nclass StatusGQLEnum(graphene.Enum):\n    PENDING = StatusEnum.PENDING.value\n    VERIFIED = StatusEnum.VERIFIED.value\n    DISABLED = StatusEnum.DISABLED.value",
+        "detail": "app.gql.enums",
+        "documentation": {}
+    },
+    {
+        "label": "StatusGQLEnum",
+        "kind": 6,
+        "importPath": "app.gql.enums",
+        "description": "app.gql.enums",
+        "peekOfCode": "class StatusGQLEnum(graphene.Enum):\n    PENDING = StatusEnum.PENDING.value\n    VERIFIED = StatusEnum.VERIFIED.value\n    DISABLED = StatusEnum.DISABLED.value",
+        "detail": "app.gql.enums",
         "documentation": {}
     },
     {
@@ -1274,7 +1357,7 @@
         "kind": 6,
         "importPath": "app.gql.types",
         "description": "app.gql.types",
-        "peekOfCode": "class UserObject(ObjectType):\n    id = Int()\n    username = String()\n    email = String()\n    role = String()\n    applications = List(lambda: JobApplicationObject)\n    @staticmethod\n    def resolve_applications(root, info):\n        return root.applications\nclass JobApplicationObject(ObjectType):",
+        "peekOfCode": "class UserObject(ObjectType):\n    id = Int()\n    username = String()\n    email = String()\n    role = String()\n    status = StatusGQLEnum()\n    applications = List(lambda: JobApplicationObject)\n    @staticmethod\n    def resolve_status(root, info):\n        # Check if 'status' exists; if not, return a default value",
         "detail": "app.gql.types",
         "documentation": {}
     },

@@ -1,20 +1,25 @@
 
 employers_data = [
-    { "name": "MetaTechA", "contact_email": "contact@company-a.com", "industry": "Tech"},
-    { "name": "MoneySoftB", "contact_email": "contact@company-b.com", "industry": "Finance"},
+    {"name": "MetaTechA", "contact_email": "contact@company-a.com", "industry": "Tech"},
+    {"name": "MoneySoftB", "contact_email": "contact@company-b.com", "industry": "Finance"},
 ]
 
 jobs_data = [
-    { "title": "Software Engineer", "description": "Develop web applications", "employer_id": 1},
-    { "title": "Data Analyst", "description": "Analyze data and create reports", "employer_id": 1},
-    { "title": "Accountant II", "description": "Manage financial records", "employer_id": 2},
-    { "title": "Manager", "description": "Manage people who manage records", "employer_id": 2},
+    {"title": "Software Engineer",
+        "description": "Develop web applications", "employer_id": 1},
+    {"title": "Data Analyst",
+        "description": "Analyze data and create reports", "employer_id": 1},
+    {"title": "Accountant II", "description": "Manage financial records", "employer_id": 2},
+    {"title": "Manager", "description": "Manage people who manage records", "employer_id": 2},
 ]
 
 users_data = [
-    {"username": "mia", "email": "mia@email.com", "password": "password", "role": "admin" },
-    {"username": "gilbert", "email": "gilbert@email.com", "password": "password", "role": "admin" },
-    {"username": "willow", "email": "willow@email.com", "password": "password", "role": "admin" }
+    {"username": "mia", "email": "mia@email.com",
+        "password": "password", "role": "admin"},
+    {"username": "gilbert", "email": "gilbert@email.com",
+        "password": "password", "role": "admin"},
+    {"username": "willow", "email": "willow@email.com",
+        "password": "password", "role": "admin"}
 ]
 
 applications_data = [
@@ -53,7 +58,7 @@ posts = [
         "rating": 4.5,
         "booking_count": 11,
         "company_id": 1,  # Connect the post to a company using the company_id
-        "user_profile_id": 1, 
+        "user_profile_id": 1,
         "prices": [
             {"vehicle_type": "sedan", "price": 300.00},
             {"vehicle_type": "hatchback", "price": 300.00},
