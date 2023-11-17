@@ -1,0 +1,17 @@
+# How to start local
+
+`uvicorn main:app --reload`
+
+# Creating a migration script
+
+`alembic revision --autogenerate -m "first initial"`
+
+# Run the Migration
+
+## Run to the most recent migration
+
+`alembic upgrade head`
+
+### Run to a specific version
+
+`alembic upgrade 5a5a17843e58`

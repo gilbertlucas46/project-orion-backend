@@ -44,11 +44,6 @@ class UserObject(ObjectType):
     applications = List(lambda: JobApplicationObject)
 
     @staticmethod
-    def resolve_status(root, info):
-        # Check if 'status' exists; if not, return a default value
-        return root.status.value if root.status is not None else "PENDING"
-
-    @staticmethod
     def resolve_applications(root, info):
         return root.applications
 

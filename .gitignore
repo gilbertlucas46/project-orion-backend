@@ -232,4 +232,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Migration verions
+alembic/versions/
+
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,python,windows

@@ -10,6 +10,9 @@ class StatusEnum(Enum):
 
 
 class StatusGQLEnum(graphene.Enum):
-    PENDING = StatusEnum.PENDING.value
-    VERIFIED = StatusEnum.VERIFIED.value
-    DISABLED = StatusEnum.DISABLED.value
+    class Meta:
+        name = "StatusEnum"
+
+    PENDING = StatusEnum.PENDING
+    VERIFIED = StatusEnum.VERIFIED
+    DISABLED = StatusEnum.DISABLED
