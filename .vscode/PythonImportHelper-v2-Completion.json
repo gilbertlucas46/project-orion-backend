@@ -1156,6 +1156,14 @@
         "documentation": {}
     },
     {
+        "label": "CORSMiddleware",
+        "importPath": "starlette.middleware.cors",
+        "description": "starlette.middleware.cors",
+        "isExtraImport": true,
+        "detail": "starlette.middleware.cors",
+        "documentation": {}
+    },
+    {
         "label": "GraphQLApp",
         "importPath": "starlette_graphene3",
         "description": "starlette_graphene3",
@@ -1741,7 +1749,7 @@
         "kind": 2,
         "importPath": "app.utils.utils",
         "description": "app.utils.utils",
-        "peekOfCode": "def generate_token(email):\n    # now + token lifespan\n    expiration_time = datetime.utcnow() + timedelta(minutes=TOKEN_EXPIRATION_TIME_MINUTES)\n    payload = {\n        \"sub\": email,\n        \"exp\": expiration_time,\n    }\n    token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)\n    return token\ndef get_authenticated_user(context):",
+        "peekOfCode": "def generate_token(email, user_id):\n    # now + token lifespan\n    expiration_time = datetime.utcnow() + timedelta(minutes=TOKEN_EXPIRATION_TIME_MINUTES)\n    payload = {\n        \"id\": user_id,\n        \"sub\": email,\n        \"exp\": expiration_time,\n    }\n    token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)\n    return token",
         "detail": "app.utils.utils",
         "documentation": {}
     },
@@ -1804,7 +1812,7 @@
         "kind": 5,
         "importPath": "app.utils.utils",
         "description": "app.utils.utils",
-        "peekOfCode": "SECRET_KEY = os.getenv(\"SECRET_KEY\")\nALGORITHM = os.getenv(\"ALGORITHM\")\nTOKEN_EXPIRATION_TIME_MINUTES = int(os.getenv(\"TOKEN_EXPIRATION_TIME_MINUTES\"))\ndef generate_token(email):\n    # now + token lifespan\n    expiration_time = datetime.utcnow() + timedelta(minutes=TOKEN_EXPIRATION_TIME_MINUTES)\n    payload = {\n        \"sub\": email,\n        \"exp\": expiration_time,\n    }",
+        "peekOfCode": "SECRET_KEY = os.getenv(\"SECRET_KEY\")\nALGORITHM = os.getenv(\"ALGORITHM\")\nTOKEN_EXPIRATION_TIME_MINUTES = int(os.getenv(\"TOKEN_EXPIRATION_TIME_MINUTES\"))\ndef generate_token(email, user_id):\n    # now + token lifespan\n    expiration_time = datetime.utcnow() + timedelta(minutes=TOKEN_EXPIRATION_TIME_MINUTES)\n    payload = {\n        \"id\": user_id,\n        \"sub\": email,\n        \"exp\": expiration_time,",
         "detail": "app.utils.utils",
         "documentation": {}
     },
@@ -1813,7 +1821,7 @@
         "kind": 5,
         "importPath": "app.utils.utils",
         "description": "app.utils.utils",
-        "peekOfCode": "ALGORITHM = os.getenv(\"ALGORITHM\")\nTOKEN_EXPIRATION_TIME_MINUTES = int(os.getenv(\"TOKEN_EXPIRATION_TIME_MINUTES\"))\ndef generate_token(email):\n    # now + token lifespan\n    expiration_time = datetime.utcnow() + timedelta(minutes=TOKEN_EXPIRATION_TIME_MINUTES)\n    payload = {\n        \"sub\": email,\n        \"exp\": expiration_time,\n    }\n    token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)",
+        "peekOfCode": "ALGORITHM = os.getenv(\"ALGORITHM\")\nTOKEN_EXPIRATION_TIME_MINUTES = int(os.getenv(\"TOKEN_EXPIRATION_TIME_MINUTES\"))\ndef generate_token(email, user_id):\n    # now + token lifespan\n    expiration_time = datetime.utcnow() + timedelta(minutes=TOKEN_EXPIRATION_TIME_MINUTES)\n    payload = {\n        \"id\": user_id,\n        \"sub\": email,\n        \"exp\": expiration_time,\n    }",
         "detail": "app.utils.utils",
         "documentation": {}
     },
@@ -1822,7 +1830,7 @@
         "kind": 5,
         "importPath": "app.utils.utils",
         "description": "app.utils.utils",
-        "peekOfCode": "TOKEN_EXPIRATION_TIME_MINUTES = int(os.getenv(\"TOKEN_EXPIRATION_TIME_MINUTES\"))\ndef generate_token(email):\n    # now + token lifespan\n    expiration_time = datetime.utcnow() + timedelta(minutes=TOKEN_EXPIRATION_TIME_MINUTES)\n    payload = {\n        \"sub\": email,\n        \"exp\": expiration_time,\n    }\n    token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)\n    return token",
+        "peekOfCode": "TOKEN_EXPIRATION_TIME_MINUTES = int(os.getenv(\"TOKEN_EXPIRATION_TIME_MINUTES\"))\ndef generate_token(email, user_id):\n    # now + token lifespan\n    expiration_time = datetime.utcnow() + timedelta(minutes=TOKEN_EXPIRATION_TIME_MINUTES)\n    payload = {\n        \"id\": user_id,\n        \"sub\": email,\n        \"exp\": expiration_time,\n    }\n    token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)",
         "detail": "app.utils.utils",
         "documentation": {}
     },
@@ -1831,25 +1839,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def startup_event():\n    prepare_database()\n@app.get(\"/employers\")\ndef get_employers():\n    with Session() as session:\n        return session.query(Employer).all()\n@app.get(\"/jobs\")\ndef get_employers():\n    with Session() as session:\n        return session.query(Job).all()",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "get_employers",
-        "kind": 2,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "def get_employers():\n    with Session() as session:\n        return session.query(Employer).all()\n@app.get(\"/jobs\")\ndef get_employers():\n    with Session() as session:\n        return session.query(Job).all()\n# mount on graphql API\napp.mount(\"/graphql\", GraphQLApp(\n    schema=schema,",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "get_employers",
-        "kind": 2,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "def get_employers():\n    with Session() as session:\n        return session.query(Job).all()\n# mount on graphql API\napp.mount(\"/graphql\", GraphQLApp(\n    schema=schema,\n    on_get=make_playground_handler()\n))\n# at this point we are exposing our graphql API at \"/graphql\" endpoint of out web application",
+        "peekOfCode": "def startup_event():\n    prepare_database()\n# CORS middleware settings\norigins = [\n    \"http://localhost\",    # Adjust the allowed origins as needed\n    \"http://localhost:3000\",\n]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,",
         "detail": "main",
         "documentation": {}
     },
@@ -1858,7 +1848,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "schema = Schema(query=Query, mutation=Mutation)\napp = FastAPI()\n#Fast api provides some special decorators to let us hook into the\n#various application events, and one such event is startup, which is triggered\n#when the application, well literally starts up.\n@app.on_event(\"startup\")\ndef startup_event():\n    prepare_database()\n@app.get(\"/employers\")\ndef get_employers():",
+        "peekOfCode": "schema = Schema(query=Query, mutation=Mutation)\napp = FastAPI()\n# FastAPI provides some special decorators to let us hook into the\n# various application events, and one such event is startup, which is triggered\n# when the application, well literally starts up.\n@app.on_event(\"startup\")\ndef startup_event():\n    prepare_database()\n# CORS middleware settings\norigins = [",
         "detail": "main",
         "documentation": {}
     },
@@ -1867,7 +1857,16 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI()\n#Fast api provides some special decorators to let us hook into the\n#various application events, and one such event is startup, which is triggered\n#when the application, well literally starts up.\n@app.on_event(\"startup\")\ndef startup_event():\n    prepare_database()\n@app.get(\"/employers\")\ndef get_employers():\n    with Session() as session:",
+        "peekOfCode": "app = FastAPI()\n# FastAPI provides some special decorators to let us hook into the\n# various application events, and one such event is startup, which is triggered\n# when the application, well literally starts up.\n@app.on_event(\"startup\")\ndef startup_event():\n    prepare_database()\n# CORS middleware settings\norigins = [\n    \"http://localhost\",    # Adjust the allowed origins as needed",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "origins",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "origins = [\n    \"http://localhost\",    # Adjust the allowed origins as needed\n    \"http://localhost:3000\",\n]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,\n    allow_credentials=True,\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],",
         "detail": "main",
         "documentation": {}
     }

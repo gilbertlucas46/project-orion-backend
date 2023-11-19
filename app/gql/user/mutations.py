@@ -26,7 +26,7 @@ class LoginUser(Mutation):
 
         verify_password(user.password_hash, password)
 
-        token = generate_token(email)
+        token = generate_token(email, user.id)
 
         return LoginUser(token=token)
 

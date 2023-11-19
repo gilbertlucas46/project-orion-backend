@@ -18,18 +18,21 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = os.getenv("ALGORITHM")
 TOKEN_EXPIRATION_TIME_MINUTES = int(os.getenv("TOKEN_EXPIRATION_TIME_MINUTES"))
 
-def generate_token(email):
+
+def generate_token(email, user_id):
     # now + token lifespan
     expiration_time = datetime.utcnow() + timedelta(minutes=TOKEN_EXPIRATION_TIME_MINUTES)
     payload = {
+        "id": user_id,
         "sub": email,
         "exp": expiration_time,
-        
+
     }
-    
+
     token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)
-    
+
     return token
+
 
 def get_authenticated_user(context):
     # On every request that our graphql server receives
@@ -54,7 +57,8 @@ def get_authenticated_user(context):
                 raise GraphQLError("Token has expired")
 
             session = Session()
-            user = session.query(User).filter(User.email == payload.get('sub')).first()
+            user = session.query(User).filter(
+                User.email == payload.get('sub')).first()
 
             if not user:
                 raise GraphQLError("Could not authenticate user")
@@ -67,9 +71,11 @@ def get_authenticated_user(context):
     else:
         raise GraphQLError("Missing authentication token")
 
+
 def hash_password(pwd):
     ph = PasswordHasher()
     return ph.hash(pwd)
+
 
 def verify_password(pwd_hash, pwd):
     ph = PasswordHasher()
@@ -93,27 +99,28 @@ def admin_user(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
         # /single asterisk(positional) double asterisk keyword arguments respectively
-        
+
         # we need to get access to the context
         # which is always second in our mutate function
         info = args[1]
         # get a handle on the authenticated user
         user = get_authenticated_user(info.context)
         print(info.context)
-        
+
         # check whether the user has a role of admin
         if user.role != "admin":
             raise GraphQLError("You are not authorized to perform this action")
-        
+
         # 1.If they are and admin proceed to the rest of the logic
         # 2.Return the invocation of the wrapped function with *args, **kwargs
         # because we dont know in advance what they will be called with
         return func(*args, **kwargs)
-        
+
         # when we return the ❌wrapper() ✅wrapper we do not want to invoke it
         # we simple want to return the wrapped function with the checks
         # that its doing & delegating the invocation of that function
     return wrapper
+
 
 def authd_user(func):
     @wraps(func)
@@ -121,8 +128,9 @@ def authd_user(func):
         info = args[1]
         get_authenticated_user(info.context)
         return func(*args, **kwargs)
-        
+
     return wrapper
+
 
 def authd_user_same_as(func):
     @wraps(func)
@@ -134,7 +142,7 @@ def authd_user_same_as(func):
 
         if user.id != uid:
             raise GraphQLError("You are not authorized to perform this action")
-        
+
         return func(*args, **kwargs)
-        
-    return wrapper 
+
+    return wrapper
