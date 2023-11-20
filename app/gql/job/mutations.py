@@ -4,6 +4,7 @@ from app.db.database import Session
 from app.db.models import Job
 from app.utils.utils import admin_user
 
+
 class AddJob(Mutation):
     class Arguments:
         title = String(required=True)
@@ -59,16 +60,16 @@ class DeleteJob(Mutation):
     class Arguments:
         id = Int(required=True)
 
-    success =  Boolean()
-    
-    @admin_user 
+    success = Boolean()
+
+    @admin_user
     def mutate(root, info, id):
         session = Session()
         job = session.query(Job).filter(Job.id == id).first()
-        
+
         if not job:
             raise Exception("Job not found")
-        
+
         session.delete(job)
         session.commit()
         session.close()

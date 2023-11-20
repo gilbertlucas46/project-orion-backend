@@ -2,6 +2,7 @@ from graphene import ObjectType, List, Field, Int
 from app.gql.types import JobObject, EmployerObject, UserObject, JobApplicationObject, PostObject
 from app.db.database import Session
 from app.db.models import Job, Employer, User, JobApplication
+from app.utils.utils import admin_user
 
 
 class Query(ObjectType):
@@ -16,6 +17,7 @@ class Query(ObjectType):
     def resolve_job_applications(root, info):
         return Session().query(JobApplication).all()
 
+    @admin_user
     def resolve_users(root, info):
         return Session().query(User).all()
 

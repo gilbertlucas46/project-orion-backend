@@ -979,6 +979,14 @@
         "documentation": {}
     },
     {
+        "label": "admin_user",
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "isExtraImport": true,
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
         "label": "GraphQLError",
         "importPath": "graphql",
         "description": "graphql",
@@ -1371,7 +1379,7 @@
         "kind": 5,
         "importPath": "app.db.data",
         "description": "app.db.data",
-        "peekOfCode": "users_data = [\n    {\"username\": \"mia\", \"email\": \"mia@email.com\",\n        \"password\": \"password\", \"role\": \"admin\"},\n    {\"username\": \"gilbert\", \"email\": \"gilbert@email.com\",\n        \"password\": \"password\", \"role\": \"admin\"},\n    {\"username\": \"willow\", \"email\": \"willow@email.com\",\n        \"password\": \"password\", \"role\": \"admin\"}\n]\napplications_data = [\n    {\"user_id\": 1, \"job_id\": 1},",
+        "peekOfCode": "users_data = [\n    {\"username\": \"mia\", \"email\": \"mia@email.com\",\n        \"password\": \"password\", \"role\": \"user\"},\n    {\"username\": \"gilbert\", \"email\": \"gilbert@email.com\",\n        \"password\": \"password\", \"role\": \"admin\"},\n    {\"username\": \"willow\", \"email\": \"willow@email.com\",\n        \"password\": \"password\", \"role\": \"user\"}\n]\napplications_data = [\n    {\"user_id\": 1, \"job_id\": 1},",
         "detail": "app.db.data",
         "documentation": {}
     },
@@ -1596,7 +1604,7 @@
         "kind": 6,
         "importPath": "app.gql.job.mutations",
         "description": "app.gql.job.mutations",
-        "peekOfCode": "class DeleteJob(Mutation):\n    class Arguments:\n        id = Int(required=True)\n    success =  Boolean()\n    @admin_user \n    def mutate(root, info, id):\n        session = Session()\n        job = session.query(Job).filter(Job.id == id).first()\n        if not job:\n            raise Exception(\"Job not found\")",
+        "peekOfCode": "class DeleteJob(Mutation):\n    class Arguments:\n        id = Int(required=True)\n    success = Boolean()\n    @admin_user\n    def mutate(root, info, id):\n        session = Session()\n        job = session.query(Job).filter(Job.id == id).first()\n        if not job:\n            raise Exception(\"Job not found\")",
         "detail": "app.gql.job.mutations",
         "documentation": {}
     },
