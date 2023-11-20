@@ -987,6 +987,14 @@
         "documentation": {}
     },
     {
+        "label": "get_authenticated_user",
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "isExtraImport": true,
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
         "label": "GraphQLError",
         "importPath": "graphql",
         "description": "graphql",
@@ -1676,7 +1684,7 @@
         "kind": 6,
         "importPath": "app.gql.queries",
         "description": "app.gql.queries",
-        "peekOfCode": "class Query(ObjectType):\n    jobs = List(JobObject)\n    job = Field(JobObject, id=Int(required=True))\n    employers = List(EmployerObject)\n    employer = Field(EmployerObject, id=Int(required=True))\n    users = List(UserObject)\n    job_applications = List(JobApplicationObject)\n    post = Field(PostObject, id=Int(required=True))\n    def resolve_job_applications(root, info):\n        return Session().query(JobApplication).all()",
+        "peekOfCode": "class Query(ObjectType):\n    jobs = List(JobObject)\n    job = Field(JobObject, id=Int(required=True))\n    employers = List(EmployerObject)\n    employer = Field(EmployerObject, id=Int(required=True))\n    users = List(UserObject)\n    job_applications = List(JobApplicationObject)\n    post = Field(PostObject, id=Int(required=True))\n    me = Field(UserObject)\n    def resolve_job_applications(root, info):",
         "detail": "app.gql.queries",
         "documentation": {}
     },
