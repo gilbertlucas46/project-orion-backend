@@ -346,6 +346,14 @@
         "documentation": {}
     },
     {
+        "label": "User",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
         "label": "Employer",
         "importPath": "app.db.models",
         "description": "app.db.models",
@@ -715,6 +723,14 @@
         "documentation": {}
     },
     {
+        "label": "Union",
+        "importPath": "graphene",
+        "description": "graphene",
+        "isExtraImport": true,
+        "detail": "graphene",
+        "documentation": {}
+    },
+    {
         "label": "Schema",
         "importPath": "graphene",
         "description": "graphene",
@@ -836,6 +852,14 @@
     },
     {
         "label": "PostObject",
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "isExtraImport": true,
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "AuthenticatedItemUnion",
         "importPath": "app.gql.types",
         "description": "app.gql.types",
         "isExtraImport": true,
@@ -1684,7 +1708,7 @@
         "kind": 6,
         "importPath": "app.gql.queries",
         "description": "app.gql.queries",
-        "peekOfCode": "class Query(ObjectType):\n    jobs = List(JobObject)\n    job = Field(JobObject, id=Int(required=True))\n    employers = List(EmployerObject)\n    employer = Field(EmployerObject, id=Int(required=True))\n    users = List(UserObject)\n    job_applications = List(JobApplicationObject)\n    post = Field(PostObject, id=Int(required=True))\n    me = Field(UserObject)\n    def resolve_job_applications(root, info):",
+        "peekOfCode": "class Query(ObjectType):\n    jobs = List(JobObject)\n    job = Field(JobObject, id=Int(required=True))\n    employers = List(EmployerObject)\n    employer = Field(EmployerObject, id=Int(required=True))\n    users = List(UserObject)\n    job_applications = List(JobApplicationObject)\n    post = Field(PostObject, id=Int(required=True))\n    authenticated_item = Field(AuthenticatedItemUnion)\n    me = Field(UserObject)",
         "detail": "app.gql.queries",
         "documentation": {}
     },
@@ -1712,6 +1736,15 @@
         "importPath": "app.gql.types",
         "description": "app.gql.types",
         "peekOfCode": "class UserObject(ObjectType):\n    id = Int()\n    username = String()\n    email = String()\n    role = String()\n    status = StatusGQLEnum()\n    applications = List(lambda: JobApplicationObject)\n    @staticmethod\n    def resolve_applications(root, info):\n        return root.applications",
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "AuthenticatedItemUnion",
+        "kind": 6,
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "peekOfCode": "class AuthenticatedItemUnion(Union):\n    class Meta:\n        types = (UserObject, )\n    @staticmethod\n    def resolve_type(instance, info):\n        if isinstance(instance, User):\n            return UserObject\n        # Add other types as needed\n        raise Exception('Unknown type')\nclass JobApplicationObject(ObjectType):",
         "detail": "app.gql.types",
         "documentation": {}
     },

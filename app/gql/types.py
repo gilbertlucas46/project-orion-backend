@@ -1,4 +1,5 @@
-from graphene import ObjectType, String, Int, List, Field, Float, Enum
+from graphene import ObjectType, String, Int, List, Field, Float, Enum, Union
+from app.db.models import User
 from app.gql.enums import StatusGQLEnum
 
 
@@ -46,6 +47,19 @@ class UserObject(ObjectType):
     @staticmethod
     def resolve_applications(root, info):
         return root.applications
+
+
+class AuthenticatedItemUnion(Union):
+    class Meta:
+        types = (UserObject, )
+
+    @staticmethod
+    def resolve_type(instance, info):
+        if isinstance(instance, User):
+            return UserObject
+        # Add other types as needed
+
+        raise Exception('Unknown type')
 
 
 class JobApplicationObject(ObjectType):
