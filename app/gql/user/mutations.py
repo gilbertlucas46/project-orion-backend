@@ -34,6 +34,7 @@ class LoginUser(Mutation):
 class AddUser(Mutation):
     class Arguments:
         username = String(required=True)
+        name = String(required=True)
         email = String(required=True)
         password = String(required=True)
         role = String(required=True)
@@ -42,7 +43,7 @@ class AddUser(Mutation):
     user = Field(lambda: UserObject)
 
     @staticmethod
-    def mutate(root, info, username, email, password, role, status):
+    def mutate(root, info, username, name, email, password, role, status):
         if role == "admin":
             current_user = get_authenticated_user(info.context)
             if current_user.role != "admin":
@@ -55,7 +56,7 @@ class AddUser(Mutation):
             raise GraphQLError("A user with this email already exists.")
 
         password_hash = hash_password(password)
-        user = User(username=username, email=email,
+        user = User(username=username, name=name, email=email,
                     password_hash=password_hash, role=role, status=status)
         session.add(user)
         session.commit()

@@ -38,6 +38,7 @@ class JobObject(ObjectType):
 
 class UserObject(ObjectType):
     id = Int()
+    name = String()
     username = String()
     email = String()
     role = String()
@@ -51,7 +52,7 @@ class UserObject(ObjectType):
 
 class AuthenticatedItemUnion(Union):
     class Meta:
-        types = (UserObject, )
+        types = (UserObject,)
 
     @staticmethod
     def resolve_type(instance, info):
