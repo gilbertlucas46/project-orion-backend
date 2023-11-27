@@ -1,6 +1,6 @@
 from graphene import ObjectType, String, Int, List, Field, Float, Enum, Union
 from app.db.models import User
-from app.gql.enums import StatusGQLEnum
+from app.gql.enums import RoleGQLEnum, StatusGQLEnum
 
 
 class EmployerObject(ObjectType):
@@ -41,7 +41,7 @@ class UserObject(ObjectType):
     name = String()
     username = String()
     email = String()
-    role = String()
+    role = Field(RoleGQLEnum)
     status = Field(StatusGQLEnum)
     applications = List(lambda: JobApplicationObject)
 

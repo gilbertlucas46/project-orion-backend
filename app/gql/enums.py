@@ -16,3 +16,20 @@ class StatusGQLEnum(graphene.Enum):
     PENDING = StatusEnum.PENDING
     VERIFIED = StatusEnum.VERIFIED
     DISABLED = StatusEnum.DISABLED
+
+
+class RoleEnum(Enum):
+    USER = "USER"
+    SERVICE_PROVIDER = "SERVICE_PROVIDER"
+    ADMIN = "ADMIN"
+    EDITOR = "EDITOR"
+
+
+class RoleGQLEnum(graphene.Enum):
+    class Meta:
+        name = "RoleEnum"
+
+    USER = RoleEnum.USER
+    SERVICE_PROVIDER = RoleEnum.SERVICE_PROVIDER
+    ADMIN = RoleEnum.ADMIN
+    EDITOR = RoleEnum.EDITOR
