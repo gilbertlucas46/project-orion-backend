@@ -16,9 +16,9 @@ app = FastAPI()
 # when the application, well literally starts up.
 
 
-@app.on_event("startup")
-def startup_event():
-    prepare_database()
+# @app.on_event("startup")
+# def startup_event():
+#     prepare_database()
 
 
 # CORS middleware settings

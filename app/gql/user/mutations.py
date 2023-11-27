@@ -38,7 +38,7 @@ class AddUser(Mutation):
         email = String(required=True)
         password = String(required=True)
         role = String(required=True)
-        status = StatusGQLEnum()
+        status = StatusGQLEnum(default_value=StatusEnum.PENDING)
 
     user = Field(lambda: UserObject)
 

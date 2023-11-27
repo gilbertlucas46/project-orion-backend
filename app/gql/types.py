@@ -42,7 +42,7 @@ class UserObject(ObjectType):
     username = String()
     email = String()
     role = String()
-    status = StatusGQLEnum()
+    status = Field(StatusGQLEnum)
     applications = List(lambda: JobApplicationObject)
 
     @staticmethod
