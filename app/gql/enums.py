@@ -18,18 +18,18 @@ class StatusGQLEnum(graphene.Enum):
     DISABLED = StatusEnum.DISABLED
 
 
-class RoleEnum(Enum):
+class AccountRoleEnum(Enum):
     USER = "USER"
     SERVICE_PROVIDER = "SERVICE_PROVIDER"
     ADMIN = "ADMIN"
     EDITOR = "EDITOR"
 
 
-class RoleGQLEnum(graphene.Enum):
+class AccountRoleGQLEnum(graphene.Enum):
     class Meta:
-        name = "RoleEnum"
+        name = "AccountRoleEnum"
 
-    USER = RoleEnum.USER
-    SERVICE_PROVIDER = RoleEnum.SERVICE_PROVIDER
-    ADMIN = RoleEnum.ADMIN
-    EDITOR = RoleEnum.EDITOR
+    USER = AccountRoleEnum.USER
+    SERVICE_PROVIDER = AccountRoleEnum.SERVICE_PROVIDER
+    ADMIN = AccountRoleEnum.ADMIN
+    EDITOR = AccountRoleEnum.EDITOR

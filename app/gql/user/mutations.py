@@ -6,7 +6,7 @@ from argon2.exceptions import VerifyMismatchError
 from app.utils.utils import authd_user, authd_user_same_as, generate_token, verify_password
 from app.gql.types import JobApplicationObject, UserObject
 from app.utils.utils import hash_password, get_authenticated_user
-from app.gql.enums import RoleEnum, RoleGQLEnum, StatusEnum, StatusGQLEnum
+from app.gql.enums import AccountRoleEnum, AccountRoleGQLEnum, StatusEnum, StatusGQLEnum
 
 
 class LoginUser(Mutation):
@@ -34,10 +34,10 @@ class LoginUser(Mutation):
 class AddUser(Mutation):
     class Arguments:
         username = String(required=True)
-        name = String(required=True)
+        name = String()
         email = String(required=True)
         password = String(required=True)
-        role = RoleGQLEnum(default_value=RoleEnum.USER)
+        role = AccountRoleGQLEnum(default_value=AccountRoleEnum.USER)
         status = StatusGQLEnum(default_value=StatusEnum.PENDING)
 
     user = Field(lambda: UserObject)

@@ -2,7 +2,7 @@ import graphene
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, ForeignKey, Float, Enum
 from sqlalchemy.orm import relationship
-from app.gql.enums import RoleEnum, StatusEnum
+from app.gql.enums import AccountRoleEnum, StatusEnum
 
 Base = declarative_base()
 
@@ -42,7 +42,8 @@ class User(Base):
     username = Column(String)
     email = Column(String)
     password_hash = Column(String)
-    role = Column(Enum(RoleEnum))
+    role = Column(Enum(AccountRoleEnum),
+                  default=AccountRoleEnum.USER, nullable=False)
     # use the Enum type directly from SQLAlchemy and set nullable=False instead of
     # nullable=True to ensure that the status column is not nullable since we set a default value
     status = Column(Enum(StatusEnum),

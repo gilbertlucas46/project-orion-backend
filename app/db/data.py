@@ -15,11 +15,11 @@ jobs_data = [
 
 users_data = [
     {"username": "mia", "email": "mia@email.com",
-        "password": "password", "role": "user"},
+        "password": "password"},
     {"username": "gilbert", "email": "gilbert@email.com",
-        "password": "password", "role": "admin"},
+        "password": "password"},
     {"username": "willow", "email": "willow@email.com",
-        "password": "password", "role": "user"}
+        "password": "password"}
 ]
 
 applications_data = [
