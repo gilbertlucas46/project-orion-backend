@@ -38,7 +38,6 @@ class User(Base):
     __tablename__ = 'users'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    name = Column(String)
     username = Column(String)
     email = Column(String)
     password_hash = Column(String)
@@ -48,7 +47,12 @@ class User(Base):
     # nullable=True to ensure that the status column is not nullable since we set a default value
     status = Column(Enum(StatusEnum),
                     default=StatusEnum.PENDING, nullable=False)
-
+    companyName = Column(String)
+    firstName = Column(String)
+    lastName = Column(String)
+    facebookLink = Column(String)
+    address = Column(String)
+    phoneNumber = Column(String)
     applications = relationship(
         "JobApplication", back_populates="user", lazy="joined")
 

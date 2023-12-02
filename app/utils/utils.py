@@ -146,3 +146,18 @@ def authd_user_same_as(func):
         return func(*args, **kwargs)
 
     return wrapper
+
+
+def authd_user_same_as_id(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        info = args[1]
+        user = get_authenticated_user(info.context)
+        user_id = kwargs.get("id")
+
+        if user.id != user_id:
+            raise GraphQLError("You are not authorized to perform this action")
+
+        return func(*args, **kwargs)
+
+    return wrapper

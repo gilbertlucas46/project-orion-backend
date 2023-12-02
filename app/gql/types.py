@@ -38,11 +38,16 @@ class JobObject(ObjectType):
 
 class UserObject(ObjectType):
     id = Int()
-    name = String()
     username = String()
     email = String()
     role = Field(AccountRoleGQLEnum)
     status = Field(StatusGQLEnum)
+    companyName = String()
+    firstName = String()
+    lastName = String()
+    facebookLink = String()
+    address = String()
+    phoneNumber = String()
     applications = List(lambda: JobApplicationObject)
 
     @staticmethod

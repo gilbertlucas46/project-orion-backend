@@ -1,9 +1,14 @@
+from app.gql.types import UserObject  # Import your UserObject type
+from app.db.models import User
+# Make sure to import the Session from your database module
+from app.db.database import Session
 from graphene import Mutation, String, Int, Field, Boolean
 from graphql import GraphQLError
 from app.db.database import Session
 from app.db.models import JobApplication, User
 from argon2.exceptions import VerifyMismatchError
-from app.utils.utils import authd_user, authd_user_same_as, generate_token, verify_password
+from app.utils.utils import (authd_user_same_as, authd_user_same_as_id, generate_token,
+                             verify_password)
 from app.gql.types import JobApplicationObject, UserObject
 from app.utils.utils import hash_password, get_authenticated_user
 from app.gql.enums import AccountRoleEnum, AccountRoleGQLEnum, StatusEnum, StatusGQLEnum
@@ -34,7 +39,6 @@ class LoginUser(Mutation):
 class AddUser(Mutation):
     class Arguments:
         username = String(required=True)
-        name = String()
         email = String(required=True)
         password = String(required=True)
         role = AccountRoleGQLEnum(default_value=AccountRoleEnum.USER)
@@ -62,6 +66,52 @@ class AddUser(Mutation):
         session.commit()
         session.refresh(user)
         return AddUser(user=user)
+
+
+class UpdateUser(Mutation):
+    class Arguments:
+        id = Int(required=True)
+        companyName = String()
+        email = String()
+        firstName = String()
+        lastName = String()
+        facebookLink = String()
+        address = String()
+        phoneNumber = String()
+
+    user = Field(lambda: UserObject)
+
+    @authd_user_same_as_id
+    def mutate(root, info, id, companyName,
+               email,
+               firstName,
+               lastName,
+               facebookLink,
+               address,
+               phoneNumber):
+
+        session = Session()
+
+        # Retrieve the user from the database based on the provided id
+        user = session.query(User).filter(User.id == id).first()
+
+        # Check if the user exists
+        if user:
+            # Update user attributes
+            user.companyName = companyName or user.companyName
+            user.email = email or user.email
+            user.firstName = firstName or user.firstName
+            user.lastName = lastName or user.lastName
+            user.facebookLink = facebookLink or user.facebookLink
+            user.address = address or user.address
+            user.phoneNumber = phoneNumber or user.phoneNumber
+
+            session.commit()
+            session.refresh(user)
+
+            return UpdateUser(user=user)
+        else:
+            raise GraphQLError("User not found")
 
 
 class ApplyToJob(Mutation):
