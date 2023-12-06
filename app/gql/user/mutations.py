@@ -78,6 +78,7 @@ class UpdateUser(Mutation):
         facebookLink = String()
         address = String()
         phoneNumber = String()
+        identificationImage = String()
 
     user = Field(lambda: UserObject)
 
@@ -88,7 +89,8 @@ class UpdateUser(Mutation):
                lastName,
                facebookLink,
                address,
-               phoneNumber):
+               phoneNumber,
+               identificationImage):
 
         session = Session()
 
@@ -105,6 +107,7 @@ class UpdateUser(Mutation):
             user.facebookLink = facebookLink or user.facebookLink
             user.address = address or user.address
             user.phoneNumber = phoneNumber or user.phoneNumber
+            user.identificationImage = identificationImage or user.identificationImage
 
             session.commit()
             session.refresh(user)

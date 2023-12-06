@@ -48,6 +48,7 @@ class UserObject(ObjectType):
     facebookLink = String()
     address = String()
     phoneNumber = String()
+    identificationImage = String()
     applications = List(lambda: JobApplicationObject)
 
     @staticmethod

@@ -53,6 +53,7 @@ class User(Base):
     facebookLink = Column(String)
     address = Column(String)
     phoneNumber = Column(String)
+    identificationImage = Column(String)
     applications = relationship(
         "JobApplication", back_populates="user", lazy="joined")
 
