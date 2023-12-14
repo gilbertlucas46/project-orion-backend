@@ -54,6 +54,7 @@ class User(Base):
     address = Column(String)
     phoneNumber = Column(String)
     identificationImage = Column(String)
+    companyLogoUrl = Column(String)
     applications = relationship(
         "JobApplication", back_populates="user", lazy="joined")
 

@@ -1,6 +1,7 @@
 from graphene import ObjectType, String, Int, List, Field, Float, Enum, Union
 from app.db.models import User
 from app.gql.enums import AccountRoleGQLEnum, StatusGQLEnum
+import sqlalchemy
 
 
 class EmployerObject(ObjectType):
@@ -49,6 +50,7 @@ class UserObject(ObjectType):
     address = String()
     phoneNumber = String()
     identificationImage = String()
+    companyLogoUrl = String()
     applications = List(lambda: JobApplicationObject)
 
     @staticmethod

@@ -12,6 +12,7 @@ from app.utils.utils import (authd_user_same_as, authd_user_same_as_id, generate
 from app.gql.types import JobApplicationObject, UserObject
 from app.utils.utils import hash_password, get_authenticated_user
 from app.gql.enums import AccountRoleEnum, AccountRoleGQLEnum, StatusEnum, StatusGQLEnum
+import sqlalchemy
 
 
 class LoginUser(Mutation):
@@ -79,6 +80,7 @@ class UpdateUser(Mutation):
         address = String()
         phoneNumber = String()
         identificationImage = String()
+        companyLogoUrl = String()
 
     user = Field(lambda: UserObject)
 
@@ -90,7 +92,8 @@ class UpdateUser(Mutation):
                facebookLink,
                address,
                phoneNumber,
-               identificationImage):
+               identificationImage,
+               companyLogoUrl):
 
         session = Session()
 
@@ -108,6 +111,7 @@ class UpdateUser(Mutation):
             user.address = address or user.address
             user.phoneNumber = phoneNumber or user.phoneNumber
             user.identificationImage = identificationImage or user.identificationImage
+            user.companyLogoUrl = companyLogoUrl or user.companyLogoUrl
 
             session.commit()
             session.refresh(user)
