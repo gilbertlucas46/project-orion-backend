@@ -57,6 +57,8 @@ class User(Base):
     companyLogoUrl = Column(String)
     applications = relationship(
         "JobApplication", back_populates="user", lazy="joined")
+    posts = relationship(
+        "Post", back_populates="user", lazy="joined")
 
 
 class JobApplication(Base):
@@ -74,21 +76,22 @@ class Post(Base):
     __tablename__ = 'posts'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
+    user_id = Column(Integer, ForeignKey("users.id"))
     title = Column(String)
     description = Column(String)
     rating = Column(Float)
     booking_count = Column(Integer)
+
+    user = relationship("User", back_populates="posts", lazy="joined")
     # Connect the post to an employer using the company_id
-    company_id = Column(Integer, ForeignKey('employers.id'))
-    user_profile_id = Column(Integer)
 
     # Define a one-to-many relationship with prices
     prices = relationship("Price", back_populates="post")
 
-    # Define a one-to-many relationship with images
+    # # Define a one-to-many relationship with images
     images = relationship("Image", back_populates="post")
 
-    # Define a one-to-many relationship with addons
+    # # Define a one-to-many relationship with addons
     addons = relationship("Addon", back_populates="post")
 
 

@@ -256,6 +256,126 @@
         "documentation": {}
     },
     {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
         "label": "op",
         "importPath": "alembic",
         "description": "alembic",
@@ -546,6 +666,14 @@
         "documentation": {}
     },
     {
+        "label": "User",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
         "label": "Post",
         "importPath": "app.db.models",
         "description": "app.db.models",
@@ -715,6 +843,14 @@
     },
     {
         "label": "applications_data",
+        "importPath": "app.db.data",
+        "description": "app.db.data",
+        "isExtraImport": true,
+        "detail": "app.db.data",
+        "documentation": {}
+    },
+    {
+        "label": "bookings",
         "importPath": "app.db.data",
         "description": "app.db.data",
         "isExtraImport": true,
@@ -1115,6 +1251,14 @@
         "documentation": {}
     },
     {
+        "label": "UserObject",
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "isExtraImport": true,
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
         "label": "JobApplicationObject",
         "importPath": "app.gql.types",
         "description": "app.gql.types",
@@ -1267,7 +1411,15 @@
         "documentation": {}
     },
     {
-        "label": "admin_user",
+        "label": "authd_user_same_as",
+        "importPath": "app.utils.utils",
+        "description": "app.utils.utils",
+        "isExtraImport": true,
+        "detail": "app.utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "authd_user_same_as_id",
         "importPath": "app.utils.utils",
         "description": "app.utils.utils",
         "isExtraImport": true,
@@ -1602,6 +1754,24 @@
     {
         "label": "upgrade",
         "kind": 2,
+        "importPath": "alembic.versions.29becc6d9b90_added_add_post",
+        "description": "alembic.versions.29becc6d9b90_added_add_post",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
+        "detail": "alembic.versions.29becc6d9b90_added_add_post",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.29becc6d9b90_added_add_post",
+        "description": "alembic.versions.29becc6d9b90_added_add_post",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
+        "detail": "alembic.versions.29becc6d9b90_added_add_post",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
         "importPath": "alembic.versions.2c1b4b2a399a_set_default_status2",
         "description": "alembic.versions.2c1b4b2a399a_set_default_status2",
         "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
@@ -1687,6 +1857,42 @@
         "description": "alembic.versions.59e1ec0b2a53_set_default_status",
         "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
         "detail": "alembic.versions.59e1ec0b2a53_set_default_status",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.6976b55e1cf0_added_add_post",
+        "description": "alembic.versions.6976b55e1cf0_added_add_post",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('posts', sa.Column('user_id', sa.Integer(), nullable=True))\n    op.drop_constraint('posts_company_id_fkey', 'posts', type_='foreignkey')\n    op.create_foreign_key(None, 'posts', 'users', ['user_id'], ['id'])\n    op.drop_column('posts', 'company_id')\n    op.drop_column('posts', 'user_profile_id')\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###",
+        "detail": "alembic.versions.6976b55e1cf0_added_add_post",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.6976b55e1cf0_added_add_post",
+        "description": "alembic.versions.6976b55e1cf0_added_add_post",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('posts', sa.Column('user_profile_id', sa.INTEGER(), autoincrement=False, nullable=True))\n    op.add_column('posts', sa.Column('company_id', sa.INTEGER(), autoincrement=False, nullable=True))\n    op.drop_constraint(None, 'posts', type_='foreignkey')\n    op.create_foreign_key('posts_company_id_fkey', 'posts', 'employers', ['company_id'], ['id'])\n    op.drop_column('posts', 'user_id')\n    # ### end Alembic commands ###",
+        "detail": "alembic.versions.6976b55e1cf0_added_add_post",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.6c54407c2080_added_add_post",
+        "description": "alembic.versions.6c54407c2080_added_add_post",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
+        "detail": "alembic.versions.6c54407c2080_added_add_post",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.6c54407c2080_added_add_post",
+        "description": "alembic.versions.6c54407c2080_added_add_post",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
+        "detail": "alembic.versions.6c54407c2080_added_add_post",
         "documentation": {}
     },
     {
@@ -1813,6 +2019,42 @@
         "description": "alembic.versions.b71384bd82de_first_added_company_url",
         "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('users', 'companyLogoUrl')\n    # ### end Alembic commands ###",
         "detail": "alembic.versions.b71384bd82de_first_added_company_url",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.b799c3a1e103_added_add_post",
+        "description": "alembic.versions.b799c3a1e103_added_add_post",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
+        "detail": "alembic.versions.b799c3a1e103_added_add_post",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.b799c3a1e103_added_add_post",
+        "description": "alembic.versions.b799c3a1e103_added_add_post",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
+        "detail": "alembic.versions.b799c3a1e103_added_add_post",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.c4e92d335b32_added_add_post",
+        "description": "alembic.versions.c4e92d335b32_added_add_post",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
+        "detail": "alembic.versions.c4e92d335b32_added_add_post",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.c4e92d335b32_added_add_post",
+        "description": "alembic.versions.c4e92d335b32_added_add_post",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
+        "detail": "alembic.versions.c4e92d335b32_added_add_post",
         "documentation": {}
     },
     {
@@ -1973,7 +2215,7 @@
         "kind": 5,
         "importPath": "app.db.data",
         "description": "app.db.data",
-        "peekOfCode": "posts = [\n    {\n        \"id\": 1,\n        \"title\": \"88 car wash\",\n        \"description\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid veritatis animi numquam! Mollitia facere, excepturi dolore, dicta ullam harum nemo autem ipsam reiciendis, a eligendi qui at maxime nihil ipsum!\",\n        \"rating\": 4.5,\n        \"booking_count\": 11,\n        \"company_id\": 1,  # Connect the post to a company using the company_id\n        \"user_profile_id\": 1,\n        \"prices\": [",
+        "peekOfCode": "posts = [\n    {\n        \"id\": 1,\n        \"title\": \"88 car wash\",\n        \"description\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid veritatis animi numquam! Mollitia facere, excepturi dolore, dicta ullam harum nemo autem ipsam reiciendis, a eligendi qui at maxime nihil ipsum!\",\n        \"rating\": 4.5,\n        \"booking_count\": 11,\n        \"company_id\": 1,  # Connect the post to a company using the company_id\n        \"user_profile_id\": 1,\n        # \"prices\": [",
         "detail": "app.db.data",
         "documentation": {}
     },
@@ -2072,7 +2314,7 @@
         "kind": 6,
         "importPath": "app.db.models",
         "description": "app.db.models",
-        "peekOfCode": "class Post(Base):\n    __tablename__ = 'posts'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    title = Column(String)\n    description = Column(String)\n    rating = Column(Float)\n    booking_count = Column(Integer)\n    # Connect the post to an employer using the company_id\n    company_id = Column(Integer, ForeignKey('employers.id'))\n    user_profile_id = Column(Integer)",
+        "peekOfCode": "class Post(Base):\n    __tablename__ = 'posts'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    title = Column(String)\n    description = Column(String)\n    rating = Column(Float)\n    booking_count = Column(Integer)\n    user = relationship(\"User\", back_populates=\"posts\", lazy=\"joined\")\n    # Connect the post to an employer using the company_id",
         "detail": "app.db.models",
         "documentation": {}
     },
@@ -2171,7 +2413,7 @@
         "kind": 6,
         "importPath": "app.gql.post.mutations",
         "description": "app.gql.post.mutations",
-        "peekOfCode": "class AddPost(Mutation):\n    class Arguments:\n        title = String(required=True)\n        description = String(required=True)\n        rating = Float(required=True)\n        booking_count = Int(required=True)\n    post = Field(lambda: PostObject)\n    @admin_user\n    def mutate(root, info, title, description, rating, booking_count):\n        post = Post(title=title, description=description,",
+        "peekOfCode": "class AddPost(Mutation):\n    class Arguments:\n        user_id = Int(required=True)\n        title = String()\n        description = String()\n        rating = Float()\n        booking_count = Int()\n    post = Field(lambda: PostObject)\n    @authd_user_same_as\n    def mutate(root, info, user_id, title, description, rating, booking_count):",
         "detail": "app.gql.post.mutations",
         "documentation": {}
     },
@@ -2324,7 +2566,7 @@
         "kind": 6,
         "importPath": "app.gql.types",
         "description": "app.gql.types",
-        "peekOfCode": "class ImageObject(ObjectType):\n    image_url = String()\nclass AddonObject(ObjectType):\n    name = String()\n    description = String()\n    price = Float()\nclass PostObject(ObjectType):\n    id = Int()\n    title = String()\n    description = String()",
+        "peekOfCode": "class ImageObject(ObjectType):\n    image_url = String()\nclass AddonObject(ObjectType):\n    name = String()\n    description = String()\n    price = Float()\nclass PostObject(ObjectType):\n    user_id = Int()\n    id = Int()\n    title = String()",
         "detail": "app.gql.types",
         "documentation": {}
     },
@@ -2333,7 +2575,7 @@
         "kind": 6,
         "importPath": "app.gql.types",
         "description": "app.gql.types",
-        "peekOfCode": "class AddonObject(ObjectType):\n    name = String()\n    description = String()\n    price = Float()\nclass PostObject(ObjectType):\n    id = Int()\n    title = String()\n    description = String()\n    rating = Float()\n    booking_count = Int()",
+        "peekOfCode": "class AddonObject(ObjectType):\n    name = String()\n    description = String()\n    price = Float()\nclass PostObject(ObjectType):\n    user_id = Int()\n    id = Int()\n    title = String()\n    description = String()\n    rating = Float()",
         "detail": "app.gql.types",
         "documentation": {}
     },
@@ -2342,7 +2584,7 @@
         "kind": 6,
         "importPath": "app.gql.types",
         "description": "app.gql.types",
-        "peekOfCode": "class PostObject(ObjectType):\n    id = Int()\n    title = String()\n    description = String()\n    rating = Float()\n    booking_count = Int()\n    company_id = Int()\n    user_profile_id = Int()\n    prices = List(lambda: PriceObject)\n    images = List(lambda: ImageObject)",
+        "peekOfCode": "class PostObject(ObjectType):\n    user_id = Int()\n    id = Int()\n    title = String()\n    description = String()\n    rating = Float()\n    booking_count = Int()",
         "detail": "app.gql.types",
         "documentation": {}
     },

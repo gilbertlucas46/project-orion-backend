@@ -52,6 +52,7 @@ class UserObject(ObjectType):
     identificationImage = String()
     companyLogoUrl = String()
     applications = List(lambda: JobApplicationObject)
+    posts = List(lambda: PostObject)
 
     @staticmethod
     def resolve_applications(root, info):
@@ -103,25 +104,9 @@ class AddonObject(ObjectType):
 
 
 class PostObject(ObjectType):
+    user_id = Int()
     id = Int()
     title = String()
     description = String()
     rating = Float()
     booking_count = Int()
-    company_id = Int()
-    user_profile_id = Int()
-    prices = List(lambda: PriceObject)
-    images = List(lambda: ImageObject)
-    addons = List(lambda: AddonObject)
-
-    @staticmethod
-    def resolve_prices(root, info):
-        return root.prices
-
-    @staticmethod
-    def resolve_images(root, info):
-        return root.images
-
-    @staticmethod
-    def resolve_addons(root, info):
-        return root.addons

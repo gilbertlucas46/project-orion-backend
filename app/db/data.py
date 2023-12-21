@@ -59,29 +59,29 @@ posts = [
         "booking_count": 11,
         "company_id": 1,  # Connect the post to a company using the company_id
         "user_profile_id": 1,
-        "prices": [
-            {"vehicle_type": "sedan", "price": 300.00},
-            {"vehicle_type": "hatchback", "price": 300.00},
-            {"vehicle_type": "suv", "price": 300.00},
-            {"vehicle_type": "van", "price": 300.00},
-            {"vehicle_type": "close van", "price": 300.00},
-            {"vehicle_type": "caravan", "price": 300.00},
-            {"vehicle_type": "motorcycle", "price": 300.00},
-        ],
-        "images": [
-            {"image_url": "https://fastly.picsum.photos/id/334/536/354.jpg?hmac=Fqr45rgKed7wdrBcTfry45TVJTcjO1smvFBhSRsaeqY"},
-            {"image_url": "https://fastly.picsum.photos/id/334/536/354.jpg?hmac=Fqr45rgKed7wdrBcTfry45TVJTcjO1smvFBhSRsaeqY"},
-            {"image_url": "https://fastly.picsum.photos/id/334/536/354.jpg?hmac=Fqr45rgKed7wdrBcTfry45TVJTcjO1smvFBhSRsaeqY"},
-            {"image_url": "https://fastly.picsum.photos/id/334/536/354.jpg?hmac=Fqr45rgKed7wdrBcTfry45TVJTcjO1smvFBhSRsaeqY"},
-            {"image_url": "https://fastly.picsum.photos/id/334/536/354.jpg?hmac=Fqr45rgKed7wdrBcTfry45TVJTcjO1smvFBhSRsaeqY"},
-        ],
-        "addons": [
-            {
-                "name": "Sealer Hand Wax",
-                "description": "Lorem ipsum",
-                "price": 300.00
-            },
-        ],
+        # "prices": [
+        #     {"vehicle_type": "sedan", "price": 300.00},
+        #     {"vehicle_type": "hatchback", "price": 300.00},
+        #     {"vehicle_type": "suv", "price": 300.00},
+        #     {"vehicle_type": "van", "price": 300.00},
+        #     {"vehicle_type": "close van", "price": 300.00},
+        #     {"vehicle_type": "caravan", "price": 300.00},
+        #     {"vehicle_type": "motorcycle", "price": 300.00},
+        # ],
+        # "images": [
+        #     {"image_url": "https://fastly.picsum.photos/id/334/536/354.jpg?hmac=Fqr45rgKed7wdrBcTfry45TVJTcjO1smvFBhSRsaeqY"},
+        #     {"image_url": "https://fastly.picsum.photos/id/334/536/354.jpg?hmac=Fqr45rgKed7wdrBcTfry45TVJTcjO1smvFBhSRsaeqY"},
+        #     {"image_url": "https://fastly.picsum.photos/id/334/536/354.jpg?hmac=Fqr45rgKed7wdrBcTfry45TVJTcjO1smvFBhSRsaeqY"},
+        #     {"image_url": "https://fastly.picsum.photos/id/334/536/354.jpg?hmac=Fqr45rgKed7wdrBcTfry45TVJTcjO1smvFBhSRsaeqY"},
+        #     {"image_url": "https://fastly.picsum.photos/id/334/536/354.jpg?hmac=Fqr45rgKed7wdrBcTfry45TVJTcjO1smvFBhSRsaeqY"},
+        # ],
+        # "addons": [
+        #     {
+        #         "name": "Sealer Hand Wax",
+        #         "description": "Lorem ipsum",
+        #         "price": 300.00
+        #     },
+        # ],
     }
 ]
 
