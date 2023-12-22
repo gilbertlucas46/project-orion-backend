@@ -1,7 +1,7 @@
 from graphene import ObjectType, List, Field, Int
 from app.gql.types import JobObject, EmployerObject, UserObject, JobApplicationObject, PostObject, AuthenticatedItemUnion
 from app.db.database import Session
-from app.db.models import Job, Employer, User, JobApplication
+from app.db.models import Employer, Job, JobApplication, Post, User
 from app.utils.utils import admin_user, get_authenticated_user
 
 
@@ -12,6 +12,7 @@ class Query(ObjectType):
     employer = Field(EmployerObject, id=Int(required=True))
     users = List(UserObject)
     job_applications = List(JobApplicationObject)
+    posts = List(PostObject)
     post = Field(PostObject, id=Int(required=True))
     authenticated_item = Field(AuthenticatedItemUnion)
     me = Field(UserObject)
@@ -34,6 +35,10 @@ class Query(ObjectType):
     @staticmethod
     def resolve_jobs(root, info):
         return Session().query(Job).all()
+
+    @staticmethod
+    def resolve_posts(root, info):
+        return Session().query(Post).all()
 
     @staticmethod
     def resolve_employers(root, info):

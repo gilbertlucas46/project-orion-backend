@@ -1,4 +1,4 @@
-from graphene import ObjectType, String, Int, List, Field, Float, Enum, Union
+from graphene import ObjectType, String, Int, List, Field, Float, Enum, Union, InputObjectType
 from app.db.models import User
 from app.gql.enums import AccountRoleGQLEnum, StatusGQLEnum
 import sqlalchemy
@@ -88,16 +88,16 @@ class JobApplicationObject(ObjectType):
         return root.job
 
 
-class PriceObject(ObjectType):
+class PriceObject(InputObjectType):
     vehicle_type = String()
     price = Float()
 
 
-class ImageObject(ObjectType):
+class ImageObject(InputObjectType):
     image_url = String()
 
 
-class AddonObject(ObjectType):
+class AddonObject(InputObjectType):
     name = String()
     description = String()
     price = Float()

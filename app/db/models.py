@@ -83,15 +83,8 @@ class Post(Base):
     booking_count = Column(Integer)
 
     user = relationship("User", back_populates="posts", lazy="joined")
-    # Connect the post to an employer using the company_id
-
-    # Define a one-to-many relationship with prices
     prices = relationship("Price", back_populates="post")
-
-    # # Define a one-to-many relationship with images
     images = relationship("Image", back_populates="post")
-
-    # # Define a one-to-many relationship with addons
     addons = relationship("Addon", back_populates="post")
 
 
