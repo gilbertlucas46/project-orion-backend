@@ -89,12 +89,12 @@ class JobApplicationObject(ObjectType):
 
 
 class PriceObject(InputObjectType):
-    vehicle_type = String()
+    vehicleType = String()
     price = Float()
 
 
 class ImageObject(InputObjectType):
-    image_url = String()
+    imageUrl = String()
 
 
 class AddonObject(InputObjectType):
@@ -104,7 +104,7 @@ class AddonObject(InputObjectType):
 
 
 class PostObject(ObjectType):
-    user_id = Int()
+    userId = Int()
     id = Int()
     title = String()
     description = String()

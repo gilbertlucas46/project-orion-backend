@@ -13,9 +13,9 @@ class AddPost(Mutation):
         description = String()
         rating = Float()
         booking_count = Int()
-        prices = List(PriceObject)  # Assuming you have an input type for Price
+        prices = List(PriceObject)
         images = List(ImageObject)
-        addons = List(AddonObject)  # Assuming you have an input type for Addon
+        addons = List(AddonObject)
 
     post = Field(lambda: PostObject)
 
@@ -31,10 +31,10 @@ class AddPost(Mutation):
 
         for price in prices:
             post.prices.append(
-                Price(vehicle_type=price.vehicle_type, price=price.price))
+                Price(vehicleType=price.vehicleType, price=price.price))
 
         for image in images:
-            post.images.append(Image(image_url=image.image_url))
+            post.images.append(Image(imageUrl=image.imageUrl))
 
         for addon in addons:
             post.addons.append(

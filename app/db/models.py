@@ -93,7 +93,7 @@ class Price(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     post_id = Column(Integer, ForeignKey('posts.id'))
-    vehicle_type = Column(String)
+    vehicleType = Column(String)
     price = Column(Float)
 
     post = relationship("Post", back_populates="prices")
@@ -104,7 +104,7 @@ class Image(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     post_id = Column(Integer, ForeignKey('posts.id'))
-    image_url = Column(String)
+    imageUrl = Column(String)
 
     post = relationship("Post", back_populates="images")
 
