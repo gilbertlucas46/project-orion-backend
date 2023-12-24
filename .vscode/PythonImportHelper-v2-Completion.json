@@ -843,6 +843,14 @@
         "documentation": {}
     },
     {
+        "label": "ServiceTypeGQLEnum",
+        "importPath": "app.gql.enums",
+        "description": "app.gql.enums",
+        "isExtraImport": true,
+        "detail": "app.gql.enums",
+        "documentation": {}
+    },
+    {
         "label": "StatusGQLEnum",
         "importPath": "app.gql.enums",
         "description": "app.gql.enums",
@@ -1900,7 +1908,7 @@
         "kind": 6,
         "importPath": "app.gql.types",
         "description": "app.gql.types",
-        "peekOfCode": "class ImageObject(InputObjectType):\n    imageUrl = String()\nclass AddonObject(InputObjectType):\n    name = String()\n    description = String()\n    price = Float()\nclass PostObject(ObjectType):\n    userId = Int()\n    id = Int()\n    title = String()",
+        "peekOfCode": "class ImageObject(InputObjectType):\n    imageUrl = String()\nclass AddonObject(InputObjectType):\n    name = String()\n    description = String()\n    price = Float()\nclass PostObject(ObjectType):\n    user_id = Int()\n    id = Int()\n    serviceType = Field(ServiceTypeGQLEnum)",
         "detail": "app.gql.types",
         "documentation": {}
     },
@@ -1909,7 +1917,7 @@
         "kind": 6,
         "importPath": "app.gql.types",
         "description": "app.gql.types",
-        "peekOfCode": "class AddonObject(InputObjectType):\n    name = String()\n    description = String()\n    price = Float()\nclass PostObject(ObjectType):\n    userId = Int()\n    id = Int()\n    title = String()\n    description = String()\n    rating = Float()",
+        "peekOfCode": "class AddonObject(InputObjectType):\n    name = String()\n    description = String()\n    price = Float()\nclass PostObject(ObjectType):\n    user_id = Int()\n    id = Int()\n    serviceType = Field(ServiceTypeGQLEnum)\n    description = String()\n    rating = Float()",
         "detail": "app.gql.types",
         "documentation": {}
     },
@@ -1918,7 +1926,7 @@
         "kind": 6,
         "importPath": "app.gql.types",
         "description": "app.gql.types",
-        "peekOfCode": "class PostObject(ObjectType):\n    userId = Int()\n    id = Int()\n    title = String()\n    description = String()\n    rating = Float()\n    booking_count = Int()",
+        "peekOfCode": "class PostObject(ObjectType):\n    user_id = Int()\n    id = Int()\n    serviceType = Field(ServiceTypeGQLEnum)\n    description = String()\n    rating = Float()\n    booking_count = Int()",
         "detail": "app.gql.types",
         "documentation": {}
     },

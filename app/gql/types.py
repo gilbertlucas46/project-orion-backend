@@ -1,6 +1,6 @@
 from graphene import ObjectType, String, Int, List, Field, Float, Enum, Union, InputObjectType
 from app.db.models import User
-from app.gql.enums import AccountRoleGQLEnum, StatusGQLEnum
+from app.gql.enums import AccountRoleGQLEnum, ServiceTypeGQLEnum, StatusGQLEnum
 import sqlalchemy
 
 
@@ -104,9 +104,9 @@ class AddonObject(InputObjectType):
 
 
 class PostObject(ObjectType):
-    userId = Int()
+    user_id = Int()
     id = Int()
-    title = String()
+    serviceType = Field(ServiceTypeGQLEnum)
     description = String()
     rating = Float()
     booking_count = Int()
