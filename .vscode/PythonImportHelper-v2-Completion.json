@@ -48,462 +48,6 @@
         "documentation": {}
     },
     {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
         "label": "op",
         "importPath": "alembic",
         "description": "alembic",
@@ -1227,7 +771,31 @@
         "documentation": {}
     },
     {
+        "label": "ServiceTypeEnum",
+        "importPath": "app.gql.enums",
+        "description": "app.gql.enums",
+        "isExtraImport": true,
+        "detail": "app.gql.enums",
+        "documentation": {}
+    },
+    {
         "label": "StatusEnum",
+        "importPath": "app.gql.enums",
+        "description": "app.gql.enums",
+        "isExtraImport": true,
+        "detail": "app.gql.enums",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceTypeEnum",
+        "importPath": "app.gql.enums",
+        "description": "app.gql.enums",
+        "isExtraImport": true,
+        "detail": "app.gql.enums",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceTypeGQLEnum",
         "importPath": "app.gql.enums",
         "description": "app.gql.enums",
         "isExtraImport": true,
@@ -1790,397 +1358,55 @@
     {
         "label": "upgrade",
         "kind": 2,
-        "importPath": "alembic.versions.09f0eb9d3191_added_name",
-        "description": "alembic.versions.09f0eb9d3191_added_name",
+        "importPath": "alembic.versions.39b7ff600402_initial",
+        "description": "alembic.versions.39b7ff600402_initial",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('images', sa.Column('imageUrl', sa.String(), nullable=True))\n    op.drop_column('images', 'image_url')\n    # op.add_column('posts', sa.Column('serviceType', sa.Enum('CAR_WASH', 'EXTERIOR_DETAILING', 'GLASS_DETAILING', 'INTERIOR_DETAILING', 'COLOR_CORRECTION', 'HEADLIGHT_RESTORATION', name='servicetypeenum'), nullable=True))\n    op.drop_column('posts', 'title')\n    op.add_column('prices', sa.Column(\n        'vehicleType', sa.String(), nullable=True))\n    op.drop_column('prices', 'vehicle_type')\n    # ### end Alembic commands ###",
+        "detail": "alembic.versions.39b7ff600402_initial",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.39b7ff600402_initial",
+        "description": "alembic.versions.39b7ff600402_initial",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('prices', sa.Column('vehicle_type',\n                  sa.VARCHAR(), autoincrement=False, nullable=True))\n    op.drop_column('prices', 'vehicleType')\n    op.add_column('posts', sa.Column('title', sa.VARCHAR(),\n                  autoincrement=False, nullable=True))\n    op.drop_column('posts', 'serviceType')\n    op.add_column('images', sa.Column('image_url', sa.VARCHAR(),\n                  autoincrement=False, nullable=True))",
+        "detail": "alembic.versions.39b7ff600402_initial",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.5fc084b75d28_add_servicetypeenum_enum",
+        "description": "alembic.versions.5fc084b75d28_add_servicetypeenum_enum",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.execute(\"CREATE TYPE servicetypeenum AS ENUM ('CAR_WASH', 'EXTERIOR_DETAILING', 'GLASS_DETAILING', 'INTERIOR_DETAILING', 'COLOR_CORRECTION', 'HEADLIGHT_RESTORATION');\")\n    op.add_column('posts', sa.Column('serviceType', sa.Enum('CAR_WASH', 'EXTERIOR_DETAILING', 'GLASS_DETAILING',\n                  'INTERIOR_DETAILING', 'COLOR_CORRECTION', 'HEADLIGHT_RESTORATION', name='servicetypeenum'), nullable=True))\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.execute(\"DROP TYPE servicetypeenum;\")\n    op.drop_column('posts', 'serviceType')",
+        "detail": "alembic.versions.5fc084b75d28_add_servicetypeenum_enum",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.5fc084b75d28_add_servicetypeenum_enum",
+        "description": "alembic.versions.5fc084b75d28_add_servicetypeenum_enum",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.execute(\"DROP TYPE servicetypeenum;\")\n    op.drop_column('posts', 'serviceType')\n    # ### end Alembic commands ###",
+        "detail": "alembic.versions.5fc084b75d28_add_servicetypeenum_enum",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.6fd5a0cea863_add_servicetypeenum_enum2",
+        "description": "alembic.versions.6fd5a0cea863_add_servicetypeenum_enum2",
         "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.09f0eb9d3191_added_name",
+        "detail": "alembic.versions.6fd5a0cea863_add_servicetypeenum_enum2",
         "documentation": {}
     },
     {
         "label": "downgrade",
         "kind": 2,
-        "importPath": "alembic.versions.09f0eb9d3191_added_name",
-        "description": "alembic.versions.09f0eb9d3191_added_name",
+        "importPath": "alembic.versions.6fd5a0cea863_add_servicetypeenum_enum2",
+        "description": "alembic.versions.6fd5a0cea863_add_servicetypeenum_enum2",
         "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.09f0eb9d3191_added_name",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.100aa79e1536_added_update_user",
-        "description": "alembic.versions.100aa79e1536_added_update_user",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('users', sa.Column('companyName', sa.String(), nullable=True))\n    op.add_column('users', sa.Column('firstName', sa.String(), nullable=True))\n    op.add_column('users', sa.Column('lastName', sa.String(), nullable=True))\n    op.add_column('users', sa.Column('facebookLink', sa.String(), nullable=True))\n    op.add_column('users', sa.Column('address', sa.String(), nullable=True))\n    op.add_column('users', sa.Column('phoneNumber', sa.String(), nullable=True))\n    # ### end Alembic commands ###\ndef downgrade() -> None:",
-        "detail": "alembic.versions.100aa79e1536_added_update_user",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.100aa79e1536_added_update_user",
-        "description": "alembic.versions.100aa79e1536_added_update_user",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('users', 'phoneNumber')\n    op.drop_column('users', 'address')\n    op.drop_column('users', 'facebookLink')\n    op.drop_column('users', 'lastName')\n    op.drop_column('users', 'firstName')\n    op.drop_column('users', 'companyName')\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.100aa79e1536_added_update_user",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.29becc6d9b90_added_add_post",
-        "description": "alembic.versions.29becc6d9b90_added_add_post",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.29becc6d9b90_added_add_post",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.29becc6d9b90_added_add_post",
-        "description": "alembic.versions.29becc6d9b90_added_add_post",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.29becc6d9b90_added_add_post",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2c1b4b2a399a_set_default_status2",
-        "description": "alembic.versions.2c1b4b2a399a_set_default_status2",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2c1b4b2a399a_set_default_status2",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2c1b4b2a399a_set_default_status2",
-        "description": "alembic.versions.2c1b4b2a399a_set_default_status2",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2c1b4b2a399a_set_default_status2",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.4fb376047f7d_added_update_user_object",
-        "description": "alembic.versions.4fb376047f7d_added_update_user_object",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.4fb376047f7d_added_update_user_object",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.4fb376047f7d_added_update_user_object",
-        "description": "alembic.versions.4fb376047f7d_added_update_user_object",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.4fb376047f7d_added_update_user_object",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.54c26952fa28_test_1",
-        "description": "alembic.versions.54c26952fa28_test_1",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.54c26952fa28_test_1",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.54c26952fa28_test_1",
-        "description": "alembic.versions.54c26952fa28_test_1",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.54c26952fa28_test_1",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.5850df8ad911_added_name",
-        "description": "alembic.versions.5850df8ad911_added_name",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.5850df8ad911_added_name",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.5850df8ad911_added_name",
-        "description": "alembic.versions.5850df8ad911_added_name",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.5850df8ad911_added_name",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.58a884654efb_added_add_post_images",
-        "description": "alembic.versions.58a884654efb_added_add_post_images",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('images', sa.Column('imageUrl', sa.String(), nullable=True))\n    op.drop_column('images', 'image_url')\n    op.add_column('prices', sa.Column('vehicleType', sa.String(), nullable=True))\n    op.drop_column('prices', 'vehicle_type')\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('prices', sa.Column('vehicle_type', sa.VARCHAR(), autoincrement=False, nullable=True))",
-        "detail": "alembic.versions.58a884654efb_added_add_post_images",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.58a884654efb_added_add_post_images",
-        "description": "alembic.versions.58a884654efb_added_add_post_images",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('prices', sa.Column('vehicle_type', sa.VARCHAR(), autoincrement=False, nullable=True))\n    op.drop_column('prices', 'vehicleType')\n    op.add_column('images', sa.Column('image_url', sa.VARCHAR(), autoincrement=False, nullable=True))\n    op.drop_column('images', 'imageUrl')\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.58a884654efb_added_add_post_images",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.59e1ec0b2a53_set_default_status",
-        "description": "alembic.versions.59e1ec0b2a53_set_default_status",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.59e1ec0b2a53_set_default_status",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.59e1ec0b2a53_set_default_status",
-        "description": "alembic.versions.59e1ec0b2a53_set_default_status",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.59e1ec0b2a53_set_default_status",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.6976b55e1cf0_added_add_post",
-        "description": "alembic.versions.6976b55e1cf0_added_add_post",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('posts', sa.Column('user_id', sa.Integer(), nullable=True))\n    op.drop_constraint('posts_company_id_fkey', 'posts', type_='foreignkey')\n    op.create_foreign_key(None, 'posts', 'users', ['user_id'], ['id'])\n    op.drop_column('posts', 'company_id')\n    op.drop_column('posts', 'user_profile_id')\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###",
-        "detail": "alembic.versions.6976b55e1cf0_added_add_post",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.6976b55e1cf0_added_add_post",
-        "description": "alembic.versions.6976b55e1cf0_added_add_post",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('posts', sa.Column('user_profile_id', sa.INTEGER(), autoincrement=False, nullable=True))\n    op.add_column('posts', sa.Column('company_id', sa.INTEGER(), autoincrement=False, nullable=True))\n    op.drop_constraint(None, 'posts', type_='foreignkey')\n    op.create_foreign_key('posts_company_id_fkey', 'posts', 'employers', ['company_id'], ['id'])\n    op.drop_column('posts', 'user_id')\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.6976b55e1cf0_added_add_post",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.6c54407c2080_added_add_post",
-        "description": "alembic.versions.6c54407c2080_added_add_post",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.6c54407c2080_added_add_post",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.6c54407c2080_added_add_post",
-        "description": "alembic.versions.6c54407c2080_added_add_post",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.6c54407c2080_added_add_post",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.6f3af338cda8_added_update_user_object",
-        "description": "alembic.versions.6f3af338cda8_added_update_user_object",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.6f3af338cda8_added_update_user_object",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.6f3af338cda8_added_update_user_object",
-        "description": "alembic.versions.6f3af338cda8_added_update_user_object",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.6f3af338cda8_added_update_user_object",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.8d4c1e2afb3d_first_initial",
-        "description": "alembic.versions.8d4c1e2afb3d_first_initial",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.8d4c1e2afb3d_first_initial",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.8d4c1e2afb3d_first_initial",
-        "description": "alembic.versions.8d4c1e2afb3d_first_initial",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.8d4c1e2afb3d_first_initial",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.8f47cc3cfa62_update_status_enum",
-        "description": "alembic.versions.8f47cc3cfa62_update_status_enum",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.8f47cc3cfa62_update_status_enum",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.8f47cc3cfa62_update_status_enum",
-        "description": "alembic.versions.8f47cc3cfa62_update_status_enum",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.8f47cc3cfa62_update_status_enum",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.93fb7cadb076_nullable_role",
-        "description": "alembic.versions.93fb7cadb076_nullable_role",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.alter_column('users', 'role',\n               existing_type=sa.VARCHAR(),\n               type_=sa.Enum('USER', 'SERVICE_PROVIDER', 'ADMIN', 'EDITOR', name='accountroleenum'),\n               nullable=False)\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.alter_column('users', 'role',",
-        "detail": "alembic.versions.93fb7cadb076_nullable_role",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.93fb7cadb076_nullable_role",
-        "description": "alembic.versions.93fb7cadb076_nullable_role",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.alter_column('users', 'role',\n               existing_type=sa.Enum('USER', 'SERVICE_PROVIDER', 'ADMIN', 'EDITOR', name='accountroleenum'),\n               type_=sa.VARCHAR(),\n               nullable=True)\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.93fb7cadb076_nullable_role",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.9b66524db582_added_name_key",
-        "description": "alembic.versions.9b66524db582_added_name_key",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.9b66524db582_added_name_key",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.9b66524db582_added_name_key",
-        "description": "alembic.versions.9b66524db582_added_name_key",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.9b66524db582_added_name_key",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.b0252bd7f0cf_first_added_identification_image_url",
-        "description": "alembic.versions.b0252bd7f0cf_first_added_identification_image_url",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('users', sa.Column('identificationImage', sa.String(), nullable=True))\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('users', 'identificationImage')\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.b0252bd7f0cf_first_added_identification_image_url",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.b0252bd7f0cf_first_added_identification_image_url",
-        "description": "alembic.versions.b0252bd7f0cf_first_added_identification_image_url",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('users', 'identificationImage')\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.b0252bd7f0cf_first_added_identification_image_url",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.b71384bd82de_first_added_company_url",
-        "description": "alembic.versions.b71384bd82de_first_added_company_url",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('users', sa.Column('companyLogoUrl', sa.String(), nullable=True))\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('users', 'companyLogoUrl')\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.b71384bd82de_first_added_company_url",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.b71384bd82de_first_added_company_url",
-        "description": "alembic.versions.b71384bd82de_first_added_company_url",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('users', 'companyLogoUrl')\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.b71384bd82de_first_added_company_url",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.b799c3a1e103_added_add_post",
-        "description": "alembic.versions.b799c3a1e103_added_add_post",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.b799c3a1e103_added_add_post",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.b799c3a1e103_added_add_post",
-        "description": "alembic.versions.b799c3a1e103_added_add_post",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.b799c3a1e103_added_add_post",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.c4e92d335b32_added_add_post",
-        "description": "alembic.versions.c4e92d335b32_added_add_post",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.c4e92d335b32_added_add_post",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.c4e92d335b32_added_add_post",
-        "description": "alembic.versions.c4e92d335b32_added_add_post",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.c4e92d335b32_added_add_post",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.c8f10ba5c328_nullable_status",
-        "description": "alembic.versions.c8f10ba5c328_nullable_status",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.c8f10ba5c328_nullable_status",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.c8f10ba5c328_nullable_status",
-        "description": "alembic.versions.c8f10ba5c328_nullable_status",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.c8f10ba5c328_nullable_status",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.f7481092888f_added_update_user_object",
-        "description": "alembic.versions.f7481092888f_added_update_user_object",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('users', 'name')\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('users', sa.Column('name', sa.VARCHAR(), autoincrement=False, nullable=True))\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.f7481092888f_added_update_user_object",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.f7481092888f_added_update_user_object",
-        "description": "alembic.versions.f7481092888f_added_update_user_object",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('users', sa.Column('name', sa.VARCHAR(), autoincrement=False, nullable=True))\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.f7481092888f_added_update_user_object",
+        "detail": "alembic.versions.6fd5a0cea863_add_servicetypeenum_enum2",
         "documentation": {}
     },
     {
@@ -2404,7 +1630,7 @@
         "kind": 6,
         "importPath": "app.db.models",
         "description": "app.db.models",
-        "peekOfCode": "class Post(Base):\n    __tablename__ = 'posts'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    title = Column(String)\n    description = Column(String)\n    rating = Column(Float)\n    booking_count = Column(Integer)\n    user = relationship(\"User\", back_populates=\"posts\", lazy=\"joined\")\n    prices = relationship(\"Price\", back_populates=\"post\")",
+        "peekOfCode": "class Post(Base):\n    __tablename__ = 'posts'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    serviceType = Column(Enum(ServiceTypeEnum),\n                         default=ServiceTypeEnum.CAR_WASH, nullable=True)\n    description = Column(String)\n    rating = Column(Float)\n    booking_count = Column(Integer)\n    user = relationship(\"User\", back_populates=\"posts\", lazy=\"joined\")",
         "detail": "app.db.models",
         "documentation": {}
     },
@@ -2503,7 +1729,7 @@
         "kind": 6,
         "importPath": "app.gql.post.mutations",
         "description": "app.gql.post.mutations",
-        "peekOfCode": "class AddPost(Mutation):\n    class Arguments:\n        user_id = Int(required=True)\n        title = String()\n        description = String()\n        rating = Float()\n        booking_count = Int()\n        prices = List(PriceObject)\n        images = List(ImageObject)\n        addons = List(AddonObject)",
+        "peekOfCode": "class AddPost(Mutation):\n    class Arguments:\n        user_id = Int(required=True)\n        serviceType = ServiceTypeGQLEnum(\n            default_value=ServiceTypeEnum.CAR_WASH)\n        description = String()\n        rating = Float()\n        booking_count = Int()\n        prices = List(PriceObject)\n        images = List(ImageObject)",
         "detail": "app.gql.post.mutations",
         "documentation": {}
     },
@@ -2575,7 +1801,25 @@
         "kind": 6,
         "importPath": "app.gql.enums",
         "description": "app.gql.enums",
-        "peekOfCode": "class AccountRoleGQLEnum(graphene.Enum):\n    class Meta:\n        name = \"AccountRoleEnum\"\n    USER = AccountRoleEnum.USER\n    SERVICE_PROVIDER = AccountRoleEnum.SERVICE_PROVIDER\n    ADMIN = AccountRoleEnum.ADMIN\n    EDITOR = AccountRoleEnum.EDITOR",
+        "peekOfCode": "class AccountRoleGQLEnum(graphene.Enum):\n    class Meta:\n        name = \"AccountRoleEnum\"\n    USER = AccountRoleEnum.USER\n    SERVICE_PROVIDER = AccountRoleEnum.SERVICE_PROVIDER\n    ADMIN = AccountRoleEnum.ADMIN\n    EDITOR = AccountRoleEnum.EDITOR\nclass ServiceTypeEnum(Enum):\n    CAR_WASH = \"Car wash\"\n    EXTERIOR_DETAILING = \"Exterior detailing\"",
+        "detail": "app.gql.enums",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceTypeEnum",
+        "kind": 6,
+        "importPath": "app.gql.enums",
+        "description": "app.gql.enums",
+        "peekOfCode": "class ServiceTypeEnum(Enum):\n    CAR_WASH = \"Car wash\"\n    EXTERIOR_DETAILING = \"Exterior detailing\"\n    GLASS_DETAILING = \"Glass detailing\"\n    INTERIOR_DETAILING = \"Interior detailing\"\n    COLOR_CORRECTION = \"Color Correction\"\n    HEADLIGHT_RESTORATION = \"Headlight Restoration\"\nclass ServiceTypeGQLEnum(graphene.Enum):\n    class Meta:\n        name = \"ServiceTypeEnum\"",
+        "detail": "app.gql.enums",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceTypeGQLEnum",
+        "kind": 6,
+        "importPath": "app.gql.enums",
+        "description": "app.gql.enums",
+        "peekOfCode": "class ServiceTypeGQLEnum(graphene.Enum):\n    class Meta:\n        name = \"ServiceTypeEnum\"\n    CAR_WASH = ServiceTypeEnum.CAR_WASH\n    EXTERIOR_DETAILING = ServiceTypeEnum.EXTERIOR_DETAILING\n    GLASS_DETAILING = ServiceTypeEnum.GLASS_DETAILING\n    INTERIOR_DETAILING = ServiceTypeEnum.INTERIOR_DETAILING\n    COLOR_CORRECTION = ServiceTypeEnum.COLOR_CORRECTION\n    HEADLIGHT_RESTORATION = ServiceTypeEnum.HEADLIGHT_RESTORATION",
         "detail": "app.gql.enums",
         "documentation": {}
     },

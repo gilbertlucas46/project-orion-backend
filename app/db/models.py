@@ -2,7 +2,7 @@ import graphene
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, ForeignKey, Float, Enum
 from sqlalchemy.orm import relationship
-from app.gql.enums import AccountRoleEnum, StatusEnum
+from app.gql.enums import AccountRoleEnum, ServiceTypeEnum, StatusEnum
 
 Base = declarative_base()
 
@@ -77,7 +77,8 @@ class Post(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(Integer, ForeignKey("users.id"))
-    title = Column(String)
+    serviceType = Column(Enum(ServiceTypeEnum),
+                         default=ServiceTypeEnum.CAR_WASH, nullable=True)
     description = Column(String)
     rating = Column(Float)
     booking_count = Column(Integer)
