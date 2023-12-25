@@ -1,4 +1,5 @@
 from graphene import ObjectType, List, Field, Int
+from sqlalchemy.orm import joinedload
 from app.gql.types import JobObject, EmployerObject, UserObject, JobApplicationObject, PostObject, AuthenticatedItemUnion
 from app.db.database import Session
 from app.db.models import Employer, Job, JobApplication, Post, User
@@ -20,7 +21,7 @@ class Query(ObjectType):
     def resolve_job_applications(root, info):
         return Session().query(JobApplication).all()
 
-    @admin_user
+    @staticmethod
     def resolve_users(root, info):
         return Session().query(User).all()
 
@@ -38,7 +39,12 @@ class Query(ObjectType):
 
     @staticmethod
     def resolve_posts(root, info):
-        return Session().query(Post).all()
+        return Session().query(Post).options(
+            joinedload(Post.user),
+            joinedload(Post.prices),
+            joinedload(Post.images),
+            joinedload(Post.addons)
+        ).all()
 
     @staticmethod
     def resolve_employers(root, info):

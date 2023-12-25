@@ -58,6 +58,10 @@ class UserObject(ObjectType):
     def resolve_applications(root, info):
         return root.applications
 
+    @staticmethod
+    def resolve_posts(root, info):
+        return root.posts
+
 
 class AuthenticatedItemUnion(Union):
     class Meta:
@@ -110,3 +114,27 @@ class PostObject(ObjectType):
     description = String()
     rating = Float()
     booking_count = Int()
+    user = Field(lambda: UserObject)
+    prices = List(lambda: PriceObject)
+    images = List(lambda: ImageObject)
+    addons = List(lambda: AddonObject)
+
+    @staticmethod
+    def resolve_user(root, info):
+        return root.user
+
+    @staticmethod
+    def resolve_prices(root, info):
+        return root.prices
+
+    @staticmethod
+    def resolve_user(root, info):
+        return root.user
+
+    @staticmethod
+    def resolve_images(root, info):
+        return root.images
+
+    @staticmethod
+    def resolve_addons(root, info):
+        return root.addons

@@ -418,6 +418,14 @@
         "documentation": {}
     },
     {
+        "label": "joinedload",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
         "label": "employers_data",
         "importPath": "app.db.data",
         "description": "app.db.data",
@@ -1926,7 +1934,7 @@
         "kind": 6,
         "importPath": "app.gql.types",
         "description": "app.gql.types",
-        "peekOfCode": "class PostObject(ObjectType):\n    user_id = Int()\n    id = Int()\n    serviceType = Field(ServiceTypeGQLEnum)\n    description = String()\n    rating = Float()\n    booking_count = Int()",
+        "peekOfCode": "class PostObject(ObjectType):\n    user_id = Int()\n    id = Int()\n    serviceType = Field(ServiceTypeGQLEnum)\n    description = String()\n    rating = Float()\n    booking_count = Int()\n    user = Field(lambda: UserObject)\n    prices = List(lambda: PriceObject)\n    images = List(lambda: ImageObject)",
         "detail": "app.gql.types",
         "documentation": {}
     },
