@@ -30,7 +30,10 @@ class LoginUser(Mutation):
         if not user:
             raise GraphQLError("a user with that email does no exist")
 
-        verify_password(user.password_hash, password)
+        try:
+            verify_password(user.password_hash, password)
+        except VerifyMismatchError:
+            raise GraphQLError("Incorrect password")
 
         token = generate_token(email, user.id)
 
