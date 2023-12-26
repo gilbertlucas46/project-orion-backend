@@ -128,10 +128,6 @@ class PostObject(ObjectType):
         return root.prices
 
     @staticmethod
-    def resolve_user(root, info):
-        return root.user
-
-    @staticmethod
     def resolve_images(root, info):
         return root.images
 
