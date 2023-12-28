@@ -33,7 +33,8 @@ class AddPost(Mutation):
 
         for price in prices:
             post.prices.append(
-                Price(vehicleType=price.vehicleType, price=price.price))
+                Price(vehicleType=price.vehicleType, price=price.price)
+            )
 
         for image in images:
             post.images.append(Image(imageUrl=image.imageUrl))

@@ -1,7 +1,6 @@
-from graphene import ObjectType, String, Int, List, Field, Float, Enum, Union, InputObjectType
+from graphene import ObjectType, String, Int, List, Field, Float, Enum, Union, InputObjectType, DefaultGlobalIDType, Interface
 from app.db.models import User
 from app.gql.enums import AccountRoleGQLEnum, ServiceTypeGQLEnum, StatusGQLEnum
-import sqlalchemy
 
 
 class EmployerObject(ObjectType):
@@ -115,22 +114,18 @@ class PostObject(ObjectType):
     rating = Float()
     booking_count = Int()
     user = Field(lambda: UserObject)
-    prices = List(lambda: PriceObject)
-    images = List(lambda: ImageObject)
-    addons = List(lambda: AddonObject)
+    # prices = List(PriceObject)
+    # images = List(lambda: ImageObject)
+    # addons = List(lambda: AddonObject)
 
     @staticmethod
     def resolve_user(root, info):
         return root.user
 
-    @staticmethod
-    def resolve_prices(root, info):
-        return root.prices
+    # @staticmethod
+    # def resolve_images(root, info):
+    #     return root.images
 
-    @staticmethod
-    def resolve_images(root, info):
-        return root.images
-
-    @staticmethod
-    def resolve_addons(root, info):
-        return root.addons
+    # @staticmethod
+    # def resolve_addons(root, info):
+    #     return root.addons
