@@ -39,12 +39,7 @@ class Query(ObjectType):
 
     @staticmethod
     def resolve_posts(root, info):
-        return Session().query(Post).options(
-            joinedload(Post.user),
-            joinedload(Post.prices),
-            joinedload(Post.images),
-            joinedload(Post.addons)
-        ).all()
+        return Session().query(Post).all()
 
     @staticmethod
     def resolve_employers(root, info):
