@@ -73,9 +73,8 @@ class Post(Base):
     booking_count = Column(Integer)
 
     user = relationship("User", back_populates="posts", lazy="joined")
-    prices = relationship("Price", back_populates="post", lazy="joined")
-    # images = relationship("Image", back_populates="post", lazy="joined")
-    # addons = relationship("Addon", back_populates="post", lazy="joined")
+    prices = relationship("Price", back_populates="post",
+                          lazy="joined", cascade="all, save-update, delete-orphan")
 
 
 class JobApplication(Base):

@@ -47,13 +47,20 @@ class AddPostPrice(Mutation):
 
     @staticmethod
     def mutate(root, info, vehicleType, price, post_id):
-        # add this job to the session
-        price = Price(vehicleType=vehicleType, price=price, post_id=post_id)
         session = Session()
 
+        # Check if the associated post exists
+        existing_post = session.query(Post).filter_by(id=post_id).first()
+
+        if not existing_post:
+            raise GraphQLError(f"Post with ID {post_id} does not exist.")
+
+        # Add this job to the session
+        price = Price(vehicleType=vehicleType, price=price, post_id=post_id)
         session.add(price)
         session.commit()
-        # we're refreshing the job instance with the current state that it has in the db
+
+        # Refresh the job instance with the current state in the db
         session.refresh(price)
         return AddPostPrice(price=price)
 
