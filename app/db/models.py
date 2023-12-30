@@ -75,6 +75,9 @@ class Post(Base):
     user = relationship("User", back_populates="posts", lazy="joined")
     prices = relationship("Price", back_populates="post",
                           lazy="joined", cascade="all, save-update, delete-orphan")
+    images = relationship("Image", back_populates="post",
+                          lazy="joined", cascade="all, save-update, delete-orphan")
+    # addons = relationship("Addon", back_populates="post", lazy="joined")
 
 
 class JobApplication(Base):
@@ -106,7 +109,7 @@ class Image(Base):
     post_id = Column(Integer, ForeignKey('posts.id'))
     imageUrl = Column(String)
 
-    # post = relationship("Post", back_populates="images")
+    post = relationship("Post", back_populates="images")
 
 
 class Addon(Base):

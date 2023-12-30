@@ -112,8 +112,10 @@ class PriceObject(ObjectType):
         return root.post
 
 
-class ImageObject(InputObjectType):
+class ImageObject(ObjectType):
+    id = Int()
     imageUrl = String()
+    post = Field(lambda: PostObject)
 
 
 class AddonObject(InputObjectType):
@@ -130,21 +132,21 @@ class PostObject(ObjectType):
     rating = Float()
     booking_count = Int()
     prices = List(lambda: PriceObject)
-    # user = Field(lambda: UserObject)
-    # images = List(lambda: ImageObject)
+    user = Field(lambda: UserObject)
+    images = List(lambda: ImageObject)
     # addons = List(lambda: AddonObject)
 
     @staticmethod
     def resolve_prices(root, info):
         return root.prices
 
-    # @staticmethod
-    # def resolve_user(root, info):
-    #     return root.user
+    @staticmethod
+    def resolve_user(root, info):
+        return root.user
 
-    # @staticmethod
-    # def resolve_images(root, info):
-    #     return root.images
+    @staticmethod
+    def resolve_images(root, info):
+        return root.images
 
     # @staticmethod
     # def resolve_addons(root, info):

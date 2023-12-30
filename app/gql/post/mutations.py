@@ -1,8 +1,8 @@
 # app/gql/post/mutations.py
 from graphene import Mutation, String, Int, Field, Float, List, InputObjectType
 from graphql import GraphQLError
-from app.db.models import Post, Price, User
-from app.gql.types import PostObject, PostPriceObject, PriceObject
+from app.db.models import Image, Post, Price, User
+from app.gql.types import ImageObject, PostObject, PostPriceObject, PriceObject
 from app.db.database import Session
 from app.utils.utils import authd_user_same_as
 from app.gql.enums import ServiceTypeEnum, ServiceTypeGQLEnum, VehicleTypeEnum, VehicleTypeGQLEnum
@@ -65,32 +65,28 @@ class AddPostPrice(Mutation):
         return AddPostPrice(price=price)
 
 
-class ApplyPriceToPost(Mutation):
+class AddPostImage(Mutation):
     class Arguments:
+        imageUrl = String()
         post_id = Int(required=True)
-        user_id = Int(required=True)
 
-    # It returns a job application field
-    post_price = Field(lambda: PostPriceObject)
+    image = Field(lambda: ImageObject)
 
-    @authd_user_same_as
-    def mutate(root, info, user_id, post_id):
+    @staticmethod
+    def mutate(root, info, imageUrl, post_id):
         session = Session()
 
-        # check first if the price already exist
-        existing_price = session.query(Price).filter(
-            Price.user_id == user_id,
-            Price.post_id == post_id,
-        ).first()
+        # Check if the associated post exists
+        existing_post = session.query(Post).filter_by(id=post_id).first()
 
-        if existing_price:
-            raise GraphQLError("This user has already applied to this job")
+        if not existing_post:
+            raise GraphQLError(f"Post with ID {post_id} does not exist.")
 
-        # Price -> database model, create new instance
-        post_price = Price(post_id=post_id)
-        session.add(post_price)
+        # Add this job to the session
+        image = Image(imageUrl=imageUrl)
+        session.add(image)
         session.commit()
-        # Refresh it in order to get the ID that Porsgres assigned
-        session.refresh(post_price)
 
-        return ApplyPriceToPost(post_price=post_price)
+        # Refresh the job instance with the current state in the db
+        session.refresh(image)
+        return AddPostImage(image=image)
