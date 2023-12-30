@@ -82,11 +82,11 @@ class AddPostImage(Mutation):
         if not existing_post:
             raise GraphQLError(f"Post with ID {post_id} does not exist.")
 
-        # Add this job to the session
-        image = Image(imageUrl=imageUrl)
+        # Add this image to the session and associate it with the post
+        image = Image(imageUrl=imageUrl, post=existing_post)
         session.add(image)
         session.commit()
 
-        # Refresh the job instance with the current state in the db
+        # Refresh the image instance with the current state in the db
         session.refresh(image)
         return AddPostImage(image=image)
