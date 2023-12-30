@@ -362,7 +362,7 @@
         "documentation": {}
     },
     {
-        "label": "User",
+        "label": "Post",
         "importPath": "app.db.models",
         "description": "app.db.models",
         "isExtraImport": true,
@@ -370,7 +370,15 @@
         "documentation": {}
     },
     {
-        "label": "Post",
+        "label": "Price",
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "isExtraImport": true,
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
         "importPath": "app.db.models",
         "description": "app.db.models",
         "isExtraImport": true,
@@ -515,14 +523,6 @@
     },
     {
         "label": "relationship",
-        "importPath": "sqlalchemy.orm",
-        "description": "sqlalchemy.orm",
-        "isExtraImport": true,
-        "detail": "sqlalchemy.orm",
-        "documentation": {}
-    },
-    {
-        "label": "joinedload",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
         "isExtraImport": true,
@@ -915,6 +915,14 @@
         "documentation": {}
     },
     {
+        "label": "VehicleTypeEnum",
+        "importPath": "app.gql.enums",
+        "description": "app.gql.enums",
+        "isExtraImport": true,
+        "detail": "app.gql.enums",
+        "documentation": {}
+    },
+    {
         "label": "ServiceTypeEnum",
         "importPath": "app.gql.enums",
         "description": "app.gql.enums",
@@ -924,6 +932,22 @@
     },
     {
         "label": "ServiceTypeGQLEnum",
+        "importPath": "app.gql.enums",
+        "description": "app.gql.enums",
+        "isExtraImport": true,
+        "detail": "app.gql.enums",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleTypeEnum",
+        "importPath": "app.gql.enums",
+        "description": "app.gql.enums",
+        "isExtraImport": true,
+        "detail": "app.gql.enums",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleTypeGQLEnum",
         "importPath": "app.gql.enums",
         "description": "app.gql.enums",
         "isExtraImport": true,
@@ -987,6 +1011,14 @@
         "documentation": {}
     },
     {
+        "label": "VehicleTypeGQLEnum",
+        "importPath": "app.gql.enums",
+        "description": "app.gql.enums",
+        "isExtraImport": true,
+        "detail": "app.gql.enums",
+        "documentation": {}
+    },
+    {
         "label": "EmployerObject",
         "importPath": "app.gql.types",
         "description": "app.gql.types",
@@ -1004,6 +1036,22 @@
     },
     {
         "label": "PostObject",
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "isExtraImport": true,
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "PostPriceObject",
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "isExtraImport": true,
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
+        "label": "PriceObject",
         "importPath": "app.gql.types",
         "description": "app.gql.types",
         "isExtraImport": true,
@@ -1243,6 +1291,23 @@
         "documentation": {}
     },
     {
+        "label": "graphql",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "graphql",
+        "description": "graphql",
+        "detail": "graphql",
+        "documentation": {}
+    },
+    {
+        "label": "GraphQLError",
+        "importPath": "graphql",
+        "description": "graphql",
+        "isExtraImport": true,
+        "detail": "graphql",
+        "documentation": {}
+    },
+    {
         "label": "GraphQLError",
         "importPath": "graphql",
         "description": "graphql",
@@ -1308,6 +1373,22 @@
     },
     {
         "label": "AddPost",
+        "importPath": "app.gql.post.mutations",
+        "description": "app.gql.post.mutations",
+        "isExtraImport": true,
+        "detail": "app.gql.post.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "AddPostPrice",
+        "importPath": "app.gql.post.mutations",
+        "description": "app.gql.post.mutations",
+        "isExtraImport": true,
+        "detail": "app.gql.post.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "ApplyPriceToPost",
         "importPath": "app.gql.post.mutations",
         "description": "app.gql.post.mutations",
         "isExtraImport": true,
@@ -1819,15 +1900,6 @@
         "documentation": {}
     },
     {
-        "label": "JobApplication",
-        "kind": 6,
-        "importPath": "app.db.models",
-        "description": "app.db.models",
-        "peekOfCode": "class JobApplication(Base):\n    __tablename__ = 'job_applications'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    job_id = Column(Integer, ForeignKey(\"jobs.id\"))\n    user = relationship(\"User\", back_populates=\"applications\", lazy=\"joined\")\n    job = relationship(\"Job\", back_populates=\"applications\", lazy=\"joined\")\nclass Post(Base):\n    __tablename__ = 'posts'\n    id = Column(Integer, primary_key=True, autoincrement=True)",
-        "detail": "app.db.models",
-        "documentation": {}
-    },
-    {
         "label": "Post",
         "kind": 6,
         "importPath": "app.db.models",
@@ -1837,11 +1909,20 @@
         "documentation": {}
     },
     {
+        "label": "JobApplication",
+        "kind": 6,
+        "importPath": "app.db.models",
+        "description": "app.db.models",
+        "peekOfCode": "class JobApplication(Base):\n    __tablename__ = 'job_applications'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    job_id = Column(Integer, ForeignKey(\"jobs.id\"))\n    user = relationship(\"User\", back_populates=\"applications\", lazy=\"joined\")\n    job = relationship(\"Job\", back_populates=\"applications\", lazy=\"joined\")\nclass Price(Base):\n    __tablename__ = 'prices'\n    id = Column(Integer, primary_key=True, autoincrement=True)",
+        "detail": "app.db.models",
+        "documentation": {}
+    },
+    {
         "label": "Price",
         "kind": 6,
         "importPath": "app.db.models",
         "description": "app.db.models",
-        "peekOfCode": "class Price(Base):\n    __tablename__ = 'prices'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    post_id = Column(Integer, ForeignKey('posts.id'))\n    vehicleType = Column(String)\n    price = Column(Float)\n    post = relationship(\"Post\", back_populates=\"prices\")\nclass Image(Base):\n    __tablename__ = 'images'\n    id = Column(Integer, primary_key=True, autoincrement=True)",
+        "peekOfCode": "class Price(Base):\n    __tablename__ = 'prices'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    post_id = Column(Integer, ForeignKey('posts.id'))\n    vehicleType = Column(Enum(VehicleTypeEnum), nullable=False)\n    price = Column(Float)\n    post = relationship(\"Post\", back_populates=\"prices\")\nclass Image(Base):\n    __tablename__ = 'images'\n    id = Column(Integer, primary_key=True, autoincrement=True)",
         "detail": "app.db.models",
         "documentation": {}
     },
@@ -1850,7 +1931,7 @@
         "kind": 6,
         "importPath": "app.db.models",
         "description": "app.db.models",
-        "peekOfCode": "class Image(Base):\n    __tablename__ = 'images'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    post_id = Column(Integer, ForeignKey('posts.id'))\n    imageUrl = Column(String)\n    post = relationship(\"Post\", back_populates=\"images\")\nclass Addon(Base):\n    __tablename__ = 'addons'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    post_id = Column(Integer, ForeignKey('posts.id'))",
+        "peekOfCode": "class Image(Base):\n    __tablename__ = 'images'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    post_id = Column(Integer, ForeignKey('posts.id'))\n    imageUrl = Column(String)\n    # post = relationship(\"Post\", back_populates=\"images\")\nclass Addon(Base):\n    __tablename__ = 'addons'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    post_id = Column(Integer, ForeignKey('posts.id'))",
         "detail": "app.db.models",
         "documentation": {}
     },
@@ -1859,7 +1940,7 @@
         "kind": 6,
         "importPath": "app.db.models",
         "description": "app.db.models",
-        "peekOfCode": "class Addon(Base):\n    __tablename__ = 'addons'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    post_id = Column(Integer, ForeignKey('posts.id'))\n    name = Column(String)\n    description = Column(String)\n    price = Column(Float)\n    post = relationship(\"Post\", back_populates=\"addons\")",
+        "peekOfCode": "class Addon(Base):\n    __tablename__ = 'addons'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    post_id = Column(Integer, ForeignKey('posts.id'))\n    name = Column(String)\n    description = Column(String)\n    price = Column(Float)\n    # post = relationship(\"Post\", back_populates=\"addons\")",
         "detail": "app.db.models",
         "documentation": {}
     },
@@ -1931,7 +2012,25 @@
         "kind": 6,
         "importPath": "app.gql.post.mutations",
         "description": "app.gql.post.mutations",
-        "peekOfCode": "class AddPost(Mutation):\n    class Arguments:\n        user_id = Int(required=True)\n        serviceType = ServiceTypeGQLEnum(\n            default_value=ServiceTypeEnum.CAR_WASH)\n        description = String()\n        rating = Float()\n        booking_count = Int()\n        # prices = List(PriceObject)\n        # images = List(ImageObject)",
+        "peekOfCode": "class AddPost(Mutation):\n    class Arguments:\n        user_id = Int(required=True)\n        serviceType = ServiceTypeGQLEnum(\n            default_value=ServiceTypeEnum.CAR_WASH)\n        description = String()\n        rating = Float()\n        booking_count = Int()\n    post = Field(lambda: PostObject)\n    @authd_user_same_as",
+        "detail": "app.gql.post.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "AddPostPrice",
+        "kind": 6,
+        "importPath": "app.gql.post.mutations",
+        "description": "app.gql.post.mutations",
+        "peekOfCode": "class AddPostPrice(Mutation):\n    class Arguments:\n        vehicleType = VehicleTypeGQLEnum(required=True)\n        price = Int(required=True)\n        post_id = Int(required=True)\n    price = Field(lambda: PriceObject)\n    @staticmethod\n    def mutate(root, info, vehicleType, price, post_id):\n        # add this job to the session\n        price = Price(vehicleType=vehicleType, price=price, post_id=post_id)",
+        "detail": "app.gql.post.mutations",
+        "documentation": {}
+    },
+    {
+        "label": "ApplyPriceToPost",
+        "kind": 6,
+        "importPath": "app.gql.post.mutations",
+        "description": "app.gql.post.mutations",
+        "peekOfCode": "class ApplyPriceToPost(Mutation):\n    class Arguments:\n        post_id = Int(required=True)\n        user_id = Int(required=True)\n    # It returns a job application field\n    post_price = Field(lambda: PostPriceObject)\n    @authd_user_same_as\n    def mutate(root, info, user_id, post_id):\n        session = Session()\n        # check first if the price already exist",
         "detail": "app.gql.post.mutations",
         "documentation": {}
     },
@@ -2021,7 +2120,25 @@
         "kind": 6,
         "importPath": "app.gql.enums",
         "description": "app.gql.enums",
-        "peekOfCode": "class ServiceTypeGQLEnum(graphene.Enum):\n    class Meta:\n        name = \"ServiceTypeEnum\"\n    CAR_WASH = ServiceTypeEnum.CAR_WASH\n    EXTERIOR_DETAILING = ServiceTypeEnum.EXTERIOR_DETAILING\n    GLASS_DETAILING = ServiceTypeEnum.GLASS_DETAILING\n    INTERIOR_DETAILING = ServiceTypeEnum.INTERIOR_DETAILING\n    COLOR_CORRECTION = ServiceTypeEnum.COLOR_CORRECTION\n    HEADLIGHT_RESTORATION = ServiceTypeEnum.HEADLIGHT_RESTORATION",
+        "peekOfCode": "class ServiceTypeGQLEnum(graphene.Enum):\n    class Meta:\n        name = \"ServiceTypeEnum\"\n    CAR_WASH = ServiceTypeEnum.CAR_WASH\n    EXTERIOR_DETAILING = ServiceTypeEnum.EXTERIOR_DETAILING\n    GLASS_DETAILING = ServiceTypeEnum.GLASS_DETAILING\n    INTERIOR_DETAILING = ServiceTypeEnum.INTERIOR_DETAILING\n    COLOR_CORRECTION = ServiceTypeEnum.COLOR_CORRECTION\n    HEADLIGHT_RESTORATION = ServiceTypeEnum.HEADLIGHT_RESTORATION\nclass VehicleTypeEnum(Enum):",
+        "detail": "app.gql.enums",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleTypeEnum",
+        "kind": 6,
+        "importPath": "app.gql.enums",
+        "description": "app.gql.enums",
+        "peekOfCode": "class VehicleTypeEnum(Enum):\n    SEDAN = \"Sedan\"\n    HATCHBACK = \"Hatchback\"\n    PICKUP = \"Pickup\"\n    SUV = \"SUV\"\n    VAN = \"Van\"\n    CLOSE_VAN = \"Close Van\"\n    CARAVAN = \"Caravan\"\n    MOTORCYCLE = \"Motorcycle\"\nclass VehicleTypeGQLEnum(graphene.Enum):",
+        "detail": "app.gql.enums",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleTypeGQLEnum",
+        "kind": 6,
+        "importPath": "app.gql.enums",
+        "description": "app.gql.enums",
+        "peekOfCode": "class VehicleTypeGQLEnum(graphene.Enum):\n    class Meta:\n        name = \"VehicleTypeEnum\"\n    SEDAN = VehicleTypeEnum.SEDAN\n    HATCHBACK = VehicleTypeEnum.HATCHBACK\n    PICKUP = VehicleTypeEnum.PICKUP\n    SUV = VehicleTypeEnum.SUV\n    VAN = VehicleTypeEnum.VAN\n    CLOSE_VAN = VehicleTypeEnum.CLOSE_VAN\n    CARAVAN = VehicleTypeEnum.CARAVAN",
         "detail": "app.gql.enums",
         "documentation": {}
     },
@@ -2039,7 +2156,7 @@
         "kind": 6,
         "importPath": "app.gql.queries",
         "description": "app.gql.queries",
-        "peekOfCode": "class Query(ObjectType):\n    jobs = List(JobObject)\n    job = Field(JobObject, id=Int(required=True))\n    employers = List(EmployerObject)\n    employer = Field(EmployerObject, id=Int(required=True))\n    users = List(UserObject)\n    job_applications = List(JobApplicationObject)\n    posts = List(PostObject)\n    post = Field(PostObject, id=Int(required=True))\n    authenticated_item = Field(AuthenticatedItemUnion)",
+        "peekOfCode": "class Query(ObjectType):\n    jobs = List(JobObject)\n    job = Field(JobObject, id=Int(required=True))\n    employers = List(EmployerObject)\n    employer = Field(EmployerObject, id=Int(required=True))\n    users = List(UserObject)\n    job_applications = List(JobApplicationObject)\n    posts = List(PostObject)\n    authenticated_item = Field(AuthenticatedItemUnion)\n    me = Field(UserObject)",
         "detail": "app.gql.queries",
         "documentation": {}
     },
@@ -2089,11 +2206,20 @@
         "documentation": {}
     },
     {
+        "label": "PostPriceObject",
+        "kind": 6,
+        "importPath": "app.gql.types",
+        "description": "app.gql.types",
+        "peekOfCode": "class PostPriceObject(ObjectType):\n    id = Int()\n    price_id = Int()\n    post = Field(lambda: PriceObject)\n    @staticmethod\n    def resolve_post(root, info):\n        return root.post\nclass PriceObject(ObjectType):\n    id = Int()\n    vehicleType = Field(VehicleTypeGQLEnum)",
+        "detail": "app.gql.types",
+        "documentation": {}
+    },
+    {
         "label": "PriceObject",
         "kind": 6,
         "importPath": "app.gql.types",
         "description": "app.gql.types",
-        "peekOfCode": "class PriceObject(InputObjectType):\n    vehicleType = String()\n    price = Float()\nclass ImageObject(InputObjectType):\n    imageUrl = String()\nclass AddonObject(InputObjectType):\n    name = String()\n    description = String()\n    price = Float()\nclass PostObject(ObjectType):",
+        "peekOfCode": "class PriceObject(ObjectType):\n    id = Int()\n    vehicleType = Field(VehicleTypeGQLEnum)\n    price = Float()\n    post = Field(lambda: PostObject)\n    @staticmethod\n    def resolve_post(root, info):\n        return root.post\nclass ImageObject(InputObjectType):\n    imageUrl = String()",
         "detail": "app.gql.types",
         "documentation": {}
     },
@@ -2120,7 +2246,7 @@
         "kind": 6,
         "importPath": "app.gql.types",
         "description": "app.gql.types",
-        "peekOfCode": "class PostObject(ObjectType):\n    user_id = Int()\n    id = Int()\n    serviceType = Field(ServiceTypeGQLEnum)\n    description = String()\n    rating = Float()\n    booking_count = Int()\n    user = Field(lambda: UserObject)\n    # prices = List(PriceObject)\n    # images = List(lambda: ImageObject)",
+        "peekOfCode": "class PostObject(ObjectType):\n    user_id = Int()\n    id = Int()\n    serviceType = Field(ServiceTypeGQLEnum)\n    description = String()\n    rating = Float()\n    booking_count = Int()\n    prices = List(lambda: PriceObject)\n    # user = Field(lambda: UserObject)\n    # images = List(lambda: ImageObject)",
         "detail": "app.gql.types",
         "documentation": {}
     },

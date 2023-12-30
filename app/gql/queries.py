@@ -1,5 +1,4 @@
 from graphene import ObjectType, List, Field, Int
-from sqlalchemy.orm import joinedload
 from app.gql.types import JobObject, EmployerObject, UserObject, JobApplicationObject, PostObject, AuthenticatedItemUnion
 from app.db.database import Session
 from app.db.models import Employer, Job, JobApplication, Post, User
@@ -14,7 +13,6 @@ class Query(ObjectType):
     users = List(UserObject)
     job_applications = List(JobApplicationObject)
     posts = List(PostObject)
-    post = Field(PostObject, id=Int(required=True))
     authenticated_item = Field(AuthenticatedItemUnion)
     me = Field(UserObject)
 

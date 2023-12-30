@@ -54,3 +54,28 @@ class ServiceTypeGQLEnum(graphene.Enum):
     INTERIOR_DETAILING = ServiceTypeEnum.INTERIOR_DETAILING
     COLOR_CORRECTION = ServiceTypeEnum.COLOR_CORRECTION
     HEADLIGHT_RESTORATION = ServiceTypeEnum.HEADLIGHT_RESTORATION
+
+
+class VehicleTypeEnum(Enum):
+    SEDAN = "Sedan"
+    HATCHBACK = "Hatchback"
+    PICKUP = "Pickup"
+    SUV = "SUV"
+    VAN = "Van"
+    CLOSE_VAN = "Close Van"
+    CARAVAN = "Caravan"
+    MOTORCYCLE = "Motorcycle"
+
+
+class VehicleTypeGQLEnum(graphene.Enum):
+    class Meta:
+        name = "VehicleTypeEnum"
+
+    SEDAN = VehicleTypeEnum.SEDAN
+    HATCHBACK = VehicleTypeEnum.HATCHBACK
+    PICKUP = VehicleTypeEnum.PICKUP
+    SUV = VehicleTypeEnum.SUV
+    VAN = VehicleTypeEnum.VAN
+    CLOSE_VAN = VehicleTypeEnum.CLOSE_VAN
+    CARAVAN = VehicleTypeEnum.CARAVAN
+    MOTORCYCLE = VehicleTypeEnum.MOTORCYCLE

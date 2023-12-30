@@ -1,6 +1,6 @@
 from graphene import ObjectType, String, Int, List, Field, Float, Enum, Union, InputObjectType, DefaultGlobalIDType, Interface
 from app.db.models import User
-from app.gql.enums import AccountRoleGQLEnum, ServiceTypeGQLEnum, StatusGQLEnum
+from app.gql.enums import AccountRoleGQLEnum, ServiceTypeGQLEnum, StatusGQLEnum, VehicleTypeGQLEnum
 
 
 class EmployerObject(ObjectType):
@@ -91,9 +91,25 @@ class JobApplicationObject(ObjectType):
         return root.job
 
 
-class PriceObject(InputObjectType):
-    vehicleType = String()
+class PostPriceObject(ObjectType):
+    id = Int()
+    price_id = Int()
+    post = Field(lambda: PriceObject)
+
+    @staticmethod
+    def resolve_post(root, info):
+        return root.post
+
+
+class PriceObject(ObjectType):
+    id = Int()
+    vehicleType = Field(VehicleTypeGQLEnum)
     price = Float()
+    post = Field(lambda: PostObject)
+
+    @staticmethod
+    def resolve_post(root, info):
+        return root.post
 
 
 class ImageObject(InputObjectType):
@@ -113,14 +129,18 @@ class PostObject(ObjectType):
     description = String()
     rating = Float()
     booking_count = Int()
-    user = Field(lambda: UserObject)
-    # prices = List(PriceObject)
+    prices = List(lambda: PriceObject)
+    # user = Field(lambda: UserObject)
     # images = List(lambda: ImageObject)
     # addons = List(lambda: AddonObject)
 
     @staticmethod
-    def resolve_user(root, info):
-        return root.user
+    def resolve_prices(root, info):
+        return root.prices
+
+    # @staticmethod
+    # def resolve_user(root, info):
+    #     return root.user
 
     # @staticmethod
     # def resolve_images(root, info):

@@ -2,7 +2,7 @@ import graphene
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, ForeignKey, Float, Enum
 from sqlalchemy.orm import relationship
-from app.gql.enums import AccountRoleEnum, ServiceTypeEnum, StatusEnum
+from app.gql.enums import AccountRoleEnum, ServiceTypeEnum, StatusEnum, VehicleTypeEnum
 
 Base = declarative_base()
 
@@ -61,17 +61,6 @@ class User(Base):
         "Post", back_populates="user", lazy="joined")
 
 
-class JobApplication(Base):
-    __tablename__ = 'job_applications'
-
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    user_id = Column(Integer, ForeignKey("users.id"))
-    job_id = Column(Integer, ForeignKey("jobs.id"))
-
-    user = relationship("User", back_populates="applications", lazy="joined")
-    job = relationship("Job", back_populates="applications", lazy="joined")
-
-
 class Post(Base):
     __tablename__ = 'posts'
 
@@ -85,8 +74,19 @@ class Post(Base):
 
     user = relationship("User", back_populates="posts", lazy="joined")
     prices = relationship("Price", back_populates="post", lazy="joined")
-    images = relationship("Image", back_populates="post", lazy="joined")
-    addons = relationship("Addon", back_populates="post", lazy="joined")
+    # images = relationship("Image", back_populates="post", lazy="joined")
+    # addons = relationship("Addon", back_populates="post", lazy="joined")
+
+
+class JobApplication(Base):
+    __tablename__ = 'job_applications'
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    user_id = Column(Integer, ForeignKey("users.id"))
+    job_id = Column(Integer, ForeignKey("jobs.id"))
+
+    user = relationship("User", back_populates="applications", lazy="joined")
+    job = relationship("Job", back_populates="applications", lazy="joined")
 
 
 class Price(Base):
@@ -94,7 +94,7 @@ class Price(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     post_id = Column(Integer, ForeignKey('posts.id'))
-    vehicleType = Column(String)
+    vehicleType = Column(Enum(VehicleTypeEnum), nullable=False)
     price = Column(Float)
 
     post = relationship("Post", back_populates="prices")
@@ -107,7 +107,7 @@ class Image(Base):
     post_id = Column(Integer, ForeignKey('posts.id'))
     imageUrl = Column(String)
 
-    post = relationship("Post", back_populates="images")
+    # post = relationship("Post", back_populates="images")
 
 
 class Addon(Base):
@@ -119,4 +119,4 @@ class Addon(Base):
     description = Column(String)
     price = Column(Float)
 
-    post = relationship("Post", back_populates="addons")
+    # post = relationship("Post", back_populates="addons")
