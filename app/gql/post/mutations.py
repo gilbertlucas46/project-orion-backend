@@ -37,6 +37,7 @@ class AddPost(Mutation):
         return AddPost(post=post)
 
 
+# app/gql/post/mutations.py
 class AddPostPrice(Mutation):
     class Arguments:
         vehicleType = VehicleTypeGQLEnum(required=True)
@@ -55,12 +56,22 @@ class AddPostPrice(Mutation):
         if not existing_post:
             raise GraphQLError(f"Post with ID {post_id} does not exist.")
 
-        # Add this job to the session
+        # Check if there is already a price with the same vehicle type for this post
+        existing_price = session.query(Price).filter(
+            Price.post_id == post_id,
+            Price.vehicleType == vehicleType
+        ).first()
+
+        if existing_price:
+            raise GraphQLError(
+                f"A price with vehicle type {vehicleType} already exists for this post.")
+
+        # Add this price to the session
         price = Price(vehicleType=vehicleType, price=price, post_id=post_id)
         session.add(price)
         session.commit()
 
-        # Refresh the job instance with the current state in the db
+        # Refresh the price instance with the current state in the db
         session.refresh(price)
         return AddPostPrice(price=price)
 
