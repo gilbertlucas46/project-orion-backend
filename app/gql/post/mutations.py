@@ -2,7 +2,7 @@
 from graphene import Mutation, String, Int, Field, Float, List, InputObjectType
 from graphql import GraphQLError
 from app.db.models import Image, Post, Price, User
-from app.gql.types import ImageObject, PostObject, PostPriceObject, PriceObject
+from app.gql.types import ImageInputObject, ImageObject, PostObject, PostPriceObject, PriceObject
 from app.db.database import Session
 from app.utils.utils import authd_user_same_as
 from app.gql.enums import ServiceTypeEnum, ServiceTypeGQLEnum, VehicleTypeEnum, VehicleTypeGQLEnum
@@ -67,13 +67,13 @@ class AddPostPrice(Mutation):
 
 class AddPostImage(Mutation):
     class Arguments:
-        imageUrl = String()
         post_id = Int(required=True)
+        images = List(ImageInputObject, required=True)
 
-    image = Field(lambda: ImageObject)
+    images = List(lambda: ImageObject)
 
     @staticmethod
-    def mutate(root, info, imageUrl, post_id):
+    def mutate(root, info, post_id, images):
         session = Session()
 
         # Check if the associated post exists
@@ -82,11 +82,16 @@ class AddPostImage(Mutation):
         if not existing_post:
             raise GraphQLError(f"Post with ID {post_id} does not exist.")
 
-        # Add this image to the session and associate it with the post
-        image = Image(imageUrl=imageUrl, post=existing_post)
-        session.add(image)
+        # Add multiple images to the session and associate them with the post
+        image_objects = [
+            Image(imageUrl=image["imageUrl"], post=existing_post) for image in images
+        ]
+
+        session.add_all(image_objects)
         session.commit()
 
-        # Refresh the image instance with the current state in the db
-        session.refresh(image)
-        return AddPostImage(image=image)
+        # Refresh each image instance with the current state in the db
+        for image_object in image_objects:
+            session.refresh(image_object)
+
+        return AddPostImage(images=image_objects)

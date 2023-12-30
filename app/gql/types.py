@@ -118,6 +118,10 @@ class ImageObject(ObjectType):
     post = Field(lambda: PostObject)
 
 
+class ImageInputObject(InputObjectType):
+    imageUrl = String(required=True)
+
+
 class AddonObject(InputObjectType):
     name = String()
     description = String()
