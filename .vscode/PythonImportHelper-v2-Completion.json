@@ -803,14 +803,6 @@
         "documentation": {}
     },
     {
-        "label": "InputObjectType",
-        "importPath": "graphene",
-        "description": "graphene",
-        "isExtraImport": true,
-        "detail": "graphene",
-        "documentation": {}
-    },
-    {
         "label": "Mutation",
         "importPath": "graphene",
         "description": "graphene",
@@ -1043,14 +1035,6 @@
         "documentation": {}
     },
     {
-        "label": "VehicleTypeEnum",
-        "importPath": "app.gql.enums",
-        "description": "app.gql.enums",
-        "isExtraImport": true,
-        "detail": "app.gql.enums",
-        "documentation": {}
-    },
-    {
         "label": "VehicleTypeGQLEnum",
         "importPath": "app.gql.enums",
         "description": "app.gql.enums",
@@ -1156,14 +1140,6 @@
     },
     {
         "label": "PostObject",
-        "importPath": "app.gql.types",
-        "description": "app.gql.types",
-        "isExtraImport": true,
-        "detail": "app.gql.types",
-        "documentation": {}
-    },
-    {
-        "label": "PostPriceObject",
         "importPath": "app.gql.types",
         "description": "app.gql.types",
         "isExtraImport": true,
