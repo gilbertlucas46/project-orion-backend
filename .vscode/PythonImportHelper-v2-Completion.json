@@ -2155,7 +2155,7 @@
         "kind": 6,
         "importPath": "app.db.models",
         "description": "app.db.models",
-        "peekOfCode": "class Post(Base):\n    __tablename__ = 'posts'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    serviceType = Column(Enum(ServiceTypeEnum),\n                         default=ServiceTypeEnum.CAR_WASH, nullable=True)\n    description = Column(String)\n    rating = Column(Float)\n    booking_count = Column(Integer)\n    user = relationship(\"User\", back_populates=\"posts\", lazy=\"joined\")",
+        "peekOfCode": "class Post(Base):\n    __tablename__ = 'posts'\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    serviceType = Column(Enum(ServiceTypeEnum),\n                         default=ServiceTypeEnum.CAR_WASH, nullable=True)\n    description = Column(String)\n    rating = Column(Float)\n    booking_count = Column(Integer)\n    duration = Column(String)",
         "detail": "app.db.models",
         "documentation": {}
     },
@@ -2515,7 +2515,7 @@
         "kind": 6,
         "importPath": "app.gql.types",
         "description": "app.gql.types",
-        "peekOfCode": "class PostObject(ObjectType):\n    user_id = Int()\n    id = Int()\n    serviceType = Field(ServiceTypeGQLEnum)\n    description = String()\n    rating = Float()\n    booking_count = Int()\n    prices = List(lambda: PriceObject)\n    user = Field(lambda: UserObject)\n    images = List(lambda: ImageObject)",
+        "peekOfCode": "class PostObject(ObjectType):\n    user_id = Int()\n    id = Int()\n    serviceType = Field(ServiceTypeGQLEnum)\n    description = String()\n    rating = Float()\n    booking_count = Int()\n    duration = String()\n    prices = List(lambda: PriceObject)\n    user = Field(lambda: UserObject)",
         "detail": "app.gql.types",
         "documentation": {}
     },

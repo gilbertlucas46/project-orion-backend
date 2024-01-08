@@ -145,6 +145,7 @@ class PostObject(ObjectType):
     description = String()
     rating = Float()
     booking_count = Int()
+    duration = String()
     prices = List(lambda: PriceObject)
     user = Field(lambda: UserObject)
     images = List(lambda: ImageObject)

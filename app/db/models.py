@@ -71,6 +71,7 @@ class Post(Base):
     description = Column(String)
     rating = Column(Float)
     booking_count = Column(Integer)
+    duration = Column(String)
 
     user = relationship("User", back_populates="posts", lazy="joined")
     prices = relationship("Price", back_populates="post",

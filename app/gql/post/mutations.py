@@ -23,13 +23,14 @@ class AddPost(Mutation):
     post = Field(lambda: PostObject)
 
     @authd_user_same_as
-    def mutate(root, info, user_id, serviceType, description, rating, booking_count):
+    def mutate(root, info, user_id, serviceType, description, rating, booking_count, duration):
         post = Post(
             user_id=user_id,
             serviceType=serviceType,
             description=description,
             rating=rating,
-            booking_count=booking_count
+            booking_count=booking_count,
+            duration=duration
         )
 
         session = Session()
