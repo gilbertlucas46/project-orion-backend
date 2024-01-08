@@ -36,12 +36,12 @@ class AccountRoleGQLEnum(graphene.Enum):
 
 
 class ServiceTypeEnum(Enum):
-    CAR_WASH = "Car wash"
-    EXTERIOR_DETAILING = "Exterior detailing"
-    GLASS_DETAILING = "Glass detailing"
-    INTERIOR_DETAILING = "Interior detailing"
-    COLOR_CORRECTION = "Color Correction"
-    HEADLIGHT_RESTORATION = "Headlight Restoration"
+    CAR_WASH = "car_wash"
+    EXTERIOR_DETAILING = "exterior_detailing"
+    GLASS_DETAILING = "glass_detailing"
+    INTERIOR_DETAILING = "interior_detailing"
+    COLOR_CORRECTION = "color_correction"
+    HEADLIGHT_RESTORATION = "headlight_restoration"
 
 
 class ServiceTypeGQLEnum(graphene.Enum):
@@ -57,14 +57,14 @@ class ServiceTypeGQLEnum(graphene.Enum):
 
 
 class VehicleTypeEnum(Enum):
-    SEDAN = "Sedan"
-    HATCHBACK = "Hatchback"
-    PICKUP = "Pickup"
-    SUV = "SUV"
-    VAN = "Van"
-    CLOSE_VAN = "Close Van"
-    CARAVAN = "Caravan"
-    MOTORCYCLE = "Motorcycle"
+    SEDAN = "sedan"
+    HATCHBACK = "hatchback"
+    PICKUP = "pickup"
+    SUV = "suv"
+    VAN = "van"
+    CLOSE_VAN = "close_van"
+    CARAVAN = "caravan"
+    MOTORCYCLE = "motorcycle"
 
 
 class VehicleTypeGQLEnum(graphene.Enum):

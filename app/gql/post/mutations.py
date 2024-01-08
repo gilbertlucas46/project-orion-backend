@@ -1,12 +1,14 @@
 # app/gql/post/mutations.py
 from graphene import Mutation, String, Int, Field, Float, List
 from graphql import GraphQLError
-from app.db.models import Image, Post, Price, User
-from app.gql.types import ImageInputObject, ImageObject, PostObject, PriceObject
+from app.db.models import Addon, Image, Post, Price, User
+from app.gql.types import AddonObject, ImageInputObject, ImageObject, PostObject, PriceObject
 from app.db.database import Session
 from app.utils.utils import authd_user_same_as
 from app.gql.enums import ServiceTypeEnum, ServiceTypeGQLEnum, VehicleTypeGQLEnum
 import graphql
+import re
+from sqlalchemy import desc  # Add this import at the beginning
 
 
 class AddPost(Mutation):
@@ -74,6 +76,53 @@ class AddPostPrice(Mutation):
         # Refresh the price instance with the current state in the db
         session.refresh(price)
         return AddPostPrice(price=price)
+
+
+class AddPostAddon(Mutation):
+    class Arguments:
+        name = String()
+        description = String()
+        price = Int(required=True)
+        post_id = Int(required=True)
+
+    addon = Field(lambda: AddonObject)
+
+    @staticmethod
+    def mutate(root, info, name, description, price, post_id):
+        session = Session()
+
+        # Check if the associated post exists
+        existing_post = session.query(Post).filter_by(id=post_id).first()
+
+        if not existing_post:
+            raise GraphQLError(f"Post with ID {post_id} does not exist.")
+
+        # Check if an addon with the same name exists for the given post
+        existing_addon = (
+            session.query(Addon)
+            .filter_by(post_id=post_id, name=name)
+            .order_by(desc(Addon.id))
+            .first()
+        )
+
+        if existing_addon:
+            # If an addon with the same name exists, increment the title
+            title, number = re.match(
+                r"([a-zA-Z]+)([0-9]*)", existing_addon.name).groups()
+            number = int(number) if number else 0  # Treat empty string as zero
+            new_title = f"{title}{number + 1}"
+        else:
+            new_title = name
+
+        # Add this addon to the session
+        addon = Addon(name=new_title, description=description,
+                      price=price, post_id=post_id)
+        session.add(addon)
+        session.commit()
+
+        # Refresh the addon instance with the current state in the db
+        session.refresh(addon)
+        return AddPostAddon(addon=addon)
 
 
 class AddPostImage(Mutation):

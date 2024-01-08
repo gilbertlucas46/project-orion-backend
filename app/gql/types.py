@@ -117,15 +117,25 @@ class ImageObject(ObjectType):
     imageUrl = String()
     post = Field(lambda: PostObject)
 
+    @staticmethod
+    def resolve_post(root, info):
+        return root.post
+
 
 class ImageInputObject(InputObjectType):
     imageUrl = String(required=True)
 
 
-class AddonObject(InputObjectType):
+class AddonObject(ObjectType):
+    id = Int()
     name = String()
     description = String()
     price = Float()
+    post = Field(lambda: PostObject)
+
+    @staticmethod
+    def resolve_post(root, info):
+        return root.post
 
 
 class PostObject(ObjectType):
@@ -138,7 +148,7 @@ class PostObject(ObjectType):
     prices = List(lambda: PriceObject)
     user = Field(lambda: UserObject)
     images = List(lambda: ImageObject)
-    # addons = List(lambda: AddonObject)
+    addons = List(lambda: AddonObject)
 
     @staticmethod
     def resolve_prices(root, info):

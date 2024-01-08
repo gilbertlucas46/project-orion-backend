@@ -77,7 +77,8 @@ class Post(Base):
                           lazy="joined", cascade="all, save-update, delete-orphan")
     images = relationship("Image", back_populates="post",
                           lazy="joined", cascade="all, save-update, delete-orphan")
-    # addons = relationship("Addon", back_populates="post", lazy="joined")
+    addons = relationship("Addon", back_populates="post",
+                          lazy="joined", cascade="all, save-update, delete-orphan")
 
 
 class JobApplication(Base):
@@ -121,4 +122,4 @@ class Addon(Base):
     description = Column(String)
     price = Column(Float)
 
-    # post = relationship("Post", back_populates="addons")
+    post = relationship("Post", back_populates="addons")

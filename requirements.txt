@@ -6,7 +6,7 @@ argon2-cffi-bindings==21.2.0
 asgiref==3.7.2
 cffi==1.16.0
 click==8.1.7
-Django==5.0
+Django==3.2.*
 fastapi==0.95.1
 graphene==3.2.2
 graphene-django==3.2.0
